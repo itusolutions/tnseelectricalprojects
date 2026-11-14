@@ -539,7 +539,101 @@
 	
 
           
-      
+      <main class="bg-slate-50 py-20 dark:bg-slate-950 lg:py-28">
+  <div class="mx-auto max-w-xl px-5">
+
+    <form action="https://api.web3forms.com/submit" method="POST" class="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-xl dark:border-white/10 dark:bg-slate-900 md:p-9">
+
+      <!-- Web3Forms Configuration -->
+      <input type="hidden" name="access_key" value="f7b3e8c4-32dd-4b4e-abba-2e3b5073e367">
+      <input type="hidden" name="subject" value="Newsletter Subscription - TNSE Electrical Projects">
+      <input type="hidden" name="redirect" value="https://www.tnse.co.za/thank-you/index.html">
+
+      <!-- Honeypot Spam Protection -->
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[.2em] text-amber-500">
+          STAY UPDATED
+        </p>
+
+        <h1 class="mt-3 text-3xl font-black text-slate-950 dark:text-white">
+          Subscribe to our Newsletter
+        </h1>
+
+        <p class="mt-3 leading-7 text-slate-500">
+          Receive updates on solar installations, backup power tips, electrical safety, and TNSE news.
+        </p>
+      </div>
+
+      <div class="mt-8 space-y-4">
+        <div>
+          <label for="sub-name" class="mb-2 block text-sm font-semibold text-slate-700 dark:text-slate-300">
+            First Name
+          </label>
+          <input id="sub-name"
+                 type="text"
+                 name="name"
+                 autocomplete="given-name"
+                 placeholder="Your name"
+                 class="w-full rounded-xl border border-slate-300 bg-transparent px-4 py-3 outline-none transition focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 dark:border-white/10">
+        </div>
+
+        <div>
+          <label for="sub-email" class="mb-2 block text-sm font-semibold text-slate-700 dark:text-slate-300">
+            Email Address *
+          </label>
+          <input id="sub-email"
+                 type="email"
+                 name="email"
+                 required
+                 autocomplete="email"
+                 placeholder="you@example.com"
+                 class="w-full rounded-xl border border-slate-300 bg-transparent px-4 py-3 outline-none transition focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 dark:border-white/10">
+        </div>
+
+        <div>
+          <label for="sub-interest" class="mb-2 block text-sm font-semibold text-slate-700 dark:text-slate-300">
+            Topics of Interest
+          </label>
+          <select id="sub-interest"
+                  name="Interest"
+                  class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 dark:border-white/10 dark:bg-slate-900">
+            <option>All Updates (Solar, Electrical & Energy)</option>
+            <option>Solar & Inverter Systems</option>
+            <option>Backup Power & Batteries</option>
+            <option>Residential & Commercial Electrical</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit"
+              class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-amber-400 px-6 py-4 font-black text-slate-950 transition hover:bg-amber-300">
+        SUBSCRIBE NOW
+        <span class="material-symbols-outlined">send</span>
+      </button>
+
+      <p class="mt-4 text-center text-xs leading-5 text-slate-500">
+        We respect your inbox. Unsubscribe anytime.
+      </p>
+
+    </form>
+
+  </div>
+</main>
+
+<!-- Auto-fill email if redirected from footer ?email=... -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const emailParam = params.get("email");
+    if (emailParam) {
+      const emailInput = document.getElementById("sub-email");
+      if (emailInput) emailInput.value = emailParam;
+    }
+  });
+</script>
+
 
 
   
