@@ -538,110 +538,87 @@
 
 
  
-<main id="main" class="max-w-[1100px] mx-auto px-4 py-8 text-gray-800 font-sans">
+<main class="bg-slate-50 py-20 dark:bg-slate-950 lg:py-28">
+  <div class="mx-auto max-w-xl px-5">
 
-  <!-- Hero Section -->
-  <section class="hero text-center py-16 px-6 bg-white rounded-xl shadow-sm mb-12">
-    <p class="eyebrow uppercase text-sm font-bold tracking-wider text-blue-600 mb-2">IT solutions made practical</p>
-    <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mt-0 mb-4">Technology that works for you.</h1>
-    <p class="max-w-[650px] mx-auto mb-6 text-gray-600 leading-relaxed">iTu Solutions helps individuals, homes and businesses with website development, computer repairs, software installation and everyday IT support.</p>
-    <div class="actions flex justify-center gap-4 flex-wrap">
-      <a class="button inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition-colors shadow-sm" href="/contact/">Request a quote</a>
-      <a class="button button-outline inline-block px-6 py-3 bg-transparent text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white font-semibold rounded-md transition-colors" href="https://wa.me/27711405870">Chat on WhatsApp</a>
-    </div>
-  </section>
+    <form action="https://api.web3forms.com/submit" method="POST" class="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-xl dark:border-white/10 dark:bg-slate-900 md:p-9">
 
-  <!-- Services Section with Pie Chart -->
-  <section class="section mb-12">
-    <h2 class="text-3xl font-bold text-gray-900 mb-6">How we can help</h2>
-    
-    <div class="pie-services-wrapper flex flex-wrap items-center justify-between gap-10 bg-white p-6 sm:p-10 rounded-xl shadow-sm">
-      <!-- Interactive 4-Slice SVG Pie Chart -->
-      <div class="pie-graphic flex-1 basis-[320px] flex justify-center items-center">
-        <svg viewBox="0 0 420 420" class="donut-svg w-full max-w-[380px] h-auto drop-shadow-md" aria-label="iTu Solutions Services Pie Chart">
-          <!-- Slice 1: Top Right - Website development -->
-          <a href="/services/website-development/" class="pie-slice transition-all duration-200 hover:opacity-90 hover:scale-[1.02] origin-[210px_210px] cursor-pointer">
-            <path d="M 210 210 L 210 10 A 200 200 0 0 1 410 210 Z" fill="#36b5b0" />
-            <text x="295" y="105" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">01</text>
-            <text x="295" y="125" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="13">Website</text>
-            <text x="295" y="142" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="13">Development</text>
-          </a>
+      <!-- Web3Forms Configuration -->
+      <input type="hidden" name="access_key" value="f7b3e8c4-32dd-4b4e-abba-2e3b5073e367">
+      <input type="hidden" name="subject" value="Newsletter Unsubscribe Request - TNSE Electrical Projects">
+      <input type="hidden" name="redirect" value="https://www.tnse.co.za/thank-you/index.html">
 
-          <!-- Slice 2: Bottom Right - Computer repairs -->
-          <a href="/services/computer-repairs/" class="pie-slice transition-all duration-200 hover:opacity-90 hover:scale-[1.02] origin-[210px_210px] cursor-pointer">
-            <path d="M 210 210 L 410 210 A 200 200 0 0 1 210 410 Z" fill="#8b5cf6" />
-            <text x="295" y="275" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">02</text>
-            <text x="295" y="295" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="13">Computer</text>
-            <text x="295" y="312" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="13">Repairs</text>
-          </a>
+      <!-- Honeypot Spam Protection -->
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-          <!-- Slice 3: Bottom Left - Software installation -->
-          <a href="/services/software-installation/" class="pie-slice transition-all duration-200 hover:opacity-90 hover:scale-[1.02] origin-[210px_210px] cursor-pointer">
-            <path d="M 210 210 L 210 410 A 200 200 0 0 1 10 210 Z" fill="#84cc16" />
-            <text x="125" y="275" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">03</text>
-            <text x="125" y="295" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="13">Software</text>
-            <text x="125" y="312" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="13">Installation</text>
-          </a>
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[.2em] text-amber-500">
+          EMAIL PREFERENCES
+        </p>
 
-          <!-- Slice 4: Top Left - IT support -->
-          <a href="/services/it-support/" class="pie-slice transition-all duration-200 hover:opacity-90 hover:scale-[1.02] origin-[210px_210px] cursor-pointer">
-            <path d="M 210 210 L 10 210 A 200 200 0 0 1 210 10 Z" fill="#f97316" />
-            <text x="125" y="105" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">04</text>
-            <text x="125" y="125" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="13">IT Support</text>
-          </a>
+        <h1 class="mt-3 text-3xl font-black text-slate-950 dark:text-white">
+          Unsubscribe from Newsletter
+        </h1>
 
-          <!-- Center Donut Hole -->
-          <circle cx="210" cy="210" r="78" fill="#ffffff" />
-          <text x="210" y="206" text-anchor="middle" fill="#1f2937" font-weight="bold" font-size="14" letter-spacing="1">ITU</text>
-          <text x="210" y="224" text-anchor="middle" fill="#4b5563" font-weight="bold" font-size="12" letter-spacing="1">SERVICES</text>
-        </svg>
+        <p class="mt-3 leading-7 text-slate-500">
+          We are sorry to see you go. Enter your email address below to be removed from TNSE Electrical Projects updates and newsletter communications.
+        </p>
       </div>
 
-      <!-- Service Paragraphs & Links Matched to Pie Slices -->
-      <div class="pie-details flex-1 basis-[400px] flex flex-col gap-5">
-        <div class="service-item item-01 p-4 rounded-lg bg-slate-50 border-l-[5px] border-[#36b5b0]">
-          <h3 class="text-xl font-bold mb-1 text-gray-900"><span class="badge inline-block text-white text-xs px-2 py-0.5 rounded mr-1.5 align-middle bg-[#36b5b0]">01</span> Website development</h3>
-          <p class="text-gray-600 text-sm sm:text-base mb-2">Responsive websites built to present your brand and services online.</p>
-          <a href="/services/website-development/" class="text-blue-600 hover:underline font-semibold text-sm">Explore service →</a>
+      <div class="mt-8 space-y-4">
+        <div>
+          <label for="sub-name" class="mb-2 block text-sm font-semibold text-slate-700 dark:text-slate-300">
+            First Name
+          </label>
+          <input id="sub-name"
+                 type="text"
+                 name="name"
+                 autocomplete="given-name"
+                 placeholder="Your name"
+                 class="w-full rounded-xl border border-slate-300 bg-transparent px-4 py-3 outline-none transition focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 dark:border-white/10">
         </div>
 
-        <div class="service-item item-02 p-4 rounded-lg bg-slate-50 border-l-[5px] border-[#8b5cf6]">
-          <h3 class="text-xl font-bold mb-1 text-gray-900"><span class="badge inline-block text-white text-xs px-2 py-0.5 rounded mr-1.5 align-middle bg-[#8b5cf6]">02</span> Computer repairs</h3>
-          <p class="text-gray-600 text-sm sm:text-base mb-2">Practical troubleshooting and repair support for common computer issues.</p>
-          <a href="/services/computer-repairs/" class="text-blue-600 hover:underline font-semibold text-sm">Explore service →</a>
-        </div>
-
-        <div class="service-item item-03 p-4 rounded-lg bg-slate-50 border-l-[5px] border-[#84cc16]">
-          <h3 class="text-xl font-bold mb-1 text-gray-900"><span class="badge inline-block text-white text-xs px-2 py-0.5 rounded mr-1.5 align-middle bg-[#84cc16]">03</span> Software installation</h3>
-          <p class="text-gray-600 text-sm sm:text-base mb-2">Help installing software and keeping systems up to date.</p>
-          <a href="/services/software-installation/" class="text-blue-600 hover:underline font-semibold text-sm">Explore service →</a>
-        </div>
-
-        <div class="service-item item-04 p-4 rounded-lg bg-slate-50 border-l-[5px] border-[#f97316]">
-          <h3 class="text-xl font-bold mb-1 text-gray-900"><span class="badge inline-block text-white text-xs px-2 py-0.5 rounded mr-1.5 align-middle bg-[#f97316]">04</span> IT support</h3>
-          <p class="text-gray-600 text-sm sm:text-base mb-2">Friendly technical assistance for setup, maintenance and troubleshooting.</p>
-          <a href="/services/it-support/" class="text-blue-600 hover:underline font-semibold text-sm">Explore service →</a>
+        <div>
+          <label for="sub-email" class="mb-2 block text-sm font-semibold text-slate-700 dark:text-slate-300">
+            Email Address *
+          </label>
+          <input id="sub-email"
+                 type="email"
+                 name="email"
+                 required
+                 autocomplete="email"
+                 placeholder="you@example.com"
+                 class="w-full rounded-xl border border-slate-300 bg-transparent px-4 py-3 outline-none transition focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 dark:border-white/10">
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Split Info Section -->
-  <section class="section split flex flex-wrap gap-8 items-center">
-    <div class="flex-1 basis-[300px]">
-      <p class="eyebrow uppercase text-sm font-bold tracking-wider text-blue-600 mb-2">Local support</p>
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Clear advice. Practical solutions.</h2>
-      <p class="text-gray-600 mb-4">Based in Ga-Mothiba, Nobody, Polokwane, Limpopo, iTu Solutions focuses on making technology easier to use and maintain.</p>
-      <a href="/about/" class="text-blue-600 font-semibold hover:underline">Meet iTu Solutions →</a>
-    </div>
-    <div class="feature-panel flex-1 basis-[300px] bg-white p-8 rounded-xl border-l-4 border-blue-600 shadow-sm">
-      <h3 class="text-xl font-bold mb-2 text-gray-900">Need help with a tech issue?</h3>
-      <p class="text-gray-600 mb-4">Tell us what you need and we’ll discuss the next practical step.</p>
-      <a class="button inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition-colors shadow-sm" href="/contact/">Contact us</a>
-    </div>
-  </section>
+      <button type="submit"
+              class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-amber-400 px-6 py-4 font-black text-slate-950 transition hover:bg-amber-300">
+        UNSUBSCRIBE
+        <span class="material-symbols-outlined">logout</span>
+      </button>
 
+      <p class="mt-4 text-center text-xs leading-5 text-slate-500">
+        You can resubscribe at any time from our website.
+      </p>
+
+    </form>
+
+  </div>
 </main>
+
+<!-- Auto-fill email if passed via URL parameter ?email=... -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const emailParam = params.get("email");
+    if (emailParam) {
+      const emailInput = document.getElementById("sub-email");
+      if (emailInput) emailInput.value = emailParam;
+    }
+  });
+</script>
+
 
           
 
