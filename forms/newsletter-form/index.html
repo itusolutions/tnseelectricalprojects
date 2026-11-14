@@ -539,7 +539,9 @@
 	
 
           
-      <main class="bg-slate-50 py-20 dark:bg-slate-950 lg:py-28">
+
+
+  <main class="bg-slate-50 py-20 dark:bg-slate-950 lg:py-28">
   <div class="mx-auto max-w-xl px-5">
 
     <form action="https://api.web3forms.com/submit" method="POST" class="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-xl dark:border-white/10 dark:bg-slate-900 md:p-9">
@@ -591,20 +593,6 @@
                  placeholder="you@example.com"
                  class="w-full rounded-xl border border-slate-300 bg-transparent px-4 py-3 outline-none transition focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 dark:border-white/10">
         </div>
-
-        <div>
-          <label for="sub-interest" class="mb-2 block text-sm font-semibold text-slate-700 dark:text-slate-300">
-            Topics of Interest
-          </label>
-          <select id="sub-interest"
-                  name="Interest"
-                  class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 dark:border-white/10 dark:bg-slate-900">
-            <option>All Updates (Solar, Electrical & Energy)</option>
-            <option>Solar & Inverter Systems</option>
-            <option>Backup Power & Batteries</option>
-            <option>Residential & Commercial Electrical</option>
-          </select>
-        </div>
       </div>
 
       <button type="submit"
@@ -613,9 +601,14 @@
         <span class="material-symbols-outlined">send</span>
       </button>
 
-      <p class="mt-4 text-center text-xs leading-5 text-slate-500">
-        We respect your inbox. Unsubscribe anytime.
-      </p>
+      <div class="mt-5 flex flex-col items-center gap-2 text-center text-xs leading-5 text-slate-500">
+        <p>We respect your inbox.</p>
+        <a href="https://www.tnse.co.za/forms/unsubscribe-form/index.html"
+           class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 px-3.5 py-1.5 font-semibold text-slate-600 transition hover:border-amber-400 hover:text-amber-500 dark:border-white/10 dark:text-slate-400 dark:hover:border-amber-400 dark:hover:text-amber-400">
+          Unsubscribe anytime
+          <span class="material-symbols-outlined text-sm">arrow_outward</span>
+        </a>
+      </div>
 
     </form>
 
@@ -633,6 +626,7 @@
     }
   });
 </script>
+
 
 
 
