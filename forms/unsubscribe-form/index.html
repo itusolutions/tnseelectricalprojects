@@ -537,295 +537,163 @@
 </header>
 
 
- 
-<body style="margin: 0; padding: 0; background-color: #f8fafc; font-family: Arial, Helvetica, sans-serif;">
+<main class="bg-slate-50 py-20 dark:bg-slate-950 lg:py-28">
+  <div class="mx-auto max-w-xl px-5">
 
-  <!-- Hidden Preheader Text (Shows in inbox preview) -->
-  <div style="display: none; max-height: 0px; overflow: hidden;">
-    Solar backup insights, electrical safety tips, and project updates from TNSE Electrical Projects in Polokwane.
+    <form action="https://api.web3forms.com/submit" method="POST" class="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-xl dark:border-white/10 dark:bg-slate-900 md:p-9">
+
+      <!-- Web3Forms Configuration -->
+      <input type="hidden" name="access_key" value="95452888-d0b0-4247-b67e-dbaaa8cc2876">
+      <input type="hidden" name="subject" value="Newsletter Unsubscribe Request - TNSE Electrical Projects">
+      <input type="hidden" name="redirect" value="https://www.tnse.co.za/thank-you/index.html">
+
+      <!-- Honeypot Spam Protection -->
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[.2em] text-amber-500">
+          EMAIL PREFERENCES
+        </p>
+
+        <h1 class="mt-3 text-3xl font-black text-slate-950 dark:text-white">
+          Unsubscribe from Newsletter
+        </h1>
+
+        <p class="mt-3 leading-7 text-slate-500">
+          We are sorry to see you go. Enter your details below to be removed from TNSE Electrical Projects email updates.
+        </p>
+      </div>
+
+      <div class="mt-8 space-y-5">
+        <div>
+          <label for="unsub-name" class="mb-2 block text-sm font-semibold text-slate-700 dark:text-slate-300">
+            Full Name *
+          </label>
+          <input id="unsub-name"
+                 type="text"
+                 name="name"
+                 required
+                 autocomplete="name"
+                 placeholder="Your name"
+                 class="w-full rounded-xl border border-slate-300 bg-transparent px-4 py-3 outline-none transition focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 dark:border-white/10">
+        </div>
+
+        <div>
+          <label for="unsub-email" class="mb-2 block text-sm font-semibold text-slate-700 dark:text-slate-300">
+            Email Address *
+          </label>
+          <input id="unsub-email"
+                 type="email"
+                 name="email"
+                 required
+                 autocomplete="email"
+                 placeholder="you@example.com"
+                 class="w-full rounded-xl border border-slate-300 bg-transparent px-4 py-3 outline-none transition focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 dark:border-white/10">
+        </div>
+
+        <!-- 6 Multiple-Choice Checkbox Reasons -->
+        <div>
+          <span class="mb-3 block text-sm font-semibold text-slate-700 dark:text-slate-300">
+            Why are you unsubscribing? (Select all that apply)
+          </span>
+
+          <div class="space-y-2.5">
+            <label class="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-200 p-3 transition hover:border-amber-400/60 dark:border-white/10 dark:hover:border-amber-400/50">
+              <input type="checkbox"
+                     name="unsubscribe_reasons[]"
+                     value="I receive too many emails"
+                     class="h-4 w-4 rounded border-slate-300 accent-amber-400">
+              <span class="text-sm text-slate-700 dark:text-slate-300">I receive too many emails</span>
+            </label>
+
+            <label class="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-200 p-3 transition hover:border-amber-400/60 dark:border-white/10 dark:hover:border-amber-400/50">
+              <input type="checkbox"
+                     name="unsubscribe_reasons[]"
+                     value="The content is no longer relevant to me"
+                     class="h-4 w-4 rounded border-slate-300 accent-amber-400">
+              <span class="text-sm text-slate-700 dark:text-slate-300">The content is no longer relevant to me</span>
+            </label>
+
+            <label class="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-200 p-3 transition hover:border-amber-400/60 dark:border-white/10 dark:hover:border-amber-400/50">
+              <input type="checkbox"
+                     name="unsubscribe_reasons[]"
+                     value="My solar or electrical project is already completed"
+                     class="h-4 w-4 rounded border-slate-300 accent-amber-400">
+              <span class="text-sm text-slate-700 dark:text-slate-300">My solar or electrical project is already completed</span>
+            </label>
+
+            <label class="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-200 p-3 transition hover:border-amber-400/60 dark:border-white/10 dark:hover:border-amber-400/50">
+              <input type="checkbox"
+                     name="unsubscribe_reasons[]"
+                     value="I am outside your Limpopo service area"
+                     class="h-4 w-4 rounded border-slate-300 accent-amber-400">
+              <span class="text-sm text-slate-700 dark:text-slate-300">I am outside your Limpopo service area</span>
+            </label>
+
+            <label class="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-200 p-3 transition hover:border-amber-400/60 dark:border-white/10 dark:hover:border-amber-400/50">
+              <input type="checkbox"
+                     name="unsubscribe_reasons[]"
+                     value="I do not recall subscribing to this list"
+                     class="h-4 w-4 rounded border-slate-300 accent-amber-400">
+              <span class="text-sm text-slate-700 dark:text-slate-300">I do not recall subscribing to this list</span>
+            </label>
+
+            <label class="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-200 p-3 transition hover:border-amber-400/60 dark:border-white/10 dark:hover:border-amber-400/50">
+              <input type="checkbox"
+                     name="unsubscribe_reasons[]"
+                     value="Other reason"
+                     class="h-4 w-4 rounded border-slate-300 accent-amber-400">
+              <span class="text-sm text-slate-700 dark:text-slate-300">Other reason (please specify below)</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label for="unsub-message" class="mb-2 block text-sm font-semibold text-slate-700 dark:text-slate-300">
+            Additional Comments (Optional)
+          </label>
+          <textarea id="unsub-message"
+                    name="message"
+                    rows="3"
+                    placeholder="Any extra feedback to help us improve..."
+                    class="w-full rounded-xl border border-slate-300 bg-transparent px-4 py-3 outline-none transition focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 dark:border-white/10"></textarea>
+        </div>
+      </div>
+
+      <button type="submit"
+              class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-amber-400 px-6 py-4 font-black text-slate-950 transition hover:bg-amber-300">
+        UNSUBSCRIBE
+        <span class="material-symbols-outlined">logout</span>
+      </button>
+
+      <div class="mt-5 flex flex-col items-center gap-2 text-center text-xs leading-5 text-slate-500">
+        <p>Changed your mind?</p>
+        <a href="https://www.tnse.co.za/forms/subscribe-form/index.html"
+           class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 px-3.5 py-1.5 font-semibold text-slate-600 transition hover:border-amber-400 hover:text-amber-500 dark:border-white/10 dark:text-slate-400 dark:hover:border-amber-400 dark:hover:text-amber-400">
+          Resubscribe anytime
+          <span class="material-symbols-outlined text-sm">arrow_outward</span>
+        </a>
+      </div>
+
+    </form>
+
   </div>
+</main>
 
-  <!-- Outer Wrapper -->
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f8fafc;">
-    <tr>
-      <td align="center" style="padding: 24px 12px 0 12px;">
+<!-- Auto-fill email if passed via URL parameter ?email=... -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const emailParam = params.get("email");
+    if (emailParam) {
+      const emailInput = document.getElementById("unsub-email");
+      if (emailInput) emailInput.value = emailParam;
+    }
+  });
+</script>
+ 
 
-        <!-- =========================================================
-             MAIN EMAIL BODY CONTAINER (Max Width 600px)
-        ========================================================== -->
-        <table role="presentation" class="container" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; background-color: #ffffff; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0;">
-
-          <!-- Top Header Bar -->
-          <tr>
-            <td style="background-color: #0f172a; padding: 24px 32px; border-bottom: 4px solid #f59e0b;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                <tr>
-                  <td align="left">
-                    <a href="https://www.tnse.co.za" target="_blank" style="text-decoration: none; font-size: 20px; font-weight: 900; letter-spacing: 0.04em; color: #f59e0b;">
-                      TNSE <span style="color: #ffffff; font-weight: 400;">ELECTRICAL</span>
-                    </a>
-                  </td>
-                  <td align="right" style="font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.12em; color: #94a3b8;">
-                    ENERGY INSIGHTS
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-          <!-- Hero Feature Section -->
-          <tr>
-            <td class="mobile-pad" style="padding: 36px 32px 28px 32px; background-color: #0f172a; color: #ffffff;">
-              <p style="margin: 0 0 10px 0; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.2em; color: #f59e0b;">
-                RELIABLE POWER SOLUTIONS
-              </p>
-              <h1 style="margin: 0 0 16px 0; font-size: 26px; line-height: 34px; font-weight: 900; color: #ffffff;">
-                Keep Your Home &amp; Business Powered Without Interruption
-              </h1>
-              <p style="margin: 0 0 24px 0; font-size: 15px; line-height: 24px; color: #cbd5e1;">
-                Whether you are upgrading to a hybrid solar inverter system, adding lithium battery storage, or scheduling an electrical compliance inspection in Limpopo, TNSE Electrical Projects delivers safe, dependable workmanship.
-              </p>
-              <!-- Primary CTA Button -->
-              <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                <tr>
-                  <td style="border-radius: 10px; background-color: #f59e0b;">
-                    <a href="https://www.tnse.co.za/forms/contact-form/contact/index.html" target="_blank" style="display: inline-block; padding: 14px 28px; font-size: 14px; font-weight: bold; color: #0f172a; text-decoration: none; border-radius: 10px;">
-                      Request a Project Quote &rarr;
-                    </a>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-          <!-- Main Editorial Article Section -->
-          <tr>
-            <td class="mobile-pad" style="padding: 32px 32px 16px 32px;">
-              <p style="margin: 0 0 8px 0; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.18em; color: #f59e0b;">
-                TECHNICAL SPOTLIGHT
-              </p>
-              <h2 style="margin: 0 0 12px 0; font-size: 20px; line-height: 28px; font-weight: bold; color: #0f172a;">
-                3 Signs Your Electrical or Solar Setup Needs a Checkup
-              </h2>
-              <p style="margin: 0 0 16px 0; font-size: 14px; line-height: 22px; color: #475569;">
-                Regular preventative maintenance extends the lifespan of your inverters, batteries, and distribution boards while preventing costly unexpected downtime:
-              </p>
-
-              <!-- Bullet Points Table -->
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 16px;">
-                <tr>
-                  <td valign="top" style="width: 24px; color: #f59e0b; font-weight: bold; font-size: 16px; padding-bottom: 10px;">&#10003;</td>
-                  <td style="font-size: 14px; line-height: 21px; color: #334155; padding-bottom: 10px;">
-                    <strong>Frequent DB Tripping or Flickering Lights:</strong> Often indicates overloaded circuits, loose neutral connections, or aging breakers.
-                  </td>
-                </tr>
-                <tr>
-                  <td valign="top" style="width: 24px; color: #f59e0b; font-weight: bold; font-size: 16px; padding-bottom: 10px;">&#10003;</td>
-                  <td style="font-size: 14px; line-height: 21px; color: #334155; padding-bottom: 10px;">
-                    <strong>Reduced Battery Backup Runtime:</strong> Batteries require balanced charging profiles and periodic health checks to sustain peak capacity.
-                  </td>
-                </tr>
-                <tr>
-                  <td valign="top" style="width: 24px; color: #f59e0b; font-weight: bold; font-size: 16px;">&#10003;</td>
-                  <td style="font-size: 14px; line-height: 21px; color: #334155;">
-                    <strong>Dust &amp; Heat Build-Up on Solar Panels:</strong> Seasonal cleaning and terminal inspections keep solar generation at maximum efficiency.
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-          <!-- Divider -->
-          <tr>
-            <td style="padding: 0 32px;">
-              <div style="height: 1px; background-color: #e2e8f0; font-size: 0; line-height: 0;">&nbsp;</div>
-            </td>
-          </tr>
-
-          <!-- Two-Column Service Highlights -->
-          <tr>
-            <td class="mobile-pad" style="padding: 28px 32px;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                <tr>
-                  <!-- Left Column: Solar & Backup -->
-                  <td class="stack-col" valign="top" width="48%" style="padding-right: 12px;">
-                    <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
-                      <p style="margin: 0 0 6px 0; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.14em; color: #f59e0b;">
-                        SOLAR &amp; STORAGE
-                      </p>
-                      <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: bold; color: #0f172a;">
-                        Hybrid &amp; Off-Grid Systems
-                      </h3>
-                      <p style="margin: 0 0 14px 0; font-size: 13px; line-height: 20px; color: #475569;">
-                        Custom inverter installations, solar arrays, and lithium battery banks tailored to your load profile.
-                      </p>
-                      <a href="https://www.tnse.co.za/solar/index.html" target="_blank" style="font-size: 13px; font-weight: bold; color: #d97706; text-decoration: none;">
-                        Explore Solar &rarr;
-                      </a>
-                    </div>
-                  </td>
-
-                  <!-- Right Column: Electrical Services -->
-                  <td class="stack-col" valign="top" width="48%" style="padding-left: 12px;">
-                    <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
-                      <p style="margin: 0 0 6px 0; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.14em; color: #0d9488;">
-                        ELECTRICAL WORK
-                      </p>
-                      <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: bold; color: #0f172a;">
-                        Wiring, Faults &amp; Repairs
-                      </h3>
-                      <p style="margin: 0 0 14px 0; font-size: 13px; line-height: 20px; color: #475569;">
-                        Residential, commercial, and industrial wiring, DB upgrades, fault finding, and preventative maintenance.
-                      </p>
-                      <a href="https://www.tnse.co.za/electrical/index.html" target="_blank" style="font-size: 13px; font-weight: bold; color: #0d9488; text-decoration: none;">
-                        Explore Electrical &rarr;
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-          <!-- WhatsApp Direct Banner -->
-          <tr>
-            <td class="mobile-pad" style="padding: 0 32px 32px 32px;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #fef3c7; border-radius: 12px; border: 1px solid #fde68a;">
-                <tr>
-                  <td style="padding: 20px 24px;" align="center">
-                    <p style="margin: 0 0 6px 0; font-size: 14px; font-weight: bold; color: #0f172a;">
-                      Need urgent electrical assistance or advice on a project?
-                    </p>
-                    <p style="margin: 0 0 14px 0; font-size: 13px; color: #475569;">
-                      Chat directly with our team on WhatsApp for a quick response.
-                    </p>
-                    <a href="https://wa.me/27818276288" target="_blank" style="display: inline-block; background-color: #16a34a; color: #ffffff; font-size: 13px; font-weight: bold; text-decoration: none; padding: 10px 20px; border-radius: 8px; margin: 4px;">
-                      WhatsApp Johannes
-                    </a>
-                    <a href="https://wa.me/27815507926" target="_blank" style="display: inline-block; background-color: #16a34a; color: #ffffff; font-size: 13px; font-weight: bold; text-decoration: none; padding: 10px 20px; border-radius: 8px; margin: 4px;">
-                      WhatsApp Frans
-                    </a>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-        </table>
-        <!-- End Main Email Body Container -->
-
-      </td>
-    </tr>
-  </table>
-
-  <!-- =========================================================
-       TNSE ELECTRICAL PROJECTS — RESPONSIVE HTML EMAIL FOOTER
-  ========================================================== -->
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f8fafc; font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0;">
-    <tr>
-      <td align="center" style="padding: 16px 12px 32px 12px;">
-        
-        <!-- Main Footer Container (Max Width 600px) -->
-        <table role="presentation" class="container" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; background-color: #0f172a; border-radius: 16px; overflow: hidden; color: #cbd5e1;">
-          
-          <!-- Top Amber Accent Bar -->
-          <tr>
-            <td style="height: 4px; background-color: #f59e0b; font-size: 0; line-height: 0;">&nbsp;</td>
-          </tr>
-
-          <!-- Brand & Tagline -->
-          <tr>
-            <td align="center" style="padding: 32px 24px 16px 24px;">
-              <a href="https://www.tnse.co.za" target="_blank" style="text-decoration: none; font-size: 22px; font-weight: 900; letter-spacing: 0.04em; color: #f59e0b;">
-                TNSE <span style="color: #ffffff; font-weight: 400;">ELECTRICAL PROJECTS</span>
-              </a>
-              <p style="margin: 8px 0 0 0; font-size: 13px; line-height: 20px; color: #94a3b8;">
-                Electrical Installations &bull; Solar Power &bull; Energy Continuity Solutions
-              </p>
-            </td>
-          </tr>
-
-          <!-- Quick Navigation Links -->
-          <tr>
-            <td align="center" style="padding: 8px 24px 20px 24px;">
-              <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                <tr>
-                  <td style="padding: 0 10px;">
-                    <a href="https://www.tnse.co.za/electrical/index.html" target="_blank" style="color: #f8fafc; text-decoration: none; font-size: 12px; font-weight: bold;">Electrical</a>
-                  </td>
-                  <td style="color: #475569; font-size: 12px;">&bull;</td>
-                  <td style="padding: 0 10px;">
-                    <a href="https://www.tnse.co.za/solar/index.html" target="_blank" style="color: #f8fafc; text-decoration: none; font-size: 12px; font-weight: bold;">Solar</a>
-                  </td>
-                  <td style="color: #475569; font-size: 12px;">&bull;</td>
-                  <td style="padding: 0 10px;">
-                    <a href="https://www.tnse.co.za/energy-solutions/index.html" target="_blank" style="color: #f8fafc; text-decoration: none; font-size: 12px; font-weight: bold;">Energy Solutions</a>
-                  </td>
-                  <td style="color: #475569; font-size: 12px;">&bull;</td>
-                  <td style="padding: 0 10px;">
-                    <a href="https://www.tnse.co.za/forms/contact-form/contact/index.html" target="_blank" style="color: #f59e0b; text-decoration: none; font-size: 12px; font-weight: bold;">Request Quote</a>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-          <!-- Divider -->
-          <tr>
-            <td style="padding: 0 32px;">
-              <div style="height: 1px; background-color: #1e293b; font-size: 0; line-height: 0;">&nbsp;</div>
-            </td>
-          </tr>
-
-          <!-- Direct Contact & Physical Address -->
-          <tr>
-            <td align="center" style="padding: 20px 24px;">
-              <p style="margin: 0 0 8px 0; font-size: 13px; line-height: 20px; color: #e2e8f0;">
-                <strong>Johannes:</strong> <a href="tel:+27818276288" style="color: #f59e0b; text-decoration: none;">+27 81 827 6288</a>
-                &nbsp;&nbsp;|&nbsp;&nbsp;
-                <strong>Frans:</strong> <a href="tel:+27815507926" style="color: #f59e0b; text-decoration: none;">+27 81 550 7926</a>
-              </p>
-              <p style="margin: 0 0 8px 0; font-size: 13px; line-height: 20px; color: #e2e8f0;">
-                <strong>Email:</strong> <a href="mailto:tnse.electricalprojects@gmail.com" style="color: #38bdf8; text-decoration: none;">tnse.electricalprojects@gmail.com</a>
-              </p>
-              <p style="margin: 0; font-size: 12px; line-height: 18px; color: #94a3b8;">
-                Stand no 914, Crv Street, Kwena Moloto 2, Moletjie, Polokwane, Limpopo, 0751
-              </p>
-            </td>
-          </tr>
-
-          <!-- Divider -->
-          <tr>
-            <td style="padding: 0 32px;">
-              <div style="height: 1px; background-color: #1e293b; font-size: 0; line-height: 0;">&nbsp;</div>
-            </td>
-          </tr>
-
-          <!-- Unsubscribe & Copyright -->
-          <tr>
-            <td align="center" style="padding: 20px 24px 28px 24px; background-color: #090d16;">
-              <p style="margin: 0 0 10px 0; font-size: 12px; line-height: 18px; color: #64748b;">
-                You received this email because you subscribed to updates from TNSE Electrical Projects.<br>
-                No longer want to receive these emails? 
-                <!-- Replace *|EMAIL|* with your email platform's merge tag -->
-                <a href="https://www.tnse.co.za/forms/unsubscribe-form/index.html?email=*|EMAIL|*" target="_blank" style="color: #f59e0b; text-decoration: underline;">
-                  Unsubscribe here
-                </a>.
-              </p>
-              <p style="margin: 0; font-size: 11px; color: #475569;">
-                &copy; 2026 TNSE Electrical Projects. All rights reserved.
-              </p>
-            </td>
-          </tr>
-
-        </table>
-        <!-- End Main Footer Container -->
-
-      </td>
-    </tr>
-  </table>
-
-
+            
           
 
 <!-- =========================================================
