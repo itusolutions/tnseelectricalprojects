@@ -672,43 +672,45 @@
 
 <main>
 
-  <!-- =========================================================
-        1. HERO SECTION & 2. COMPANY STATISTICS (Merged)
-   ========================================================= -->
-  <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-slate-950 pt-20 pb-16">
-    
-    <!-- Full Section Dynamic Background Carousel Container -->
-    <div id="heroCarousel" class="absolute inset-0 w-full h-full z-0 overflow-hidden">
-      <!-- Images injected dynamically via JavaScript -->
-    </div>
+<!-- =========================================================
+     1. HERO SECTION & 2. COMPANY STATISTICS (Line & Area Chart Flow Layout)
+========================================================= -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden bg-slate-950 pt-20 pb-16">
+  
+  <!-- Full Section Dynamic Background Carousel Container -->
+  <div id="heroCarousel" class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+    <!-- Images injected dynamically via JavaScript -->
+  </div>
 
-    <!-- Dark Overlay Gradients for Readability over Carousel -->
-    <div class="absolute inset-0 bg-slate-950/85 z-[1]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(245,158,11,0.18),transparent_40%),radial-gradient(circle_at_10%_80%,rgba(14,165,233,0.15),transparent_40%)] z-[1]"></div>
-    <div class="absolute inset-0 opacity-10 z-[1]" style="background-image: linear-gradient(#334155 1px, transparent 1px), linear-gradient(90deg, #334155 1px, transparent 1px); background-size: 50px 50px;"></div>
+  <!-- Dark Overlay Gradients for Readability over Carousel (No Grids / No Background Graph Lines) -->
+  <div class="absolute inset-0 bg-slate-950/85 z-[1]"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(245,158,11,0.18),transparent_40%),radial-gradient(circle_at_10%_80%,rgba(14,165,233,0.15),transparent_40%)] z-[1]"></div>
+  
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10 w-full">
     
-    <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8 z-10">
+    <!-- Flex Container Replacing All Grids -->
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
       
-      <!-- Hero Text & Statistics Content (Fades in from Left) -->
-      <div class="lg:col-span-7 flex flex-col justify-center fade-init from-left">
+      <!-- Hero Text Content (Fades in from Left) -->
+      <div class="flex flex-col justify-center fade-init from-left max-w-2xl">
         
-        <!-- Badge (Fades from Top) -->
+        <!-- Badge -->
         <div class="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-2 text-sm font-bold text-amber-300 backdrop-blur-md fade-init from-top">
           <span class="material-symbols-outlined text-lg">verified</span>
           Established 2017 · BEE Level 1 Contributor
         </div>
 
-        <!-- Heading (Fades from Left) -->
+        <!-- Heading -->
         <h1 class="mt-6 text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl text-white drop-shadow-lg fade-init from-left">
           Electrical. Solar. <span class="text-amber-400">Energy.</span>
         </h1>
 
-        <!-- Subheading Paragraph (Fades from Bottom) -->
-        <p class="mt-5 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl drop-shadow fade-init from-bottom">
+        <!-- Subheading Paragraph -->
+        <p class="mt-5 text-lg leading-relaxed text-slate-300 sm:text-xl drop-shadow fade-init from-bottom">
           TNSE Electrical Projects delivers professional electrical, solar maintenance, repairs, and robust backup power solutions for residential, commercial, and project requirements across Polokwane and surrounding areas.
         </p>
 
-        <!-- CTA Action Buttons (Middle Out Zoom Animation) -->
+        <!-- CTA Action Buttons -->
         <div class="mt-8 flex flex-wrap gap-4 fade-init middle-out">
           <a href="https://www.tnse.co.za/forms/contact-form/index.html" class="inline-flex items-center gap-2 rounded-xl bg-amber-400 px-7 py-4 font-extrabold text-slate-950 shadow-lg shadow-amber-400/20 transition hover:bg-amber-300">
             <span class="material-symbols-outlined">request_quote</span>
@@ -720,30 +722,89 @@
           </a>
         </div>
 
-        <!-- Integrated Company Statistics (Fades from Bottom with Staggered Card Entrances) -->
-        <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-800/80 pt-8 fade-init from-bottom">
-          <div class="rounded-2xl border border-slate-800/60 bg-slate-900/50 p-4 backdrop-blur-md fade-init from-left">
-            <p class="text-2xl font-black text-white">2017</p>
-            <p class="mt-1 text-xs font-medium text-slate-400">Established Year</p>
+        <!-- Integrated Company Statistics rendered as an SVG Line & Area Chart (No Grids/Cards) -->
+        <div class="mt-14 pt-8 border-t border-slate-800/80 fade-init from-bottom relative">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-400">Company Growth &amp; Milestones Trend</span>
+            <span class="text-xs font-semibold text-slate-400">2017 – Present</span>
           </div>
-          <div class="rounded-2xl border border-slate-800/60 bg-slate-900/50 p-4 backdrop-blur-md fade-init from-bottom">
-            <p class="text-2xl font-black text-amber-400">Level 1</p>
-            <p class="mt-1 text-xs font-medium text-slate-400">BEE Contributor</p>
-          </div>
-          <div class="rounded-2xl border border-slate-800/60 bg-slate-900/50 p-4 backdrop-blur-md fade-init from-top">
-            <p class="text-2xl font-black text-white">100%</p>
-            <p class="mt-1 text-xs font-medium text-slate-400">Reliable Power</p>
-          </div>
-          <div class="rounded-2xl border border-slate-800/60 bg-slate-900/50 p-4 backdrop-blur-md fade-init from-right">
-            <p class="text-2xl font-black text-amber-400">360°</p>
-            <p class="mt-1 text-xs font-medium text-slate-400">Energy Support</p>
+
+          <!-- SVG Line Chart with Colored Segments & Shaded Area Beneath -->
+          <div class="relative w-full overflow-visible">
+            <svg class="w-full h-[140px] overflow-visible" viewBox="0 0 700 130" preserveAspectRatio="none">
+              <defs>
+                <!-- Shaded Area Gradients for Each Connecting Segment -->
+                <linearGradient id="hero-area-1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35" />
+                  <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+                </linearGradient>
+                <linearGradient id="hero-area-2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#10b981" stop-opacity="0.35" />
+                  <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+                </linearGradient>
+                <linearGradient id="hero-area-3" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.35" />
+                  <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0" />
+                </linearGradient>
+              </defs>
+
+              <!-- Shaded Area Beneath Lines -->
+              <!-- Segment 1: 2017 to BEE Level 1 -->
+              <path d="M 60 90 C 130 90, 180 50, 250 45 L 250 125 L 60 125 Z" fill="url(#hero-area-1)" />
+              <!-- Segment 2: BEE Level 1 to 100% Reliable Power -->
+              <path d="M 250 45 C 320 40, 380 75, 450 30 L 450 125 L 250 125 Z" fill="url(#hero-area-2)" />
+              <!-- Segment 3: 100% Reliable Power to 360° Energy Support -->
+              <path d="M 450 30 C 530 0, 580 20, 640 15 L 640 125 L 450 125 Z" fill="url(#hero-area-3)" />
+
+              <!-- Colored Connecting Line Segments (Straight/Curved Trends Over Time) -->
+              <!-- 2017 -> BEE Level 1 (Amber) -->
+              <path d="M 60 90 C 130 90, 180 50, 250 45" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+              <!-- BEE Level 1 -> 100% Power (Emerald) -->
+              <path d="M 250 45 C 320 40, 380 75, 450 30" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round" />
+              <!-- 100% Power -> 360° Support (Blue) -->
+              <path d="M 450 30 C 530 0, 580 20, 640 15" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" />
+            </svg>
+
+            <!-- Data Point Labels Positioned Along the Trendline -->
+            <div class="pointer-events-none absolute inset-0 flex justify-between px-2 text-center">
+              
+              <!-- Point 1: 2017 -->
+              <div class="absolute left-[8%] top-[55%] -translate-x-1/2 flex flex-col items-center">
+                <span class="h-3.5 w-3.5 rounded-full bg-amber-400 ring-4 ring-amber-400/20"></span>
+                <p class="mt-2 text-lg font-black text-white">2017</p>
+                <p class="text-[11px] font-medium text-slate-400">Established Year</p>
+              </div>
+
+              <!-- Point 2: Level 1 -->
+              <div class="absolute left-[35%] top-[20%] -translate-x-1/2 flex flex-col items-center">
+                <span class="h-3.5 w-3.5 rounded-full bg-emerald-400 ring-4 ring-emerald-400/20"></span>
+                <p class="mt-2 text-lg font-black text-amber-400">Level 1</p>
+                <p class="text-[11px] font-medium text-slate-400">BEE Contributor</p>
+              </div>
+
+              <!-- Point 3: 100% -->
+              <div class="absolute left-[64%] top-[5%] -translate-x-1/2 flex flex-col items-center">
+                <span class="h-3.5 w-3.5 rounded-full bg-blue-400 ring-4 ring-blue-400/20"></span>
+                <p class="mt-2 text-lg font-black text-white">100%</p>
+                <p class="text-[11px] font-medium text-slate-400">Reliable Power</p>
+              </div>
+
+              <!-- Point 4: 360° -->
+              <div class="absolute left-[91%] top-[−5%] -translate-x-1/2 flex flex-col items-center">
+                <span class="h-3.5 w-3.5 rounded-full bg-violet-400 ring-4 ring-violet-400/20"></span>
+                <p class="mt-2 text-lg font-black text-amber-400">360°</p>
+                <p class="text-[11px] font-medium text-slate-400">Energy Support</p>
+              </div>
+
+            </div>
           </div>
         </div>
+
       </div>
 
-      <!-- Hero Side Display Card & Contact Strip (Fades in from Right with Middle-In Zoom) -->
-      <div class="lg:col-span-5 relative flex items-center justify-center fade-init from-right">
-        <div class="relative w-full max-w-lg overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-900/80 shadow-2xl backdrop-blur-xl fade-init middle-in">
+      <!-- Hero Side Display Card & Contact Strip (Replaced Grid with Clean Flex) -->
+      <div class="relative w-full max-w-md shrink-0 fade-init from-right">
+        <div class="relative w-full overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-900/80 shadow-2xl backdrop-blur-xl fade-init middle-in">
           <div class="relative isolate flex min-h-[380px] flex-col items-center justify-center overflow-hidden p-8 text-center">
             <div class="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden" aria-hidden="true">
               <div class="logo-spin-orb">
@@ -776,16 +837,16 @@
             </div>
           </div>
 
-          <!-- Quick Contact Strip (Fades from Bottom) -->
-          <div class="relative z-10 grid grid-cols-2 border-t border-slate-800/80 bg-slate-950/70 fade-init from-bottom">
-            <a href="tel:+27818276288" class="flex items-center gap-3 p-4 transition hover:bg-slate-800/50">
+          <!-- Quick Contact Strip (Flex Layout replacing Grid) -->
+          <div class="relative z-10 flex border-t border-slate-800/80 bg-slate-950/70 fade-init from-bottom">
+            <a href="tel:+27818276288" class="flex-1 flex items-center gap-3 p-4 transition hover:bg-slate-800/50">
               <span class="material-symbols-outlined text-amber-400">call</span>
               <div>
                 <p class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Johannes</p>
                 <p class="text-xs font-bold text-white">+27 81 827 6288</p>
               </div>
             </a>
-            <a href="tel:+27815507926" class="flex items-center gap-3 border-l border-slate-800/80 p-4 transition hover:bg-slate-800/50">
+            <a href="tel:+27815507926" class="flex-1 flex items-center gap-3 border-l border-slate-800/80 p-4 transition hover:bg-slate-800/50">
               <span class="material-symbols-outlined text-amber-400">call</span>
               <div>
                 <p class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Frans</p>
@@ -797,9 +858,9 @@
       </div>
 
     </div>
-  </section>
 
-
+  </div>
+</section>
 
 
 
