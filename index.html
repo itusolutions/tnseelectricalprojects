@@ -807,36 +807,141 @@
 
   
     
-<section class="bg-white py-20 dark:bg-slate-950">
-  <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-    <div class="fade-init from-left">
-      <p
-        class="font-bold uppercase tracking-[0.2em] text-amber-600 dark:text-amber-400">
+<!-- =========================================================
+     ABOUT TNSE SECTION (Population Pyramid Layout)
+========================================================= -->
+<section class="bg-white py-20 dark:bg-slate-950 overflow-hidden">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header (Centered) -->
+    <div class="fade-init from-top mx-auto max-w-3xl text-center mb-16">
+      <p class="font-bold uppercase tracking-[0.2em] text-amber-600 dark:text-amber-400">
         About TNSE Electrical Projects
       </p>
       <h2 class="mt-3 text-3xl font-black leading-tight text-slate-950 dark:text-white sm:text-4xl">
         Practical power solutions built around your needs.
       </h2>
     </div>
-    <div class="fade-init from-right text-lg leading-8 text-slate-600 dark:text-slate-400">
-      <p>
-        TNSE Electrical Projects is an electrical and solar energy solutions
-        company established in 2017 and based in Moletjie, Polokwane,
-        Limpopo.
-      </p>
-      <p class="mt-5">
-        We provide electrical installation, maintenance, fault finding,
-        repairs, solar installation and energy-related solutions for a range
-        of residential, commercial and project requirements.
-      </p>
-      <a href="about/index.html"
-        class="mt-7 inline-flex items-center gap-2 font-bold text-amber-600 hover:text-amber-700 dark:text-amber-400">
-        Learn more about TNSE
-        <span class="material-symbols-outlined text-lg">
-          arrow_forward
-        </span>
-      </a>
+
+    <!-- Flex Layout (No General Grid / Cards) -->
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+      
+      <!-- Left Column: Company Background & Link (Fades in from Left) -->
+      <div class="fade-init from-left max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-400">
+        <p>
+          TNSE Electrical Projects is an electrical and solar energy solutions
+          company established in 2017 and based in Moletjie, Polokwane,
+          Limpopo.
+        </p>
+        <p class="mt-5">
+          We provide electrical installation, maintenance, fault finding,
+          repairs, solar installation and energy-related solutions for a range
+          of residential, commercial and project requirements.
+        </p>
+        <a href="about/index.html"
+          class="mt-7 inline-flex items-center gap-2 font-bold text-amber-600 hover:text-amber-700 dark:text-amber-400">
+          Learn more about TNSE
+          <span class="material-symbols-outlined text-lg">
+            arrow_forward
+          </span>
+        </a>
+      </div>
+
+      <!-- Right Column: Population Pyramid Shape (Back-to-back horizontal bars forming a symmetrical triangular/bell shape) -->
+      <div class="fade-init from-right relative w-full max-w-lg shrink-0">
+        
+        <!-- Pyramid Axis Header Labels -->
+        <div class="flex justify-between text-xs font-extrabold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-3 px-8">
+          <span class="text-amber-600 dark:text-amber-400">Residential</span>
+          <span class="text-center">Capability Tiers</span>
+          <span class="text-sky-600 dark:text-sky-400">Commercial</span>
+        </div>
+
+        <!-- Back-to-Back Horizontal Bars (Symmetrical Triangular / Bell Form) -->
+        <div class="flex flex-col space-y-2.5">
+          
+          <!-- Tier 1: Foundation / Base (Widest) -->
+          <div class="flex items-center gap-2">
+            <!-- Left Bar (Amber / Residential) -->
+            <div class="flex-1 flex justify-end">
+              <div class="h-10 bg-amber-500 rounded-l-lg flex items-center px-4 transition-all duration-300 hover:bg-amber-600" style="width: 100%;">
+                <span class="text-xs font-extrabold text-slate-950">Installations</span>
+              </div>
+            </div>
+            <!-- Center Axis Label -->
+            <div class="w-16 text-center text-xs font-black text-slate-500 dark:text-slate-400 py-1 bg-slate-100 dark:bg-slate-900 rounded">
+              Base
+            </div>
+            <!-- Right Bar (Sky Blue / Commercial) -->
+            <div class="flex-1 flex justify-start">
+              <div class="h-10 bg-sky-500 rounded-r-lg flex items-center px-4 transition-all duration-300 hover:bg-sky-600" style="width: 100%;">
+                <span class="text-xs font-extrabold text-white">Maintenance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 2: Mid-Lower (Slightly narrower) -->
+          <div class="flex items-center gap-2">
+            <div class="flex-1 flex justify-end">
+              <div class="h-10 bg-amber-500/90 rounded-l-lg flex items-center px-4 transition-all duration-300" style="width: 82%;">
+                <span class="text-xs font-bold text-slate-950">Fault Finding</span>
+              </div>
+            </div>
+            <div class="w-16 text-center text-xs font-black text-slate-500 dark:text-slate-400 py-1 bg-slate-100 dark:bg-slate-900 rounded">
+              Core
+            </div>
+            <div class="flex-1 flex justify-start">
+              <div class="h-10 bg-sky-500/90 rounded-r-lg flex items-center px-4 transition-all duration-300" style="width: 82%;">
+                <span class="text-xs font-bold text-white">Repairs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 3: Mid-Upper (Narrower) -->
+          <div class="flex items-center gap-2">
+            <div class="flex-1 flex justify-end">
+              <div class="h-10 bg-amber-500/80 rounded-l-lg flex items-center px-4 transition-all duration-300" style="width: 62%;">
+                <span class="text-xs font-bold text-slate-950">Solar Energy</span>
+              </div>
+            </div>
+            <div class="w-16 text-center text-xs font-black text-slate-500 dark:text-slate-400 py-1 bg-slate-100 dark:bg-slate-900 rounded">
+              Advanced
+            </div>
+            <div class="flex-1 flex justify-start">
+              <div class="h-10 bg-sky-500/80 rounded-r-lg flex items-center px-4 transition-all duration-300" style="width: 62%;">
+                <span class="text-xs font-bold text-white">Projects</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 4: Peak (Narrowest Apex) -->
+          <div class="flex items-center gap-2">
+            <div class="flex-1 flex justify-end">
+              <div class="h-10 bg-amber-500/70 rounded-l-lg flex items-center px-4 transition-all duration-300" style="width: 40%;">
+                <span class="text-xs font-bold text-slate-950">Limpopo</span>
+              </div>
+            </div>
+            <div class="w-16 text-center text-xs font-black text-slate-500 dark:text-slate-400 py-1 bg-slate-100 dark:bg-slate-900 rounded">
+              Apex
+            </div>
+            <div class="flex-1 flex justify-start">
+              <div class="h-10 bg-sky-500/70 rounded-r-lg flex items-center px-4 transition-all duration-300" style="width: 40%;">
+                <span class="text-xs font-bold text-white">Polokwane</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Pyramid Legend Footnote -->
+        <div class="mt-4 text-center text-xs text-slate-500 dark:text-slate-400 italic">
+          Symmetrical balance of residential and commercial service distribution since 2017.
+        </div>
+
+      </div>
+
     </div>
+
   </div>
 </section>
 
