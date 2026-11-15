@@ -589,14 +589,14 @@
 </header>
 
 
-  <main>
+<main>
 
 <!-- =========================================================
-       SOLAR HERO WITH DYNAMIC CAROUSEL BACKGROUND
-  ========================================================== -->
+     SOLAR HERO WITH DYNAMIC CAROUSEL BACKGROUND & DONUT CHART
+========================================================== -->
   <section class="relative overflow-hidden bg-slate-950 py-24 lg:py-32">
 
-    <!-- Dynamic Background Carousel Container (Targeted by script ID #heroCarousel) -->
+    <!-- Dynamic Background Carousel Container -->
     <div id="heroCarousel" class="absolute inset-0 z-0 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/60 z-10"></div>
     </div>
@@ -607,127 +607,92 @@
     <div class="absolute -bottom-40 -left-40 h-[30rem] w-[30rem] rounded-full bg-blue-500/10 blur-3xl z-10"></div>
 
     <div class="relative z-20 mx-auto max-w-7xl px-5">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-14">
 
-      <div class="max-w-5xl">
+        <div class="max-w-3xl">
 
-        <div class="flex items-center gap-3">
-          <span class="h-px w-12 bg-amber-400"></span>
+          <div class="flex items-center gap-3">
+            <span class="h-px w-12 bg-amber-400"></span>
+            <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-400">
+              SOLAR ENERGY
+            </p>
+          </div>
 
-          <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-400">
-            SOLAR ENERGY
+          <h1 class="mt-6 max-w-4xl text-4xl font-black leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
+            Turn sunlight into dependable power
+          </h1>
+
+          <p class="mt-7 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
+            Solar generation, battery storage, inverter systems and backup
+            power solutions designed around residential, commercial and
+            project energy requirements.
           </p>
-        </div>
 
-        <h1 class="mt-6 max-w-4xl text-4xl font-black leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
-          Turn sunlight into dependable power
-        </h1>
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a href="https://www.tnse.co.za/forms/contact-form/index.html"
+               class="inline-flex items-center gap-2 rounded-xl bg-amber-400 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-amber-300 shadow-lg">
+              <span>Request a Solar Quote</span>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
 
-        <p class="mt-7 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
-          Solar generation, battery storage, inverter systems and backup
-          power solutions designed around residential, commercial and
-          project energy requirements.
-        </p>
-
-        <div class="mt-9 flex flex-wrap gap-4">
-
-          <a href="../contact/index.html"
-             class="inline-flex items-center gap-2 rounded-xl bg-amber-400 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-amber-300">
-
-            Request a Solar Quote
-
-            <span class="material-symbols-outlined">
-              arrow_forward
-            </span>
-
-          </a>
-
-          <a href="installations.html"
-             class="inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3.5 font-bold text-white transition hover:bg-white/10">
-
-            Explore Solar Installations
-
-            <span class="material-symbols-outlined">
-              solar_power
-            </span>
-
-          </a>
+            <a href="installations.html"
+               class="inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3.5 font-bold text-white transition hover:bg-white/10">
+              <span>Explore Solar Installations</span>
+              <span class="material-symbols-outlined">solar_power</span>
+            </a>
+          </div>
 
         </div>
 
+        <!-- Donut (Ring) Chart Replacing Hero Highlights Grid (No Grids/Cards) -->
+        <div class="reveal relative flex items-center justify-center shrink-0 mx-auto lg:mx-0">
+          <svg class="w-80 h-80 sm:w-96 sm:h-96 -rotate-90 drop-shadow-sm" viewBox="0 0 320 320">
+            <circle cx="160" cy="160" r="125" fill="none" stroke="currentColor" stroke-width="38" class="text-slate-800/70" />
+            <!-- Segment 1: Solar Generation (33.3%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#f59e0b" stroke-width="38"
+                    stroke-dasharray="261.8 785.4" stroke-dashoffset="0" stroke-linecap="butt" />
+            <!-- Segment 2: Energy Storage (33.3%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#10b981" stroke-width="38"
+                    stroke-dasharray="261.8 785.4" stroke-dashoffset="-261.8" stroke-linecap="butt" />
+            <!-- Segment 3: Backup Power (33.3%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#3b82f6" stroke-width="38"
+                    stroke-dasharray="261.8 785.4" stroke-dashoffset="-523.6" stroke-linecap="butt" />
+          </svg>
 
-        <!-- Hero highlights -->
-        <div class="mt-14 grid max-w-4xl gap-4 sm:grid-cols-3">
-
-          <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-
-            <span class="material-symbols-outlined text-amber-400">
-              solar_power
+          <!-- Hollow Center Metrics -->
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-10 pointer-events-none">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-400">
+              Solar Framework
             </span>
-
-            <p class="mt-4 font-bold text-white">
-              Solar Generation
-            </p>
-
-            <p class="mt-1 text-sm text-slate-400">
-              Harness available solar energy
-            </p>
-
-          </div>
-
-
-          <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-
-            <span class="material-symbols-outlined text-amber-400">
-              battery_charging_full
+            <span class="mt-1 text-4xl sm:text-5xl font-black text-white">
+              100%
             </span>
-
-            <p class="mt-4 font-bold text-white">
-              Energy Storage
-            </p>
-
-            <p class="mt-1 text-sm text-slate-400">
-              Store energy for later use
-            </p>
-
-          </div>
-
-
-          <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-
-            <span class="material-symbols-outlined text-amber-400">
-              power
+            <span class="mt-1 text-xs font-semibold text-slate-300">
+              3 Core Pillars
             </span>
-
-            <p class="mt-4 font-bold text-white">
-              Backup Power
-            </p>
-
-            <p class="mt-1 text-sm text-slate-400">
-              Support power continuity
-            </p>
-
+            <div class="mt-3 flex items-center gap-2">
+              <span class="h-2.5 w-2.5 rounded-full bg-amber-500" title="Solar Generation"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-emerald-500" title="Energy Storage"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-blue-500" title="Backup Power"></span>
+            </div>
           </div>
-
         </div>
 
       </div>
-
     </div>
 
   </section>
 
 
   <!-- =========================================================
-       SOLAR INTRODUCTION
+       SOLAR INTRODUCTION (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
-
+  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
       <div class="grid items-center gap-14 lg:grid-cols-2">
 
         <div class="reveal">
-
           <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
             SOLAR SOLUTIONS
           </p>
@@ -755,215 +720,62 @@
             properties and suitable projects requiring renewable energy
             and power-continuity solutions.
           </p>
-
-
-          <div class="mt-8 grid gap-4 sm:grid-cols-2">
-
-            <div class="flex gap-3">
-
-              <span class="material-symbols-outlined text-amber-500">
-                check_circle
-              </span>
-
-              <div>
-
-                <h3 class="font-bold text-slate-950 dark:text-white">
-                  Practical planning
-                </h3>
-
-                <p class="mt-1 text-sm text-slate-500">
-                  Solutions based on project requirements.
-                </p>
-
-              </div>
-
-            </div>
-
-
-            <div class="flex gap-3">
-
-              <span class="material-symbols-outlined text-amber-500">
-                check_circle
-              </span>
-
-              <div>
-
-                <h3 class="font-bold text-slate-950 dark:text-white">
-                  Integrated systems
-                </h3>
-
-                <p class="mt-1 text-sm text-slate-500">
-                  Solar, storage and backup options.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
         </div>
 
-
-        <!-- Solar visual -->
-        <div class="reveal">
-
-          <div class="relative overflow-hidden rounded-[2rem] bg-slate-950 p-8 shadow-2xl">
-
-            <div class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-amber-400/10 blur-3xl"></div>
-
-            <div class="relative">
-
-              <div class="flex items-center justify-between">
-
-                <div>
-
-                  <p class="text-xs font-bold uppercase tracking-widest text-slate-500">
-                    TNSE SOLAR
-                  </p>
-
-                  <h3 class="mt-2 text-2xl font-black text-white">
-                    Integrated Solar Power
-                  </h3>
-
-                </div>
-
-                <div class="grid h-14 w-14 place-items-center rounded-2xl bg-amber-400 text-slate-950">
-
-                  <span class="material-symbols-outlined text-3xl">
-                    solar_power
-                  </span>
-
-                </div>
-
-              </div>
-
-
-              <div class="mt-10 space-y-3">
-
-                <div class="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
-
-                  <div class="grid h-11 w-11 place-items-center rounded-xl bg-amber-400/10">
-
-                    <span class="material-symbols-outlined text-amber-400">
-                      wb_sunny
-                    </span>
-
-                  </div>
-
-                  <div>
-
-                    <p class="font-bold text-white">
-                      Solar Panels
-                    </p>
-
-                    <p class="text-sm text-slate-500">
-                      Solar generation
-                    </p>
-
-                  </div>
-
-                </div>
-
-
-                <div class="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
-
-                  <div class="grid h-11 w-11 place-items-center rounded-xl bg-amber-400/10">
-
-                    <span class="material-symbols-outlined text-amber-400">
-                      sync_alt
-                    </span>
-
-                  </div>
-
-                  <div>
-
-                    <p class="font-bold text-white">
-                      Inverter Systems
-                    </p>
-
-                    <p class="text-sm text-slate-500">
-                      Power conversion and management
-                    </p>
-
-                  </div>
-
-                </div>
-
-
-                <div class="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
-
-                  <div class="grid h-11 w-11 place-items-center rounded-xl bg-amber-400/10">
-
-                    <span class="material-symbols-outlined text-amber-400">
-                      battery_charging_full
-                    </span>
-
-                  </div>
-
-                  <div>
-
-                    <p class="font-bold text-white">
-                      Battery Storage
-                    </p>
-
-                    <p class="text-sm text-slate-500">
-                      Stored energy
-                    </p>
-
-                  </div>
-
-                </div>
-
-
-                <div class="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
-
-                  <div class="grid h-11 w-11 place-items-center rounded-xl bg-amber-400/10">
-
-                    <span class="material-symbols-outlined text-amber-400">
-                      power
-                    </span>
-
-                  </div>
-
-                  <div>
-
-                    <p class="font-bold text-white">
-                      Backup Power
-                    </p>
-
-                    <p class="text-sm text-slate-500">
-                      Power continuity
-                    </p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
+        <!-- Right Side Line & Area Chart Flow for Solar Planning -->
+        <div class="reveal relative w-full">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-black uppercase tracking-widest text-amber-500">Solar Strategy Flow</span>
+            <span class="text-xs font-semibold text-slate-400">Optimized Performance</span>
           </div>
 
+          <svg class="w-full h-56 overflow-visible" viewBox="0 0 500 180" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="solar-intro-area" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.38" />
+                <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+              </linearGradient>
+            </defs>
+
+            <!-- Shaded Area -->
+            <path d="M 50 130 C 150 130, 220 60, 310 45 C 380 35, 420 20, 460 12 L 460 170 L 50 170 Z" fill="url(#solar-intro-area)" />
+            <!-- Connected Curved Line -->
+            <path d="M 50 130 C 150 130, 220 60, 310 45 C 380 35, 420 20, 460 12" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+          </svg>
+
+          <div class="pointer-events-none absolute inset-0 pt-10">
+            <div class="absolute left-[12%] top-[70%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Practical Planning</span>
+            </div>
+            <div class="absolute left-[42%] top-[50%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Energy Audit</span>
+            </div>
+            <div class="absolute left-[75%] top-[25%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Integrated Systems</span>
+            </div>
+            <div class="absolute left-[92%] top-[10%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-violet-500 ring-4 ring-violet-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-amber-500">Continuity</span>
+            </div>
+          </div>
         </div>
 
       </div>
 
     </div>
-
   </section>
 
 
   <!-- =========================================================
-       CORE SOLAR SERVICES
+       CORE SOLAR SERVICES (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-slate-50 py-20 dark:bg-slate-900/50 lg:py-28">
-
+  <section class="bg-slate-50 py-20 dark:bg-slate-900/50 lg:py-28 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
       <div class="mx-auto max-w-3xl text-center reveal">
-
         <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
           OUR SOLAR SERVICES
         </p>
@@ -976,199 +788,87 @@
           Explore the different solar services available through TNSE
           Electrical Projects.
         </p>
-
       </div>
 
+      <!-- Line & Area Chart Flow Replacing 6 Cards Grid -->
+      <div class="reveal relative mt-16">
+        <svg class="w-full h-[300px] overflow-visible" viewBox="0 0 1000 300" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="solar-services-area-1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.38" />
+              <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+            </linearGradient>
+            <linearGradient id="solar-services-area-2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#10b981" stop-opacity="0.38" />
+              <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+            </linearGradient>
+          </defs>
 
-      <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Shaded Areas -->
+          <path d="M 80 180 C 200 180, 250 90, 330 90 L 330 280 L 80 280 Z" fill="url(#solar-services-area-1)" />
+          <path d="M 330 90 C 450 90, 520 40, 600 30 C 680 20, 800 15, 920 10 L 920 280 L 330 280 Z" fill="url(#solar-services-area-2)" />
 
+          <!-- Connected Curved Line Segments -->
+          <path d="M 80 180 C 200 180, 250 90, 330 90" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" />
+          <path d="M 330 90 C 450 90, 520 40, 600 30 C 680 20, 800 15, 920 10" fill="none" stroke="#10b981" stroke-width="4.5" stroke-linecap="round" />
+        </svg>
 
-        <!-- Installation -->
-        <a href="installations.html"
-           class="reveal lift group rounded-3xl border border-slate-200 bg-white p-8 transition hover:-translate-y-1 hover:border-amber-400 dark:border-white/10 dark:bg-slate-900">
-
-          <div class="grid h-14 w-14 place-items-center rounded-2xl bg-amber-100 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400">
-
-            <span class="material-symbols-outlined text-3xl">
-              solar_power
-            </span>
-
+        <div class="pointer-events-none absolute inset-0 pt-4 grid grid-cols-1 md:grid-cols-6 gap-4">
+          <!-- 1. Installations -->
+          <div class="pointer-events-auto absolute left-[8%] top-[56%] -translate-x-1/2 flex flex-col items-center text-center w-36 sm:w-44">
+            <span class="h-3 w-3 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
+            <h3 class="mt-2 text-sm font-bold text-slate-900 dark:text-white">Solar Installations</h3>
+            <a href="installations.html" class="mt-1 text-[11px] font-bold text-amber-500 hover:underline pointer-events-auto">Explore →</a>
           </div>
 
-          <h3 class="mt-7 text-2xl font-black text-slate-950 dark:text-white">
-            Solar Installations
-          </h3>
-
-          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-            Solar panels, inverter systems, battery storage and related
-            components installed according to project requirements.
-          </p>
-
-          <span class="mt-6 inline-flex items-center gap-2 font-bold text-amber-500">
-
-            Explore Installations
-
-            <span class="material-symbols-outlined">
-              arrow_forward
-            </span>
-
-          </span>
-
-        </a>
-
-
-        <!-- Maintenance -->
-        <a href="maintenance.html"
-           class="reveal lift group rounded-3xl border border-slate-200 bg-white p-8 transition hover:-translate-y-1 hover:border-amber-400 dark:border-white/10 dark:bg-slate-900">
-
-          <div class="grid h-14 w-14 place-items-center rounded-2xl bg-amber-100 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400">
-
-            <span class="material-symbols-outlined text-3xl">
-              engineering
-            </span>
-
+          <!-- 2. Maintenance -->
+          <div class="pointer-events-auto absolute left-[25%] top-[40%] -translate-x-1/2 flex flex-col items-center text-center w-36 sm:w-44">
+            <span class="h-3 w-3 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
+            <h3 class="mt-2 text-sm font-bold text-slate-900 dark:text-white">Solar Maintenance</h3>
+            <a href="maintenance.html" class="mt-1 text-[11px] font-bold text-emerald-500 hover:underline pointer-events-auto">Explore →</a>
           </div>
 
-          <h3 class="mt-7 text-2xl font-black text-slate-950 dark:text-white">
-            Solar Maintenance
-          </h3>
-
-          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-            Inspection, maintenance and system performance checks to
-            help identify issues affecting solar system operation.
-          </p>
-
-          <span class="mt-6 inline-flex items-center gap-2 font-bold text-amber-500">
-
-            Explore Maintenance
-
-            <span class="material-symbols-outlined">
-              arrow_forward
-            </span>
-
-          </span>
-
-        </a>
-
-
-        <!-- Repairs -->
-        <a href="repairs.html"
-           class="reveal lift group rounded-3xl border border-slate-200 bg-white p-8 transition hover:-translate-y-1 hover:border-amber-400 dark:border-white/10 dark:bg-slate-900">
-
-          <div class="grid h-14 w-14 place-items-center rounded-2xl bg-amber-100 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400">
-
-            <span class="material-symbols-outlined text-3xl">
-              build
-            </span>
-
+          <!-- 3. Repairs -->
+          <div class="pointer-events-auto absolute left-[42%] top-[25%] -translate-x-1/2 flex flex-col items-center text-center w-36 sm:w-44">
+            <span class="h-3 w-3 rounded-full bg-sky-500 ring-4 ring-sky-500/20"></span>
+            <h3 class="mt-2 text-sm font-bold text-slate-900 dark:text-white">Solar Repairs</h3>
+            <a href="repairs.html" class="mt-1 text-[11px] font-bold text-sky-500 hover:underline pointer-events-auto">Explore →</a>
           </div>
 
-          <h3 class="mt-7 text-2xl font-black text-slate-950 dark:text-white">
-            Solar Repairs
-          </h3>
-
-          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-            Troubleshooting and repair support for solar panels, inverters,
-            batteries and other system components.
-          </p>
-
-          <span class="mt-6 inline-flex items-center gap-2 font-bold text-amber-500">
-
-            Explore Repairs
-
-            <span class="material-symbols-outlined">
-              arrow_forward
-            </span>
-
-          </span>
-
-        </a>
-
-
-        <!-- Backup -->
-        <div class="reveal lift rounded-3xl border border-slate-200 bg-white p-8 dark:border-white/10 dark:bg-slate-900">
-
-          <div class="grid h-14 w-14 place-items-center rounded-2xl bg-amber-100 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400">
-
-            <span class="material-symbols-outlined text-3xl">
-              battery_charging_full
-            </span>
-
+          <!-- 4. Backup Power -->
+          <div class="pointer-events-auto absolute left-[58%] top-[16%] -translate-x-1/2 flex flex-col items-center text-center w-36 sm:w-44">
+            <span class="h-3 w-3 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
+            <h3 class="mt-2 text-sm font-bold text-slate-900 dark:text-white">Backup Power</h3>
+            <p class="mt-0.5 text-[10px] text-slate-500">Essential loads continuity</p>
           </div>
 
-          <h3 class="mt-7 text-2xl font-black text-slate-950 dark:text-white">
-            Backup Power
-          </h3>
+          <!-- 5. System Design -->
+          <div class="pointer-events-auto absolute left-[75%] top-[10%] -translate-x-1/2 flex flex-col items-center text-center w-36 sm:w-44">
+            <span class="h-3 w-3 rounded-full bg-indigo-500 ring-4 ring-indigo-500/20"></span>
+            <h3 class="mt-2 text-sm font-bold text-slate-900 dark:text-white">Solar System Design</h3>
+            <p class="mt-0.5 text-[10px] text-slate-500">Tailored planning</p>
+          </div>
 
-          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-            Battery and inverter solutions designed to support essential
-            loads when normal power is unavailable.
-          </p>
-
+          <!-- 6. Energy Storage -->
+          <div class="pointer-events-auto absolute left-[92%] top-[4%] -translate-x-1/2 flex flex-col items-center text-center w-36 sm:w-44">
+            <span class="h-3 w-3 rounded-full bg-violet-500 ring-4 ring-violet-500/20"></span>
+            <h3 class="mt-2 text-sm font-bold text-slate-900 dark:text-white">Energy Storage</h3>
+            <p class="mt-0.5 text-[10px] text-slate-500">Advanced batteries</p>
+          </div>
         </div>
-
-
-        <!-- System Design -->
-        <div class="reveal lift rounded-3xl border border-slate-200 bg-white p-8 dark:border-white/10 dark:bg-slate-900">
-
-          <div class="grid h-14 w-14 place-items-center rounded-2xl bg-amber-100 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400">
-
-            <span class="material-symbols-outlined text-3xl">
-              architecture
-            </span>
-
-          </div>
-
-          <h3 class="mt-7 text-2xl font-black text-slate-950 dark:text-white">
-            Solar System Design
-          </h3>
-
-          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-            Solar solution planning around energy usage, available space,
-            system requirements and backup needs.
-          </p>
-
-        </div>
-
-
-        <!-- Energy Storage -->
-        <div class="reveal lift rounded-3xl border border-slate-200 bg-white p-8 dark:border-white/10 dark:bg-slate-900">
-
-          <div class="grid h-14 w-14 place-items-center rounded-2xl bg-amber-100 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400">
-
-            <span class="material-symbols-outlined text-3xl">
-              battery_full
-            </span>
-
-          </div>
-
-          <h3 class="mt-7 text-2xl font-black text-slate-950 dark:text-white">
-            Energy Storage
-          </h3>
-
-          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-            Battery storage solutions that can complement solar generation
-            and support backup requirements.
-          </p>
-
-        </div>
-
       </div>
 
     </div>
-
   </section>
 
 
   <!-- =========================================================
-       HOW SOLAR SYSTEMS WORK
+       HOW SOLAR SYSTEMS WORK (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
-
+  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
       <div class="mx-auto max-w-3xl text-center reveal">
-
         <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
           HOW IT WORKS
         </p>
@@ -1181,130 +881,68 @@
           A solar energy system brings together several components that
           work together to generate, manage, store and supply electrical energy.
         </p>
-
       </div>
 
+      <!-- Line & Area Chart Flow for 4 Steps -->
+      <div class="reveal relative mt-16">
+        <svg class="w-full h-[260px] overflow-visible" viewBox="0 0 1000 260" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="solar-how-area" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.38" />
+              <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+            </linearGradient>
+          </defs>
 
-      <div class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Shaded Area -->
+          <path d="M 60 180 C 220 180, 310 95, 500 95 C 690 95, 780 35, 940 20 L 940 240 L 60 240 Z" fill="url(#solar-how-area)" />
+          <!-- Connected Curved Line -->
+          <path d="M 60 180 C 220 180, 310 95, 500 95 C 690 95, 780 35, 940 20" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" />
+        </svg>
 
-
-        <div class="reveal rounded-3xl border border-slate-200 p-7 dark:border-white/10">
-
-          <span class="text-4xl font-black text-slate-200 dark:text-slate-700">
-            01
-          </span>
-
-          <div class="mt-5 grid h-12 w-12 place-items-center rounded-xl bg-amber-100 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400">
-
-            <span class="material-symbols-outlined">
-              solar_power
-            </span>
-
+        <div class="pointer-events-none absolute inset-0 pt-4">
+          <!-- Step 01 -->
+          <div class="pointer-events-auto absolute left-[6%] top-[62%] -translate-x-1/2 flex flex-col items-center text-center w-36 sm:w-48">
+            <span class="h-3 w-3 rounded-full bg-amber-400 ring-4 ring-amber-400/20"></span>
+            <p class="mt-1 text-xs font-black text-amber-500">01 · Solar Generation</p>
+            <p class="mt-0.5 text-[11px] text-slate-500">Captures sunlight</p>
           </div>
 
-          <h3 class="mt-5 font-bold text-slate-950 dark:text-white">
-            Solar Generation
-          </h3>
-
-          <p class="mt-3 text-sm leading-7 text-slate-500">
-            Solar panels capture available sunlight and generate electrical energy.
-          </p>
-
-        </div>
-
-
-        <div class="reveal rounded-3xl border border-slate-200 p-7 dark:border-white/10">
-
-          <span class="text-4xl font-black text-slate-200 dark:text-slate-700">
-            02
-          </span>
-
-          <div class="mt-5 grid h-12 w-12 place-items-center rounded-xl bg-amber-100 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400">
-
-            <span class="material-symbols-outlined">
-              sync_alt
-            </span>
-
+          <!-- Step 02 -->
+          <div class="pointer-events-auto absolute left-[31%] top-[40%] -translate-x-1/2 flex flex-col items-center text-center w-36 sm:w-48">
+            <span class="h-3 w-3 rounded-full bg-emerald-400 ring-4 ring-emerald-400/20"></span>
+            <p class="mt-1 text-xs font-black text-emerald-500">02 · Power Conversion</p>
+            <p class="mt-0.5 text-[11px] text-slate-500">Inverter management</p>
           </div>
 
-          <h3 class="mt-5 font-bold text-slate-950 dark:text-white">
-            Power Conversion
-          </h3>
-
-          <p class="mt-3 text-sm leading-7 text-slate-500">
-            An inverter manages the conversion and distribution of electrical power.
-          </p>
-
-        </div>
-
-
-        <div class="reveal rounded-3xl border border-slate-200 p-7 dark:border-white/10">
-
-          <span class="text-4xl font-black text-slate-200 dark:text-slate-700">
-            03
-          </span>
-
-          <div class="mt-5 grid h-12 w-12 place-items-center rounded-xl bg-amber-100 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400">
-
-            <span class="material-symbols-outlined">
-              battery_charging_full
-            </span>
-
+          <!-- Step 03 -->
+          <div class="pointer-events-auto absolute left-[69%] top-[18%]-translate-x-1/2 flex flex-col items-center text-center w-36 sm:w-48">
+            <span class="h-3 w-3 rounded-full bg-blue-400 ring-4 ring-blue-400/20"></span>
+            <p class="mt-1 text-xs font-black text-blue-500">03 · Energy Storage</p>
+            <p class="mt-0.5 text-[11px] text-slate-500">Battery backup</p>
           </div>
 
-          <h3 class="mt-5 font-bold text-slate-950 dark:text-white">
-            Energy Storage
-          </h3>
-
-          <p class="mt-3 text-sm leading-7 text-slate-500">
-            Suitable battery systems can store energy for later use or backup.
-          </p>
-
-        </div>
-
-
-        <div class="reveal rounded-3xl border border-slate-200 p-7 dark:border-white/10">
-
-          <span class="text-4xl font-black text-slate-200 dark:text-slate-700">
-            04
-          </span>
-
-          <div class="mt-5 grid h-12 w-12 place-items-center rounded-xl bg-amber-100 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400">
-
-            <span class="material-symbols-outlined">
-              power
-            </span>
-
+          <!-- Step 04 -->
+          <div class="pointer-events-auto absolute left-[94%] top-[4%] -translate-x-1/2 flex flex-col items-center text-center w-36 sm:w-48">
+            <span class="h-3 w-3 rounded-full bg-violet-400 ring-4 ring-violet-400/20"></span>
+            <p class="mt-1 text-xs font-black text-violet-500">04 · Power to Loads</p>
+            <p class="mt-0.5 text-[11px] text-slate-500">Reliable supply</p>
           </div>
-
-          <h3 class="mt-5 font-bold text-slate-950 dark:text-white">
-            Power to Your Loads
-          </h3>
-
-          <p class="mt-3 text-sm leading-7 text-slate-500">
-            The system supplies energy to the electrical loads according to its configuration.
-          </p>
-
         </div>
-
       </div>
 
     </div>
-
   </section>
 
 
   <!-- =========================================================
-       SOLAR COMPONENTS
+       SOLAR COMPONENTS (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-slate-50 py-20 dark:bg-slate-900/50 lg:py-28">
-
+  <section class="bg-slate-50 py-20 dark:bg-slate-900/50 lg:py-28 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
-      <div class="grid gap-12 lg:grid-cols-[.75fr_1.25fr]">
+      <div class="grid gap-12 lg:grid-cols-[.75fr_1.25fr] lg:items-center">
 
         <div class="reveal">
-
           <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
             SYSTEM COMPONENTS
           </p>
@@ -1321,277 +959,130 @@
 
           <a href="installations.html"
              class="mt-7 inline-flex items-center gap-2 font-bold text-amber-500">
-
-            Explore Solar Installations
-
-            <span class="material-symbols-outlined">
-              arrow_forward
-            </span>
-
+            <span>Explore Solar Installations</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
           </a>
-
         </div>
 
-
-        <div class="grid gap-4 sm:grid-cols-2">
-
-
-          <div class="reveal rounded-2xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-900">
-
-            <span class="material-symbols-outlined text-amber-500">
-              solar_power
-            </span>
-
-            <h3 class="mt-4 font-bold text-slate-950 dark:text-white">
-              Solar Panels
-            </h3>
-
-            <p class="mt-2 text-sm leading-7 text-slate-500">
-              Generate electrical energy from available sunlight.
-            </p>
-
+        <!-- Right Side Line & Area Chart Flow for Components -->
+        <div class="reveal relative w-full">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-black uppercase tracking-widest text-amber-500">Components Flow</span>
+            <span class="text-xs font-semibold text-slate-400">Integrated Hardware</span>
           </div>
 
+          <svg class="w-full h-52 overflow-visible" viewBox="0 0 500 180" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="component-area" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#10b981" stop-opacity="0.38" />
+                <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+              </linearGradient>
+            </defs>
 
-          <div class="reveal rounded-2xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-900">
+            <!-- Shaded Area -->
+            <path d="M 50 130 C 150 130, 220 60, 310 45 C 380 35, 420 20, 460 12 L 460 170 L 50 170 Z" fill="url(#component-area)" />
+            <!-- Connected Curved Line -->
+            <path d="M 50 130 C 150 130, 220 60, 310 45 C 380 35, 420 20, 460 12" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round" />
+          </svg>
 
-            <span class="material-symbols-outlined text-amber-500">
-              sync_alt
-            </span>
-
-            <h3 class="mt-4 font-bold text-slate-950 dark:text-white">
-              Inverters
-            </h3>
-
-            <p class="mt-2 text-sm leading-7 text-slate-500">
-              Manage the conversion and flow of electrical energy.
-            </p>
-
+          <div class="pointer-events-none absolute inset-0 pt-10">
+            <div class="absolute left-[12%] top-[70%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Solar Panels</span>
+            </div>
+            <div class="absolute left-[42%] top-[50%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Inverters</span>
+            </div>
+            <div class="absolute left-[75%] top-[25%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Batteries</span>
+            </div>
+            <div class="absolute left-[92%] top-[10%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-violet-500 ring-4 ring-violet-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-amber-500">Integration</span>
+            </div>
           </div>
-
-
-          <div class="reveal rounded-2xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-900">
-
-            <span class="material-symbols-outlined text-amber-500">
-              battery_charging_full
-            </span>
-
-            <h3 class="mt-4 font-bold text-slate-950 dark:text-white">
-              Batteries
-            </h3>
-
-            <p class="mt-2 text-sm leading-7 text-slate-500">
-              Store energy for suitable backup and energy-management applications.
-            </p>
-
-          </div>
-
-
-          <div class="reveal rounded-2xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-900">
-
-            <span class="material-symbols-outlined text-amber-500">
-              electrical_services
-            </span>
-
-            <h3 class="mt-4 font-bold text-slate-950 dark:text-white">
-              Electrical Integration
-            </h3>
-
-            <p class="mt-2 text-sm leading-7 text-slate-500">
-              Connect the solar solution with the property's electrical system.
-            </p>
-
-          </div>
-
         </div>
 
       </div>
 
     </div>
-
   </section>
 
 
   <!-- =========================================================
-       RESIDENTIAL / COMMERCIAL
+       RESIDENTIAL / COMMERCIAL (Donut (Ring) Chart Centerpiece — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
-
+  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
-      <div class="text-center reveal">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-14">
 
-        <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
-          SOLAR APPLICATIONS
-        </p>
+        <div class="reveal max-w-xl">
+          <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
+            SOLAR APPLICATIONS
+          </p>
 
-        <h2 class="mt-4 text-3xl font-black text-slate-950 dark:text-white md:text-5xl">
-          Solar solutions for different environments
-        </h2>
+          <h2 class="mt-4 text-3xl font-black text-slate-950 dark:text-white md:text-5xl">
+            Solar solutions for different environments
+          </h2>
 
-        <p class="mx-auto mt-5 max-w-3xl leading-8 text-slate-600 dark:text-slate-400">
-          Solar requirements differ depending on the property, energy usage
-          and operational needs.
-        </p>
-
-      </div>
-
-
-      <div class="mt-12 grid gap-6 md:grid-cols-3">
-
-
-        <div class="reveal overflow-hidden rounded-3xl border border-slate-200 dark:border-white/10">
-
-          <div class="grid h-40 place-items-center bg-slate-950">
-
-            <span class="material-symbols-outlined text-6xl text-amber-400">
-              home
-            </span>
-
-          </div>
-
-          <div class="p-7">
-
-            <h3 class="text-2xl font-black text-slate-950 dark:text-white">
-              Residential Solar
-            </h3>
-
-            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-              Solar, battery and backup solutions for homes and residential
-              properties.
-            </p>
-
-            <ul class="mt-5 space-y-2 text-sm text-slate-500">
-
-              <li class="flex gap-2">
-                <span class="material-symbols-outlined text-amber-500">check</span>
-                Solar generation
-              </li>
-
-              <li class="flex gap-2">
-                <span class="material-symbols-outlined text-amber-500">check</span>
-                Battery storage
-              </li>
-
-              <li class="flex gap-2">
-                <span class="material-symbols-outlined text-amber-500">check</span>
-                Backup power
-              </li>
-
-            </ul>
-
-          </div>
-
+          <p class="mt-5 leading-8 text-slate-600 dark:text-slate-400">
+            Solar requirements differ depending on the property, energy usage
+            and operational needs across residential, commercial and project sectors.
+          </p>
         </div>
 
+        <!-- Center Donut (Ring) Chart with Hollow Center Metrics -->
+        <div class="reveal relative flex items-center justify-center shrink-0 mx-auto lg:mx-0">
+          <svg class="w-80 h-80 sm:w-96 sm:h-96 -rotate-90 drop-shadow-sm" viewBox="0 0 320 320">
+            <circle cx="160" cy="160" r="125" fill="none" stroke="currentColor" stroke-width="38" class="text-slate-200/70 dark:text-slate-800/70" />
+            
+            <!-- Segment 1: Residential Solar (33.3%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#f59e0b" stroke-width="38"
+                    stroke-dasharray="261.8 785.4" stroke-dashoffset="0" stroke-linecap="butt" />
+            <!-- Segment 2: Commercial Solar (33.3%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#10b981" stroke-width="38"
+                    stroke-dasharray="261.8 785.4" stroke-dashoffset="-261.8" stroke-linecap="butt" />
+            <!-- Segment 3: Project Solar (33.3%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#3b82f6" stroke-width="38"
+                    stroke-dasharray="261.8 785.4" stroke-dashoffset="-523.6" stroke-linecap="butt" />
+          </svg>
 
-        <div class="reveal overflow-hidden rounded-3xl border border-slate-200 dark:border-white/10">
-
-          <div class="grid h-40 place-items-center bg-slate-950">
-
-            <span class="material-symbols-outlined text-6xl text-amber-400">
-              business
+          <!-- Hollow Center Metrics -->
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-10 pointer-events-none">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-500">
+              Applications
             </span>
-
-          </div>
-
-          <div class="p-7">
-
-            <h3 class="text-2xl font-black text-slate-950 dark:text-white">
-              Commercial Solar
-            </h3>
-
-            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-              Solar and energy solutions for businesses and commercial
-              environments.
-            </p>
-
-            <ul class="mt-5 space-y-2 text-sm text-slate-500">
-
-              <li class="flex gap-2">
-                <span class="material-symbols-outlined text-amber-500">check</span>
-                Solar generation
-              </li>
-
-              <li class="flex gap-2">
-                <span class="material-symbols-outlined text-amber-500">check</span>
-                Energy storage
-              </li>
-
-              <li class="flex gap-2">
-                <span class="material-symbols-outlined text-amber-500">check</span>
-                Power continuity
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-
-        <div class="reveal overflow-hidden rounded-3xl border border-slate-200 dark:border-white/10">
-
-          <div class="grid h-40 place-items-center bg-slate-950">
-
-            <span class="material-symbols-outlined text-6xl text-amber-400">
-              construction
+            <span class="mt-1 text-4xl sm:text-5xl font-black text-slate-950 dark:text-white">
+              100%
             </span>
-
+            <span class="mt-1 text-xs font-semibold text-slate-600 dark:text-slate-300">
+              3 Sector Coverage
+            </span>
+            <div class="mt-3 flex items-center gap-2">
+              <span class="h-2.5 w-2.5 rounded-full bg-amber-500" title="Residential"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-emerald-500" title="Commercial"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-blue-500" title="Project"></span>
+            </div>
           </div>
-
-          <div class="p-7">
-
-            <h3 class="text-2xl font-black text-slate-950 dark:text-white">
-              Project Solar
-            </h3>
-
-            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-              Solar solutions that can be incorporated into suitable
-              construction, property and infrastructure projects.
-            </p>
-
-            <ul class="mt-5 space-y-2 text-sm text-slate-500">
-
-              <li class="flex gap-2">
-                <span class="material-symbols-outlined text-amber-500">check</span>
-                Project planning
-              </li>
-
-              <li class="flex gap-2">
-                <span class="material-symbols-outlined text-amber-500">check</span>
-                System integration
-              </li>
-
-              <li class="flex gap-2">
-                <span class="material-symbols-outlined text-amber-500">check</span>
-                Energy requirements
-              </li>
-
-            </ul>
-
-          </div>
-
         </div>
 
       </div>
 
     </div>
-
   </section>
 
-
   <!-- =========================================================
-       BENEFITS
+       SOLAR BENEFITS (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-slate-950 py-20 text-white lg:py-28">
-
+  <section class="bg-slate-950 py-20 text-white lg:py-28 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
-      <div class="grid gap-12 lg:grid-cols-2">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
 
-        <div class="reveal">
-
+        <div class="reveal max-w-xl">
           <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-400">
             SOLAR BENEFITS
           </p>
@@ -1606,98 +1097,62 @@
             factors such as system design, energy usage, equipment,
             location and operating conditions.
           </p>
-
         </div>
 
-
-        <div class="grid gap-4 sm:grid-cols-2">
-
-
-          <div class="reveal rounded-3xl border border-white/10 bg-white/5 p-7">
-
-            <span class="material-symbols-outlined text-amber-400 text-3xl">
-              wb_sunny
-            </span>
-
-            <h3 class="mt-5 text-xl font-bold">
-              Renewable Generation
-            </h3>
-
-            <p class="mt-3 text-sm leading-7 text-slate-400">
-              Generate electrical energy using sunlight as a renewable resource.
-            </p>
-
+        <!-- Right Side Line & Area Chart Flow -->
+        <div class="reveal relative w-full max-w-md shrink-0">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-black uppercase tracking-widest text-amber-400">Benefits Progression</span>
+            <span class="text-xs font-semibold text-slate-400">Optimized ROI</span>
           </div>
 
+          <svg class="w-full h-48 overflow-visible" viewBox="0 0 450 170" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="benefits-area" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.4" />
+                <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+              </linearGradient>
+            </defs>
 
-          <div class="reveal rounded-3xl border border-white/10 bg-white/5 p-7">
+            <!-- Shaded Area -->
+            <path d="M 45 120 C 130 120, 190 60, 280 45 C 340 38, 370 20, 410 12 L 410 160 L 45 160 Z" fill="url(#benefits-area)" />
+            <!-- Connected Curved Line -->
+            <path d="M 45 120 C 130 120, 190 60, 280 45 C 340 38, 370 20, 410 12" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+          </svg>
 
-            <span class="material-symbols-outlined text-amber-400 text-3xl">
-              battery_charging_full
-            </span>
-
-            <h3 class="mt-5 text-xl font-bold">
-              Energy Storage
-            </h3>
-
-            <p class="mt-3 text-sm leading-7 text-slate-400">
-              Suitable battery systems can store energy for later use.
-            </p>
-
+          <div class="pointer-events-none absolute inset-0 pt-8">
+            <div class="absolute left-[12%] top-[68%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-amber-400 ring-4 ring-amber-400/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-300">Renewable Generation</span>
+            </div>
+            <div class="absolute left-[38%] top-[50%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-emerald-400 ring-4 ring-emerald-400/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-300">Energy Storage</span>
+            </div>
+            <div class="absolute left-[66%] top-[30%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-blue-400 ring-4 ring-blue-400/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-300">Backup Capability</span>
+            </div>
+            <div class="absolute left-[90%] top-[10%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-violet-400 ring-4 ring-violet-400/20"></span>
+              <span class="mt-1 text-xs font-bold text-amber-400">Energy Management</span>
+            </div>
           </div>
-
-
-          <div class="reveal rounded-3xl border border-white/10 bg-white/5 p-7">
-
-            <span class="material-symbols-outlined text-amber-400 text-3xl">
-              power
-            </span>
-
-            <h3 class="mt-5 text-xl font-bold">
-              Backup Capability
-            </h3>
-
-            <p class="mt-3 text-sm leading-7 text-slate-400">
-              Solar and storage can be incorporated into suitable backup systems.
-            </p>
-
-          </div>
-
-
-          <div class="reveal rounded-3xl border border-white/10 bg-white/5 p-7">
-
-            <span class="material-symbols-outlined text-amber-400 text-3xl">
-              energy_savings_leaf
-            </span>
-
-            <h3 class="mt-5 text-xl font-bold">
-              Energy Management
-            </h3>
-
-            <p class="mt-3 text-sm leading-7 text-slate-400">
-              Better understand and manage how energy is generated and used.
-            </p>
-
-          </div>
-
         </div>
 
       </div>
 
     </div>
-
   </section>
 
 
   <!-- =========================================================
-       SOLAR PROJECT PROCESS
+       SOLAR PROJECT PROCESS (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
-
+  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
       <div class="mx-auto max-w-3xl text-center reveal">
-
         <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
           OUR PROCESS
         </p>
@@ -1710,115 +1165,75 @@
           We approach solar projects through a structured process designed
           around understanding the client's requirements.
         </p>
-
       </div>
 
+      <!-- Line & Area Chart Flow for 5-Step Process -->
+      <div class="reveal relative mt-16">
+        <svg class="w-full h-[280px] overflow-visible" viewBox="0 0 1000 280" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="solar-process-area" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.38" />
+              <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+            </linearGradient>
+          </defs>
 
-      <div class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
+          <!-- Shaded Area -->
+          <path d="M 60 190 C 220 190, 310 105, 500 105 C 690 105, 780 40, 940 25 L 940 260 L 60 260 Z" fill="url(#solar-process-area)" />
+          <!-- Connected Curved Line -->
+          <path d="M 60 190 C 220 190, 310 105, 500 105 C 690 105, 780 40, 940 25" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" />
+        </svg>
 
+        <div class="pointer-events-none absolute inset-0 pt-4">
+          <!-- Step 01 -->
+          <div class="pointer-events-auto absolute left-[6%] top-[64%] -translate-x-1/2 flex flex-col items-center text-center w-36 sm:w-44">
+            <span class="h-2.5 w-2.5 rounded-full bg-amber-400 ring-4 ring-amber-400/20"></span>
+            <p class="mt-1 text-xs font-black text-amber-500">01 · Consultation</p>
+            <p class="mt-0.5 text-[11px] text-slate-500">Needs & Objectives</p>
+          </div>
 
-        <div class="reveal rounded-3xl border border-slate-200 p-6 dark:border-white/10">
+          <!-- Step 02 -->
+          <div class="pointer-events-auto absolute left-[27%] top-[50%] -translate-x-1/2 flex flex-col items-center text-center w-36 sm:w-44">
+            <span class="h-2.5 w-2.5 rounded-full bg-emerald-400 ring-4 ring-emerald-400/20"></span>
+            <p class="mt-1 text-xs font-black text-emerald-500">02 · Assessment</p>
+            <p class="mt-0.5 text-[11px] text-slate-500">Property & Infrastructure</p>
+          </div>
 
-          <span class="text-4xl font-black text-slate-200 dark:text-slate-700">
-            01
-          </span>
+          <!-- Step 03 -->
+          <div class="pointer-events-auto absolute left-[48%] top-[35%] -translate-x-1/2 flex flex-col items-center text-center w-36 sm:w-44">
+            <span class="h-2.5 w-2.5 rounded-full bg-sky-400 ring-4 ring-sky-400/20"></span>
+            <p class="mt-1 text-xs font-black text-sky-500">03 · System Planning</p>
+            <p class="mt-0.5 text-[11px] text-slate-500">Tailored Approach</p>
+          </div>
 
-          <h3 class="mt-6 font-bold text-slate-950 dark:text-white">
-            Consultation
-          </h3>
+          <!-- Step 04 -->
+          <div class="pointer-events-auto absolute left-[69%] top-[20%] -translate-x-1/2 flex flex-col items-center text-center w-36 sm:w-44">
+            <span class="h-2.5 w-2.5 rounded-full bg-blue-400 ring-4 ring-blue-400/20"></span>
+            <p class="mt-1 text-xs font-black text-blue-500">04 · Installation</p>
+            <p class="mt-0.5 text-[11px] text-slate-500">Implementation</p>
+          </div>
 
-          <p class="mt-3 text-sm leading-7 text-slate-500">
-            Understand your energy needs and project objectives.
-          </p>
-
+          <!-- Step 05 -->
+          <div class="pointer-events-auto absolute left-[94%] top-[4%] -translate-x-1/2 flex flex-col items-center text-center w-36 sm:w-44">
+            <span class="h-2.5 w-2.5 rounded-full bg-violet-400 ring-4 ring-violet-400/20"></span>
+            <p class="mt-1 text-xs font-black text-violet-500">05 · Support</p>
+            <p class="mt-0.5 text-[11px] text-slate-500">Maintenance & Care</p>
+          </div>
         </div>
-
-
-        <div class="reveal rounded-3xl border border-slate-200 p-6 dark:border-white/10">
-
-          <span class="text-4xl font-black text-slate-200 dark:text-slate-700">
-            02
-          </span>
-
-          <h3 class="mt-6 font-bold text-slate-950 dark:text-white">
-            Assessment
-          </h3>
-
-          <p class="mt-3 text-sm leading-7 text-slate-500">
-            Consider the property, existing electrical infrastructure and requirements.
-          </p>
-
-        </div>
-
-
-        <div class="reveal rounded-3xl border border-slate-200 p-6 dark:border-white/10">
-
-          <span class="text-4xl font-black text-slate-200 dark:text-slate-700">
-            03
-          </span>
-
-          <h3 class="mt-6 font-bold text-slate-950 dark:text-white">
-            System Planning
-          </h3>
-
-          <p class="mt-3 text-sm leading-7 text-slate-500">
-            Develop an appropriate solar, storage or backup approach.
-          </p>
-
-        </div>
-
-
-        <div class="reveal rounded-3xl border border-slate-200 p-6 dark:border-white/10">
-
-          <span class="text-4xl font-black text-slate-200 dark:text-slate-700">
-            04
-          </span>
-
-          <h3 class="mt-6 font-bold text-slate-950 dark:text-white">
-            Installation
-          </h3>
-
-          <p class="mt-3 text-sm leading-7 text-slate-500">
-            Implement the agreed solar system and related components.
-          </p>
-
-        </div>
-
-
-        <div class="reveal rounded-3xl border border-slate-200 p-6 dark:border-white/10">
-
-          <span class="text-4xl font-black text-slate-200 dark:text-slate-700">
-            05
-          </span>
-
-          <h3 class="mt-6 font-bold text-slate-950 dark:text-white">
-            Support
-          </h3>
-
-          <p class="mt-3 text-sm leading-7 text-slate-500">
-            Maintenance, troubleshooting and support where required.
-          </p>
-
-        </div>
-
       </div>
 
     </div>
-
   </section>
 
 
   <!-- =========================================================
-       MAINTENANCE & SUPPORT
+       MAINTENANCE & SUPPORT (Donut (Ring) Chart Centerpiece — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-slate-50 py-20 dark:bg-slate-900/50 lg:py-28">
-
+  <section class="bg-slate-50 py-20 dark:bg-slate-900/50 lg:py-28 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
-      <div class="grid gap-12 lg:grid-cols-2">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-14">
 
-        <div class="reveal">
-
+        <div class="reveal max-w-xl">
           <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
             AFTER INSTALLATION
           </p>
@@ -1830,115 +1245,69 @@
           <p class="mt-5 leading-8 text-slate-600 dark:text-slate-400">
             Solar systems contain electrical and electronic components that
             may require inspection, maintenance and troubleshooting over time.
-          </p>
-
-          <p class="mt-5 leading-8 text-slate-600 dark:text-slate-400">
             TNSE provides solar maintenance and repair services to help
             identify and address system issues where required.
           </p>
 
           <a href="maintenance.html"
              class="mt-7 inline-flex items-center gap-2 font-bold text-amber-500">
-
-            Solar Maintenance
-
-            <span class="material-symbols-outlined">
-              arrow_forward
-            </span>
-
+            <span>Solar Maintenance</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
           </a>
-
         </div>
 
+        <!-- Center Donut (Ring) Chart with Hollow Center Metrics -->
+        <div class="reveal relative flex items-center justify-center shrink-0 mx-auto lg:mx-0">
+          <svg class="w-80 h-80 sm:w-96 sm:h-96 -rotate-90 drop-shadow-sm" viewBox="0 0 320 320">
+            <circle cx="160" cy="160" r="125" fill="none" stroke="currentColor" stroke-width="38" class="text-slate-200/70 dark:text-slate-800/70" />
+            
+            <!-- Segment 1: System Inspection (25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#f59e0b" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="0" stroke-linecap="butt" />
+            <!-- Segment 2: Performance Checks (25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#10b981" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="-196.35" stroke-linecap="butt" />
+            <!-- Segment 3: Troubleshooting (25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#3b82f6" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="-392.7" stroke-linecap="butt" />
+            <!-- Segment 4: Ongoing Support (25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#8b5cf6" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="-589.05" stroke-linecap="butt" />
+          </svg>
 
-        <div class="grid gap-4 sm:grid-cols-2">
-
-
-          <div class="reveal rounded-2xl bg-white p-6 shadow-sm dark:bg-slate-900">
-
-            <span class="material-symbols-outlined text-amber-500">
-              search
+          <!-- Hollow Center Metrics -->
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-10 pointer-events-none">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-500">
+              Support Coverage
             </span>
-
-            <h3 class="mt-4 font-bold text-slate-950 dark:text-white">
-              System Inspection
-            </h3>
-
-            <p class="mt-2 text-sm leading-7 text-slate-500">
-              Review system components and identify potential issues.
-            </p>
-
-          </div>
-
-
-          <div class="reveal rounded-2xl bg-white p-6 shadow-sm dark:bg-slate-900">
-
-            <span class="material-symbols-outlined text-amber-500">
-              monitoring
+            <span class="mt-1 text-4xl sm:text-5xl font-black text-slate-950 dark:text-white">
+              100%
             </span>
-
-            <h3 class="mt-4 font-bold text-slate-950 dark:text-white">
-              Performance Checks
-            </h3>
-
-            <p class="mt-2 text-sm leading-7 text-slate-500">
-              Check system performance and operating conditions.
-            </p>
-
-          </div>
-
-
-          <div class="reveal rounded-2xl bg-white p-6 shadow-sm dark:bg-slate-900">
-
-            <span class="material-symbols-outlined text-amber-500">
-              build
+            <span class="mt-1 text-xs font-semibold text-slate-600 dark:text-slate-300">
+              4 Support Pillars
             </span>
-
-            <h3 class="mt-4 font-bold text-slate-950 dark:text-white">
-              Troubleshooting
-            </h3>
-
-            <p class="mt-2 text-sm leading-7 text-slate-500">
-              Investigate faults affecting suitable solar system components.
-            </p>
-
+            <div class="mt-3 flex items-center gap-2">
+              <span class="h-2.5 w-2.5 rounded-full bg-amber-500" title="Inspection"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-emerald-500" title="Performance"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-blue-500" title="Troubleshooting"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-violet-500" title="Support"></span>
+            </div>
           </div>
-
-
-          <div class="reveal rounded-2xl bg-white p-6 shadow-sm dark:bg-slate-900">
-
-            <span class="material-symbols-outlined text-amber-500">
-              support_agent
-            </span>
-
-            <h3 class="mt-4 font-bold text-slate-950 dark:text-white">
-              Ongoing Support
-            </h3>
-
-            <p class="mt-2 text-sm leading-7 text-slate-500">
-              Support clients with maintenance and system-related requirements.
-            </p>
-
-          </div>
-
         </div>
 
       </div>
 
     </div>
-
   </section>
 
 
   <!-- =========================================================
-       RELATED ENERGY SERVICES
+       RELATED ENERGY SERVICES (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-slate-50 py-20 dark:bg-slate-900/50 lg:py-24">
-
+  <section class="bg-slate-50 py-20 dark:bg-slate-900/50 lg:py-24 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
       <div class="max-w-3xl reveal">
-
         <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
           EXPLORE MORE
         </p>
@@ -1951,116 +1320,74 @@
           Solar can form part of a wider electrical and energy solution.
           Explore our other services.
         </p>
-
       </div>
 
+      <!-- Line & Area Chart Flow for Related Services -->
+      <div class="reveal relative mt-12">
+        <svg class="w-full h-[260px] overflow-visible" viewBox="0 0 1000 260" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="related-energy-area" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.38" />
+              <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0" />
+            </linearGradient>
+          </defs>
 
-      <div class="mt-10 grid gap-5 md:grid-cols-3">
+          <!-- Shaded Area -->
+          <path d="M 165 160 C 330 160, 400 95, 500 95 C 600 95, 700 45, 835 30 L 835 240 L 165 240 Z" fill="url(#related-energy-area)" />
+          <!-- Connected Curved Line -->
+          <path d="M 165 160 C 330 160, 400 95, 500 95 C 600 95, 700 45, 835 30" fill="none" stroke="#3b82f6" stroke-width="4.5" stroke-linecap="round" />
+        </svg>
 
+        <div class="pointer-events-none absolute inset-0 pt-4">
+          <!-- Energy Solutions -->
+          <div class="pointer-events-auto absolute left-[16.5%] top-[65%] -translate-x-1/2 flex flex-col items-center text-center w-72">
+            <span class="h-3.5 w-3.5 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Energy Solutions</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Explore backup power, battery storage, and energy management.</p>
+            <a href="../energy-solutions/index.html" class="mt-2 inline-flex items-center gap-1 text-xs font-bold text-amber-500 hover:underline pointer-events-auto">
+              Explore Energy <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
 
-        <a href="../energy-solutions/index.html"
-           class="reveal lift rounded-3xl border border-slate-200 bg-white p-7 transition hover:border-amber-400 dark:border-white/10 dark:bg-slate-900">
+          <!-- Electrical Services -->
+          <div class="pointer-events-auto absolute left-[50%] top-[38%] -translate-x-1/2 flex flex-col items-center text-center w-72">
+            <span class="h-3.5 w-3.5 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Electrical Services</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Explore electrical installations, maintenance, repairs and fault finding.</p>
+            <a href="../electrical/index.html" class="mt-2 inline-flex items-center gap-1 text-xs font-bold text-emerald-500 hover:underline pointer-events-auto">
+              Explore Electrical <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
 
-          <span class="material-symbols-outlined text-amber-500 text-3xl">
-            battery_charging_full
-          </span>
-
-          <h3 class="mt-6 text-xl font-bold text-slate-950 dark:text-white">
-            Energy Solutions
-          </h3>
-
-          <p class="mt-3 text-sm leading-7 text-slate-500">
-            Explore backup power, battery storage, renewable energy and energy management.
-          </p>
-
-          <span class="mt-6 inline-flex items-center gap-2 font-bold text-amber-500">
-
-            Explore Energy
-
-            <span class="material-symbols-outlined">
-              arrow_forward
-            </span>
-
-          </span>
-
-        </a>
-
-
-        <a href="../electrical/index.html"
-           class="reveal lift rounded-3xl border border-slate-200 bg-white p-7 transition hover:border-amber-400 dark:border-white/10 dark:bg-slate-900">
-
-          <span class="material-symbols-outlined text-amber-500 text-3xl">
-            electrical_services
-          </span>
-
-          <h3 class="mt-6 text-xl font-bold text-slate-950 dark:text-white">
-            Electrical Services
-          </h3>
-
-          <p class="mt-3 text-sm leading-7 text-slate-500">
-            Explore electrical installations, maintenance, repairs and fault finding.
-          </p>
-
-          <span class="mt-6 inline-flex items-center gap-2 font-bold text-amber-500">
-
-            Explore Electrical
-
-            <span class="material-symbols-outlined">
-              arrow_forward
-            </span>
-
-          </span>
-
-        </a>
-
-
-        <a href="../projects/solar/index.html"
-           class="reveal lift rounded-3xl border border-slate-200 bg-white p-7 transition hover:border-amber-400 dark:border-white/10 dark:bg-slate-900">
-
-          <span class="material-symbols-outlined text-amber-500 text-3xl">
-            construction
-          </span>
-
-          <h3 class="mt-6 text-xl font-bold text-slate-950 dark:text-white">
-            Solar Projects
-          </h3>
-
-          <p class="mt-3 text-sm leading-7 text-slate-500">
-            Explore solar projects and installations in the TNSE portfolio.
-          </p>
-
-          <span class="mt-6 inline-flex items-center gap-2 font-bold text-amber-500">
-
-            View Projects
-
-            <span class="material-symbols-outlined">
-              arrow_forward
-            </span>
-
-          </span>
-
-        </a>
-
+          <!-- Solar Projects -->
+          <div class="pointer-events-auto absolute left-[83.5%] top-[12%] -translate-x-1/2 flex flex-col items-center text-center w-72">
+            <span class="h-3.5 w-3.5 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Solar Projects</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Explore solar projects and installations in the TNSE portfolio.</p>
+            <a href="../projects/solar/index.html" class="mt-2 inline-flex items-center gap-1 text-xs font-bold text-blue-500 hover:underline pointer-events-auto">
+              View Projects <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div>
       </div>
 
     </div>
-
   </section>
 
 
   <!-- =========================================================
-       FINAL CTA
+       FINAL CTA (Updated path & Line/Area Chart Flow — No Grids/Cards)
+       Updated path: https://www.tnse.co.za/forms/contact-form/index.html
   ========================================================== -->
-  <section class="px-5 pb-20 lg:pb-28">
+  <section class="px-5 pb-20 lg:pb-28 overflow-hidden">
 
     <div class="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-amber-400 px-7 py-12 text-slate-950 md:px-12 lg:px-16 lg:py-16">
 
       <div class="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/20 blur-3xl"></div>
 
-      <div class="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+      <div class="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
 
-        <div class="max-w-3xl">
-
+        <div class="max-w-2xl">
           <p class="text-sm font-black uppercase tracking-[.22em]">
             GO SOLAR WITH TNSE
           </p>
@@ -2074,36 +1401,51 @@
             battery storage, backup power or your wider energy requirements.
           </p>
 
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="https://www.tnse.co.za/forms/contact-form/index.html"
+               class="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-6 py-3.5 font-bold text-white transition hover:bg-slate-800 shadow-lg">
+              <span>Request a Solar Quote</span>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+
+            <a href="https://wa.me/27818276288"
+               target="_blank"
+               rel="noopener"
+               class="inline-flex items-center gap-2 rounded-xl border-2 border-slate-950 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-slate-950 hover:text-white">
+              <span class="material-symbols-outlined">chat</span>
+              <span>WhatsApp TNSE</span>
+            </a>
+          </div>
         </div>
 
+        <!-- Right Side Line & Area Chart Flow for Final CTA -->
+        <div class="reveal relative w-full max-w-sm shrink-0">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-black uppercase tracking-widest text-slate-900">Action Path</span>
+            <span class="text-xs font-semibold text-slate-700">Quick Connect</span>
+          </div>
 
-        <div class="flex flex-wrap gap-3">
+          <svg class="w-full h-36 overflow-visible" viewBox="0 0 380 130" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="solar-cta-area" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#020617" stop-opacity="0.3" />
+                <stop offset="100%" stop-color="#020617" stop-opacity="0.0" />
+              </linearGradient>
+            </defs>
+            <path d="M 38 90 C 110 90, 160 45, 250 35 C 300 30, 330 16, 355 10 L 355 120 L 38 120 Z" fill="url(#solar-cta-area)" />
+            <path d="M 38 90 C 110 90, 160 45, 250 35 C 300 30, 330 16, 355 10" fill="none" stroke="#020617" stroke-width="3.5" stroke-linecap="round" />
+          </svg>
 
-          <a href="../contact/index.html"
-             class="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-6 py-3.5 font-bold text-white transition hover:bg-slate-800">
-
-            Request a Solar Quote
-
-            <span class="material-symbols-outlined">
-              arrow_forward
-            </span>
-
-          </a>
-
-
-          <a href="https://wa.me/27818276288"
-             target="_blank"
-             rel="noopener"
-             class="inline-flex items-center gap-2 rounded-xl border-2 border-slate-950 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-slate-950 hover:text-white">
-
-            WhatsApp TNSE
-
-            <span class="material-symbols-outlined">
-              chat
-            </span>
-
-          </a>
-
+          <div class="pointer-events-none absolute inset-0 pt-6">
+            <div class="absolute left-[15%] top-[60%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-2.5 w-2.5 rounded-full bg-slate-950 ring-4 ring-slate-950/20"></span>
+              <span class="mt-1 text-[11px] font-bold text-slate-900">Enquire</span>
+            </div>
+            <div class="absolute left-[75%] top-[20%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-2.5 w-2.5 rounded-full bg-amber-800 ring-4 ring-amber-800/20"></span>
+              <span class="mt-1 text-[11px] font-bold text-slate-900">Power Up</span>
+            </div>
+          </div>
         </div>
 
       </div>
