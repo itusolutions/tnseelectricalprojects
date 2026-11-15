@@ -873,10 +873,37 @@
 
 
 <!-- =========================================================
-     ABOUT TNSE SECTION (Streamgraph Layout)
+     ABOUT TNSE SECTION (Population Pyramid Layout with Streamgraph Background)
 ========================================================= -->
-<section class="bg-white py-20 dark:bg-slate-950 overflow-hidden">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<section class="bg-white py-20 dark:bg-slate-950 overflow-hidden relative">
+  
+  <!-- Background Streamgraph: Flowing, organic, wave-like stacked area layers centered around a horizontal axis -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-10 dark:opacity-15 flex items-center justify-center">
+    <svg class="w-full h-full object-cover" viewBox="0 0 1440 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,300 C240,220 480,380 720,300 C960,220 1200,380 1440,300 L1440,350 C1200,430 960,270 720,350 C480,430 240,270 0,350 Z" fill="url(#stream-gradient-1)" />
+      <path d="M0,300 C200,180 500,420 720,300 C940,180 1240,420 1440,300 L1440,450 C1240,550 940,250 720,400 C500,550 200,250 0,400 Z" fill="url(#stream-gradient-2)" />
+      <path d="M0,300 C300,350 500,150 720,300 C940,450 1140,250 1440,300 L1440,200 C1140,100 940,350 720,200 C500,50 300,250 0,200 Z" fill="url(#stream-gradient-3)" />
+      <defs>
+        <linearGradient id="stream-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#f59e0b" />
+          <stop offset="50%" stop-color="#0ea5e9" />
+          <stop offset="100%" stop-color="#f59e0b" />
+        </linearGradient>
+        <linearGradient id="stream-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0ea5e9" />
+          <stop offset="50%" stop-color="#f59e0b" />
+          <stop offset="100%" stop-color="#0ea5e9" />
+        </linearGradient>
+        <linearGradient id="stream-gradient-3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#d97706" />
+          <stop offset="50%" stop-color="#0284c7" />
+          <stop offset="100%" stop-color="#d97706" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
     
     <!-- Section Header (Centered) -->
     <div class="fade-init from-top mx-auto max-w-3xl text-center mb-16">
@@ -888,10 +915,10 @@
       </h2>
     </div>
 
-    <!-- Flex Layout -->
+    <!-- Flex Layout (No General Grid / Cards) -->
     <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
       
-      <!-- Left Column: Company Background & Link -->
+      <!-- Left Column: Company Background & Link (Fades in from Left) -->
       <div class="fade-init from-left max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-400">
         <p>
           TNSE Electrical Projects is an electrical and solar energy solutions
@@ -912,65 +939,95 @@
         </a>
       </div>
 
-      <!-- Right Column: Streamgraph Shape (Flowing, organic, wave-like stacked area chart centered around a horizontal axis) -->
-      <div class="fade-init from-right relative w-full max-w-xl shrink-0">
+      <!-- Right Column: Population Pyramid Shape (Back-to-back horizontal bars forming a symmetrical triangular/bell shape) -->
+      <div class="fade-init from-right relative w-full max-w-lg shrink-0">
         
-        <!-- Streamgraph Header Labels -->
-        <div class="flex justify-between text-xs font-extrabold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-3 px-4">
-          <span class="text-amber-600 dark:text-amber-400">2017 (Inception)</span>
-          <span class="text-center">Streamflow Growth Axis</span>
-          <span class="text-sky-600 dark:text-sky-400">Present (2026)</span>
+        <!-- Pyramid Axis Header Labels -->
+        <div class="flex justify-between text-xs font-extrabold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-3 px-8">
+          <span class="text-amber-600 dark:text-amber-400">Residential</span>
+          <span class="text-center">Capability Tiers</span>
+          <span class="text-sky-600 dark:text-sky-400">Commercial</span>
         </div>
 
-        <!-- Streamgraph SVG Container -->
-        <div class="relative rounded-2xl bg-slate-50 dark:bg-slate-900/50 p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
-          <svg class="w-full h-56 overflow-visible" viewBox="0 0 600 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Center Baseline Axis -->
-            <line x1="20" y1="120" x2="580" y2="120" stroke="currentColor" class="text-slate-300 dark:text-slate-700" stroke-dasharray="4 4" stroke-width="1.5" />
-
-            <!-- Layer 3 (Top Wave - Solar & Commercial Projects) -->
-            <path d="M20 120 C 120 70, 220 30, 320 60 C 420 90, 500 20, 580 40 L 580 120 C 500 120, 420 120, 320 120 C 220 120, 120 120, 20 120 Z" 
-                  class="fill-sky-500/80 hover:fill-sky-500 transition-all duration-500" />
-
-            <!-- Layer 2 (Middle-Top Wave - Installations & Maintenance) -->
-            <path d="M20 120 C 100 100, 200 80, 300 95 C 400 110, 500 70, 580 90 L 580 120 C 500 120, 400 120, 300 120 C 200 120, 100 120, 20 120 Z" 
-                  class="fill-amber-500/80 hover:fill-amber-500 transition-all duration-500" />
-
-            <!-- Layer 1 (Bottom Wave - Fault Finding & Repairs) -->
-            <path d="M20 120 C 120 150, 220 170, 320 150 C 420 130, 500 180, 580 160 L 580 120 C 500 120, 420 120, 320 120 C 220 120, 120 120, 20 120 Z" 
-                  class="fill-indigo-500/70 hover:fill-indigo-500 transition-all duration-500" />
-
-            <!-- Center Axis Data Points / Nodes -->
-            <circle cx="120" cy="120" r="4" class="fill-slate-400 dark:fill-slate-600" />
-            <circle cx="300" cy="120" r="5" class="fill-amber-600 dark:fill-amber-400" />
-            <circle cx="480" cy="120" r="4" class="fill-slate-400 dark:fill-slate-600" />
-
-            <!-- Floating Label Badges on Streams -->
-            <text x="140" y="75" class="text-[10px] font-bold fill-slate-700 dark:fill-slate-300 uppercase tracking-wider">Solar Solutions</text>
-            <text x="310" y="100" class="text-[10px] font-bold fill-slate-900 dark:fill-white uppercase tracking-wider">Installations</text>
-            <text x="430" y="155" class="text-[10px] font-bold fill-slate-700 dark:fill-slate-300 uppercase tracking-wider">Fault Finding & Repairs</text>
-          </svg>
-
-          <!-- Streamgraph Legend Footer -->
-          <div class="mt-4 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 pt-3">
-            <div class="flex items-center gap-1.5">
-              <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
-              <span>Commercial & Solar</span>
+        <!-- Back-to-Back Horizontal Bars (Symmetrical Triangular / Bell Form) -->
+        <div class="flex flex-col space-y-2.5">
+          
+          <!-- Tier 1: Foundation / Base (Widest) -->
+          <div class="flex items-center gap-2">
+            <!-- Left Bar (Amber / Residential) -->
+            <div class="flex-1 flex justify-end">
+              <div class="h-10 bg-amber-500 rounded-l-lg flex items-center px-4 transition-all duration-300 hover:bg-amber-600" style="width: 100%;">
+                <span class="text-xs font-extrabold text-slate-950">Installations</span>
+              </div>
             </div>
-            <div class="flex items-center gap-1.5">
-              <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-              <span>Core Installations</span>
+            <!-- Center Axis Label -->
+            <div class="w-16 text-center text-xs font-black text-slate-500 dark:text-slate-400 py-1 bg-slate-100 dark:bg-slate-900 rounded">
+              Base
             </div>
-            <div class="flex items-center gap-1.5">
-              <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
-              <span>Maintenance & Support</span>
+            <!-- Right Bar (Sky Blue / Commercial) -->
+            <div class="flex-1 flex justify-start">
+              <div class="h-10 bg-sky-500 rounded-r-lg flex items-center px-4 transition-all duration-300 hover:bg-sky-600" style="width: 100%;">
+                <span class="text-xs font-extrabold text-white">Maintenance</span>
+              </div>
             </div>
           </div>
+
+          <!-- Tier 2: Mid-Lower (Slightly narrower) -->
+          <div class="flex items-center gap-2">
+            <div class="flex-1 flex justify-end">
+              <div class="h-10 bg-amber-500/90 rounded-l-lg flex items-center px-4 transition-all duration-300" style="width: 82%;">
+                <span class="text-xs font-bold text-slate-950">Fault Finding</span>
+              </div>
+            </div>
+            <div class="w-16 text-center text-xs font-black text-slate-500 dark:text-slate-400 py-1 bg-slate-100 dark:bg-slate-900 rounded">
+              Core
+            </div>
+            <div class="flex-1 flex justify-start">
+              <div class="h-10 bg-sky-500/90 rounded-r-lg flex items-center px-4 transition-all duration-300" style="width: 82%;">
+                <span class="text-xs font-bold text-white">Repairs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 3: Mid-Upper (Narrower) -->
+          <div class="flex items-center gap-2">
+            <div class="flex-1 flex justify-end">
+              <div class="h-10 bg-amber-500/80 rounded-l-lg flex items-center px-4 transition-all duration-300" style="width: 62%;">
+                <span class="text-xs font-bold text-slate-950">Solar Energy</span>
+              </div>
+            </div>
+            <div class="w-16 text-center text-xs font-black text-slate-500 dark:text-slate-400 py-1 bg-slate-100 dark:bg-slate-900 rounded">
+              Advanced
+            </div>
+            <div class="flex-1 flex justify-start">
+              <div class="h-10 bg-sky-500/80 rounded-r-lg flex items-center px-4 transition-all duration-300" style="width: 62%;">
+                <span class="text-xs font-bold text-white">Projects</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 4: Peak (Narrowest Apex) -->
+          <div class="flex items-center gap-2">
+            <div class="flex-1 flex justify-end">
+              <div class="h-10 bg-amber-500/70 rounded-l-lg flex items-center px-4 transition-all duration-300" style="width: 40%;">
+                <span class="text-xs font-bold text-slate-950">Limpopo</span>
+              </div>
+            </div>
+            <div class="w-16 text-center text-xs font-black text-slate-500 dark:text-slate-400 py-1 bg-slate-100 dark:bg-slate-900 rounded">
+              Apex
+            </div>
+            <div class="flex-1 flex justify-start">
+              <div class="h-10 bg-sky-500/70 rounded-r-lg flex items-center px-4 transition-all duration-300" style="width: 40%;">
+                <span class="text-xs font-bold text-white">Polokwane</span>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Footnote -->
-        <div class="mt-3 text-center text-xs text-slate-500 dark:text-slate-400 italic">
-          Organic flow and expansion of electrical services across Limpopo since 2017.
+        <!-- Pyramid Legend Footnote -->
+        <div class="mt-4 text-center text-xs text-slate-500 dark:text-slate-400 italic">
+          Symmetrical balance of residential and commercial service distribution since 2017.
         </div>
 
       </div>
@@ -979,7 +1036,7 @@
 
   </div>
 </section>
-
+	
 <!-- =========================================================
      SERVICES SECTION (Donut / Ring Chart Layout)
 ========================================================= -->
