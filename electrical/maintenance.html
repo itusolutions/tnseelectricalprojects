@@ -462,14 +462,15 @@
             
 
                                                   
-  <main>
+<main>
 
 <!-- =========================================================
-       HERO — ELECTRICAL MAINTENANCE WITH CAROUSEL BACKGROUND
-  ========================================================== -->
+     HERO — ELECTRICAL MAINTENANCE WITH CAROUSEL BACKGROUND
+     (Grids/Cards replaced with Donut Chart and Line/Area Charts)
+========================================================== -->
   <section class="relative overflow-hidden bg-slate-950 py-24 md:py-32">
     
-    <!-- Dynamic Background Carousel Container (Targeted by script ID #heroCarousel) -->
+    <!-- Dynamic Background Carousel Container -->
     <div id="heroCarousel" class="absolute inset-0 z-0 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/60 z-10"></div>
     </div>
@@ -477,69 +478,74 @@
     <div class="hero-grid absolute inset-0 opacity-40 z-10"></div>
 
     <div class="relative z-20 mx-auto max-w-7xl px-5">
-      <div class="max-w-4xl">
-        <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-400">
-          ELECTRICAL / MAINTENANCE
-        </p>
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-14">
 
-        <h1 class="mt-5 text-4xl font-black tracking-tight text-white md:text-6xl lg:text-7xl">
-          Maintain your electrical systems. Protect your operations.
-        </h1>
-
-        <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
-          Planned electrical maintenance, inspections and fault detection can help
-          identify developing issues, support safer operation and keep electrical
-          systems aligned with the requirements of your property or project.
-        </p>
-
-        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a href="../contact/index.html"
-             class="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-400 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-amber-300">
-            <span>Request a Quote</span>
-            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-          </a>
-
-          <a href="#maintenance-services"
-             class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-6 py-3.5 font-bold text-white transition hover:bg-white/10">
-            <span>Explore Maintenance</span>
-            <span class="material-symbols-outlined text-[20px]">expand_more</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Hero highlights -->
-      <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-          <span class="material-symbols-outlined text-amber-400">event_repeat</span>
-          <p class="mt-3 font-bold text-white">Preventative</p>
-          <p class="mt-1 text-sm text-slate-400">
-            Planned maintenance activities.
+        <div class="max-w-3xl">
+          <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-400">
+            ELECTRICAL / MAINTENANCE
           </p>
+
+          <h1 class="mt-5 text-4xl font-black tracking-tight text-white md:text-6xl lg:text-7xl">
+            Maintain your electrical systems. Protect your operations.
+          </h1>
+
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
+            Planned electrical maintenance, inspections and fault detection can help
+            identify developing issues, support safer operation and keep electrical
+            systems aligned with the requirements of your property or project.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="https://www.tnse.co.za/forms/contact-form/index.html"
+               class="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-400 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-amber-300">
+              <span>Request a Quote</span>
+              <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+            </a>
+
+            <a href="#maintenance-services"
+               class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-6 py-3.5 font-bold text-white transition hover:bg-white/10">
+              <span>Explore Maintenance</span>
+              <span class="material-symbols-outlined text-[20px]">expand_more</span>
+            </a>
+          </div>
         </div>
 
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-          <span class="material-symbols-outlined text-amber-400">fact_check</span>
-          <p class="mt-3 font-bold text-white">Inspections</p>
-          <p class="mt-1 text-sm text-slate-400">
-            Visual and functional system checks.
-          </p>
-        </div>
+        <!-- Donut (Ring) Chart Replacing Hero Highlights Grid -->
+        <div class="reveal relative flex items-center justify-center shrink-0 mx-auto lg:mx-0">
+          <svg class="w-80 h-80 sm:w-96 sm:h-96 -rotate-90 drop-shadow-sm" viewBox="0 0 320 320">
+            <circle cx="160" cy="160" r="125" fill="none" stroke="currentColor" stroke-width="38" class="text-slate-800/70" />
+            <!-- Segment 1: Preventative (Amber - 25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#f59e0b" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="0" stroke-linecap="butt" />
+            <!-- Segment 2: Inspections (Emerald - 25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#10b981" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="-196.35" stroke-linecap="butt" />
+            <!-- Segment 3: Fault Detection (Blue - 25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#3b82f6" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="-392.7" stroke-linecap="butt" />
+            <!-- Segment 4: Safety Focus (Violet - 25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#8b5cf6" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="-589.05" stroke-linecap="butt" />
+          </svg>
 
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-          <span class="material-symbols-outlined text-amber-400">search</span>
-          <p class="mt-3 font-bold text-white">Fault Detection</p>
-          <p class="mt-1 text-sm text-slate-400">
-            Investigation of abnormal conditions.
-          </p>
-        </div>
-
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-          <span class="material-symbols-outlined text-amber-400">health_and_safety</span>
-          <p class="mt-3 font-bold text-white">Safety Focus</p>
-          <p class="mt-1 text-sm text-slate-400">
-            Maintenance with safety in mind.
-          </p>
+          <!-- Hollow Center Metrics -->
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-10 pointer-events-none">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-400">
+              Maintenance Protocol
+            </span>
+            <span class="mt-1 text-4xl sm:text-5xl font-black text-white">
+              100%
+            </span>
+            <span class="mt-1 text-xs font-semibold text-slate-300">
+              4 Core Focus Areas
+            </span>
+            <div class="mt-3 flex items-center gap-2">
+              <span class="h-2.5 w-2.5 rounded-full bg-amber-500" title="Preventative"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-emerald-500" title="Inspections"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-blue-500" title="Fault Detection"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-violet-500" title="Safety Focus"></span>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -548,14 +554,14 @@
 
 
   <!-- =========================================================
-       INTRODUCTION
+       INTRODUCTION (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-white py-20 dark:bg-slate-950 md:py-24">
+  <section class="bg-white py-20 dark:bg-slate-950 md:py-24 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
-      <div class="grid items-center gap-12 lg:grid-cols-2">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
 
-        <div class="reveal">
+        <div class="reveal max-w-xl">
           <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
             ELECTRICAL MAINTENANCE
           </p>
@@ -579,57 +585,47 @@
           </p>
         </div>
 
-        <div class="reveal grid gap-4 sm:grid-cols-2">
-
-          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-white/10 dark:bg-slate-900">
-            <span class="material-symbols-outlined text-amber-500">
-              monitoring
-            </span>
-            <h3 class="mt-4 text-xl font-bold text-slate-900 dark:text-white">
-              Monitor
-            </h3>
-            <p class="mt-2 leading-7 text-slate-600 dark:text-slate-400">
-              Identify changes or conditions that may require attention.
-            </p>
+        <!-- Right Side Line & Area Chart for Lifecycle Maintenance Flow -->
+        <div class="reveal relative w-full max-w-md shrink-0">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-black uppercase tracking-widest text-amber-500">Lifecycle Progression</span>
+            <span class="text-xs font-semibold text-slate-400">Quality Assured</span>
           </div>
 
-          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-white/10 dark:bg-slate-900">
-            <span class="material-symbols-outlined text-amber-500">
-              manage_search
-            </span>
-            <h3 class="mt-4 text-xl font-bold text-slate-900 dark:text-white">
-              Inspect
-            </h3>
-            <p class="mt-2 leading-7 text-slate-600 dark:text-slate-400">
-              Review electrical components and systems according to the scope.
-            </p>
-          </div>
+          <svg class="w-full h-44 overflow-visible" viewBox="0 0 450 160" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="intro-maint-area" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.38" />
+                <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+              </linearGradient>
+            </defs>
 
-          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-white/10 dark:bg-slate-900">
-            <span class="material-symbols-outlined text-amber-500">
-              build
-            </span>
-            <h3 class="mt-4 text-xl font-bold text-slate-900 dark:text-white">
-              Maintain
-            </h3>
-            <p class="mt-2 leading-7 text-slate-600 dark:text-slate-400">
-              Address maintenance requirements identified during assessment.
-            </p>
-          </div>
+            <!-- Shaded Area -->
+            <path d="M 45 115 C 130 115, 190 55, 280 42 C 340 35, 370 20, 410 12 L 410 155 L 45 155 Z" fill="url(#intro-maint-area)" />
+            <!-- Connected Curved Line -->
+            <path d="M 45 115 C 130 115, 190 55, 280 42 C 340 35, 370 20, 410 12" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+          </svg>
 
-          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-white/10 dark:bg-slate-900">
-            <span class="material-symbols-outlined text-amber-500">
-              verified
-            </span>
-            <h3 class="mt-4 text-xl font-bold text-slate-900 dark:text-white">
-              Review
-            </h3>
-            <p class="mt-2 leading-7 text-slate-600 dark:text-slate-400">
-              Check completed work and identify further requirements.
-            </p>
+          <div class="pointer-events-none absolute inset-0 pt-8">
+            <div class="absolute left-[12%] top-[66%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Monitor</span>
+            </div>
+            <div class="absolute left-[38%] top-[48%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Inspect</span>
+            </div>
+            <div class="absolute left-[66%] top-[28%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Maintain</span>
+            </div>
+            <div class="absolute left-[90%] top-[10%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-violet-500 ring-4 ring-violet-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-amber-500">Review</span>
+            </div>
           </div>
-
         </div>
+
       </div>
 
     </div>
@@ -637,9 +633,9 @@
 
 
   <!-- =========================================================
-       MAINTENANCE SERVICES
+       MAINTENANCE SERVICES (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section id="maintenance-services" class="bg-slate-50 py-20 dark:bg-slate-900 md:py-24">
+  <section id="maintenance-services" class="bg-slate-50 py-20 dark:bg-slate-900 md:py-24 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
       <div class="max-w-3xl reveal">
@@ -659,215 +655,87 @@
         </p>
       </div>
 
+      <!-- Line & Area Chart Flow Replacing Grid Cards -->
+      <div class="reveal relative mt-16">
+        <svg class="w-full h-[300px] overflow-visible" viewBox="0 0 1000 300" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="maint-svc-1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+            </linearGradient>
+            <linearGradient id="maint-svc-2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#10b981" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+            </linearGradient>
+            <linearGradient id="maint-svc-3" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0" />
+            </linearGradient>
+          </defs>
 
-      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Shaded Areas -->
+          <path d="M 165 190 C 275 190, 320 120, 440 120 L 440 290 L 165 290 Z" fill="url(#maint-svc-1)" />
+          <path d="M 440 120 C 560 120, 610 60, 725 60 L 725 290 L 440 290 Z" fill="url(#maint-svc-2)" />
+          <path d="M 725 60 C 800 60, 850 35, 910 25 L 910 290 L 725 290 Z" fill="url(#maint-svc-3)" />
 
-        <!-- Electrical Maintenance -->
-        <div class="reveal lift rounded-2xl border border-slate-200 bg-white p-7 dark:border-white/10 dark:bg-slate-950">
-          <span class="material-symbols-outlined text-amber-500">
-            electrical_services
-          </span>
+          <!-- Connected Curved Line Segments -->
+          <path d="M 165 190 C 275 190, 320 120, 440 120" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" />
+          <path d="M 440 120 C 560 120, 610 60, 725 60" fill="none" stroke="#10b981" stroke-width="4.5" stroke-linecap="round" />
+          <path d="M 725 60 C 800 60, 850 35, 910 25" fill="none" stroke="#3b82f6" stroke-width="4.5" stroke-linecap="round" />
+        </svg>
 
-          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">
-            Electrical Maintenance
-          </h3>
+        <!-- Plotted Data Points & Service Copy (No Cards) -->
+        <div class="pointer-events-none absolute inset-0">
+          
+          <!-- Electrical Maintenance -->
+          <div class="pointer-events-auto absolute left-[16.5%] top-[60%] -translate-x-1/2 flex flex-col items-center text-center w-72">
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-amber-400 text-slate-950 ring-8 ring-amber-400/20 shadow-md">
+              <span class="material-symbols-outlined">electrical_services</span>
+            </div>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Electrical Maintenance</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-400 leading-6">
+              Maintenance support for installations, wiring, connections, distribution equipment and infrastructure.
+            </p>
+          </div>
 
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-            Maintenance support for electrical installations, wiring, connections,
-            distribution equipment and other electrical infrastructure.
-          </p>
+          <!-- Preventative Maintenance -->
+          <div class="pointer-events-auto absolute left-[44%] top-[36%] -translate-x-1/2 flex flex-col items-center text-center w-72">
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-400 text-slate-950 ring-8 ring-emerald-400/20 shadow-md">
+              <span class="material-symbols-outlined">event_repeat</span>
+            </div>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Preventative Maintenance</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-400 leading-6">
+              Planned maintenance activities designed to identify developing concerns and keep assets under review.
+            </p>
+          </div>
 
-          <ul class="mt-5 space-y-3 text-sm text-slate-600 dark:text-slate-400">
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Electrical system checks
-            </li>
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Component condition checks
-            </li>
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Maintenance recommendations
-            </li>
-          </ul>
+          <!-- Electrical Inspections -->
+          <div class="pointer-events-auto absolute left-[72.5%] top-[14%] -translate-x-1/2 flex flex-col items-center text-center w-72">
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-400 text-slate-950 ring-8 ring-blue-400/20 shadow-md">
+              <span class="material-symbols-outlined">fact_check</span>
+            </div>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Electrical Inspections</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-400 leading-6">
+              Structured visual and functional inspections to identify potential concerns within an electrical installation.
+            </p>
+          </div>
+
         </div>
-
-
-        <!-- Preventative Maintenance -->
-        <div class="reveal lift rounded-2xl border border-slate-200 bg-white p-7 dark:border-white/10 dark:bg-slate-950">
-          <span class="material-symbols-outlined text-amber-500">
-            event_repeat
-          </span>
-
-          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">
-            Preventative Maintenance
-          </h3>
-
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-            Planned maintenance activities designed to identify developing
-            concerns and keep electrical assets under regular review.
-          </p>
-
-          <ul class="mt-5 space-y-3 text-sm text-slate-600 dark:text-slate-400">
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Planned inspections
-            </li>
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Condition monitoring
-            </li>
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Maintenance scheduling
-            </li>
-          </ul>
-        </div>
-
-
-        <!-- Electrical Inspections -->
-        <div class="reveal lift rounded-2xl border border-slate-200 bg-white p-7 dark:border-white/10 dark:bg-slate-950">
-          <span class="material-symbols-outlined text-amber-500">
-            fact_check
-          </span>
-
-          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">
-            Electrical Inspections
-          </h3>
-
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-            Structured visual and functional inspections to identify potential
-            concerns within an electrical installation.
-          </p>
-
-          <ul class="mt-5 space-y-3 text-sm text-slate-600 dark:text-slate-400">
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Equipment condition
-            </li>
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Wiring and connections
-            </li>
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Distribution equipment
-            </li>
-          </ul>
-        </div>
-
-
-        <!-- Fault Detection -->
-        <div class="reveal lift rounded-2xl border border-slate-200 bg-white p-7 dark:border-white/10 dark:bg-slate-950">
-          <span class="material-symbols-outlined text-amber-500">
-            search
-          </span>
-
-          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">
-            Fault Detection
-          </h3>
-
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-            Investigation of abnormal electrical conditions, system behaviour
-            and reported faults to help identify areas requiring attention.
-          </p>
-
-          <ul class="mt-5 space-y-3 text-sm text-slate-600 dark:text-slate-400">
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Fault investigation
-            </li>
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Troubleshooting
-            </li>
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Recommended corrective action
-            </li>
-          </ul>
-        </div>
-
-
-        <!-- System Maintenance -->
-        <div class="reveal lift rounded-2xl border border-slate-200 bg-white p-7 dark:border-white/10 dark:bg-slate-950">
-          <span class="material-symbols-outlined text-amber-500">
-            settings
-          </span>
-
-          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">
-            System Maintenance
-          </h3>
-
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-            Support for maintaining electrical systems, equipment and
-            infrastructure according to the requirements identified during
-            assessment.
-          </p>
-
-          <ul class="mt-5 space-y-3 text-sm text-slate-600 dark:text-slate-400">
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              System condition review
-            </li>
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Component maintenance
-            </li>
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Maintenance recommendations
-            </li>
-          </ul>
-        </div>
-
-
-        <!-- Safety Checks -->
-        <div class="reveal lift rounded-2xl border border-slate-200 bg-white p-7 dark:border-white/10 dark:bg-slate-950">
-          <span class="material-symbols-outlined text-amber-500">
-            health_and_safety
-          </span>
-
-          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">
-            Safety Checks
-          </h3>
-
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-            Maintenance activities that consider the condition and safe
-            operation of electrical equipment and installations.
-          </p>
-
-          <ul class="mt-5 space-y-3 text-sm text-slate-600 dark:text-slate-400">
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Equipment condition
-            </li>
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Visible damage checks
-            </li>
-            <li class="flex gap-2">
-              <span class="material-symbols-outlined text-amber-500">check</span>
-              Identification of safety concerns
-            </li>
-          </ul>
-        </div>
-
       </div>
+
     </div>
   </section>
 
 
   <!-- =========================================================
-       PREVENTATIVE MAINTENANCE
+       PREVENTATIVE MAINTENANCE (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-white py-20 dark:bg-slate-950 md:py-24">
+  <section class="bg-white py-20 dark:bg-slate-950 md:py-24 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
-      <div class="grid items-center gap-12 lg:grid-cols-2">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
 
-        <div class="reveal">
+        <div class="reveal max-w-xl">
           <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
             PREVENTATIVE MAINTENANCE
           </p>
@@ -884,57 +752,43 @@
           </p>
         </div>
 
-        <div class="reveal space-y-4">
-
-          <div class="flex gap-4 rounded-2xl border border-slate-200 p-5 dark:border-white/10">
-            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-400 text-slate-950">
-              <span class="material-symbols-outlined">calendar_month</span>
-            </div>
-
-            <div>
-              <h3 class="font-bold text-slate-900 dark:text-white">
-                Planned Scheduling
-              </h3>
-              <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                Establish maintenance activities around the needs of the
-                electrical installation.
-              </p>
-            </div>
+        <!-- Right Side Line & Area Chart Flow -->
+        <div class="reveal relative w-full max-w-md shrink-0">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-black uppercase tracking-widest text-amber-500">Scheduling Strategy</span>
+            <span class="text-xs font-semibold text-slate-400">Proactive Care</span>
           </div>
 
-          <div class="flex gap-4 rounded-2xl border border-slate-200 p-5 dark:border-white/10">
-            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-400 text-slate-950">
-              <span class="material-symbols-outlined">visibility</span>
-            </div>
+          <svg class="w-full h-44 overflow-visible" viewBox="0 0 450 160" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="prev-area" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#10b981" stop-opacity="0.4" />
+                <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+              </linearGradient>
+            </defs>
 
-            <div>
-              <h3 class="font-bold text-slate-900 dark:text-white">
-                Condition Checks
-              </h3>
-              <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                Review equipment, wiring, connections and other accessible
-                components for signs requiring attention.
-              </p>
-            </div>
-          </div>
+            <!-- Shaded Area -->
+            <path d="M 45 120 C 130 120, 190 60, 280 45 C 340 38, 370 20, 410 12 L 410 155 L 45 155 Z" fill="url(#prev-area)" />
+            <!-- Connected Curved Line -->
+            <path d="M 45 120 C 130 120, 190 60, 280 45 C 340 38, 370 20, 410 12" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round" />
+          </svg>
 
-          <div class="flex gap-4 rounded-2xl border border-slate-200 p-5 dark:border-white/10">
-            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-400 text-slate-950">
-              <span class="material-symbols-outlined">assignment</span>
+          <div class="pointer-events-none absolute inset-0 pt-8">
+            <div class="absolute left-[15%] top-[68%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Planned Scheduling</span>
             </div>
-
-            <div>
-              <h3 class="font-bold text-slate-900 dark:text-white">
-                Maintenance Records
-              </h3>
-              <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                Record identified maintenance requirements and actions according
-                to the project scope.
-              </p>
+            <div class="absolute left-[50%] top-[45%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Condition Checks</span>
+            </div>
+            <div class="absolute left-[85%] top-[15%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Maintenance Records</span>
             </div>
           </div>
-
         </div>
+
       </div>
 
     </div>
@@ -942,9 +796,9 @@
 
 
   <!-- =========================================================
-       ELECTRICAL INSPECTIONS
+       ELECTRICAL INSPECTIONS (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-slate-900 py-20 md:py-24">
+  <section class="bg-slate-900 py-20 md:py-24 overflow-hidden text-white">
     <div class="mx-auto max-w-7xl px-5">
 
       <div class="max-w-3xl reveal">
@@ -963,54 +817,66 @@
         </p>
       </div>
 
-      <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      <!-- Line & Area Chart Flow for Inspection Areas -->
+      <div class="reveal relative mt-16">
+        <svg class="w-full h-[260px] overflow-visible" viewBox="0 0 1000 260" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="insp-area" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.38" />
+              <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0" />
+            </linearGradient>
+          </defs>
 
-        <div class="reveal lift rounded-2xl border border-white/10 bg-white/5 p-6">
-          <span class="material-symbols-outlined text-amber-400">cable</span>
-          <h3 class="mt-4 font-bold text-white">Wiring</h3>
-          <p class="mt-2 text-sm leading-6 text-slate-400">
-            Review accessible wiring and connections for visible concerns.
-          </p>
+          <!-- Shaded Area -->
+          <path d="M 125 160 C 300 160, 375 95, 500 95 C 625 95, 700 45, 875 30 L 875 240 L 125 240 Z" fill="url(#insp-area)" />
+          <!-- Connected Curved Line -->
+          <path d="M 125 160 C 300 160, 375 95, 500 95 C 625 95, 700 45, 875 30" fill="none" stroke="#3b82f6" stroke-width="4.5" stroke-linecap="round" />
+        </svg>
+
+        <div class="pointer-events-none absolute inset-0 pt-4">
+          <!-- Wiring -->
+          <div class="pointer-events-auto absolute left-[12.5%] top-[65%] -translate-x-1/2 flex flex-col items-center text-center w-60">
+            <span class="h-3.5 w-3.5 rounded-full bg-amber-400 ring-4 ring-amber-400/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-white">Wiring</h3>
+            <p class="mt-1 text-xs text-slate-400 leading-5">Review accessible wiring and connections for visible concerns.</p>
+          </div>
+
+          <!-- Distribution -->
+          <div class="pointer-events-auto absolute left-[37.5%] top-[42%] -translate-x-1/2 flex flex-col items-center text-center w-60">
+            <span class="h-3.5 w-3.5 rounded-full bg-emerald-400 ring-4 ring-emerald-400/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-white">Distribution</h3>
+            <p class="mt-1 text-xs text-slate-400 leading-5">Review distribution equipment and related electrical connections.</p>
+          </div>
+
+          <!-- Lighting -->
+          <div class="pointer-events-auto absolute left-[62.5%] top-[25%] -translate-x-1/2 flex flex-col items-center text-center w-60">
+            <span class="h-3.5 w-3.5 rounded-full bg-sky-400 ring-4 ring-sky-400/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-white">Lighting</h3>
+            <p class="mt-1 text-xs text-slate-400 leading-5">Check lighting-related electrical components and connections.</p>
+          </div>
+
+          <!-- Connections -->
+          <div class="pointer-events-auto absolute left-[87.5%] top-[12%] -translate-x-1/2 flex flex-col items-center text-center w-60">
+            <span class="h-3.5 w-3.5 rounded-full bg-blue-400 ring-4 ring-blue-400/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-white">Connections</h3>
+            <p class="mt-1 text-xs text-slate-400 leading-5">Identify accessible connection issues requiring further attention.</p>
+          </div>
         </div>
-
-        <div class="reveal lift rounded-2xl border border-white/10 bg-white/5 p-6">
-          <span class="material-symbols-outlined text-amber-400">account_tree</span>
-          <h3 class="mt-4 font-bold text-white">Distribution</h3>
-          <p class="mt-2 text-sm leading-6 text-slate-400">
-            Review distribution equipment and related electrical connections.
-          </p>
-        </div>
-
-        <div class="reveal lift rounded-2xl border border-white/10 bg-white/5 p-6">
-          <span class="material-symbols-outlined text-amber-400">lightbulb</span>
-          <h3 class="mt-4 font-bold text-white">Lighting</h3>
-          <p class="mt-2 text-sm leading-6 text-slate-400">
-            Check lighting-related electrical components and connections.
-          </p>
-        </div>
-
-        <div class="reveal lift rounded-2xl border border-white/10 bg-white/5 p-6">
-          <span class="material-symbols-outlined text-amber-400">power</span>
-          <h3 class="mt-4 font-bold text-white">Connections</h3>
-          <p class="mt-2 text-sm leading-6 text-slate-400">
-            Identify accessible connection issues requiring further attention.
-          </p>
-        </div>
-
       </div>
+
     </div>
   </section>
 
 
   <!-- =========================================================
-       FAULT DETECTION
+       FAULT DETECTION (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-white py-20 dark:bg-slate-950 md:py-24">
+  <section class="bg-white py-20 dark:bg-slate-950 md:py-24 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
-      <div class="grid gap-12 lg:grid-cols-[.9fr_1.1fr]">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
 
-        <div class="reveal">
+        <div class="reveal max-w-xl">
           <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
             FAULT DETECTION
           </p>
@@ -1026,7 +892,7 @@
           </p>
 
           <a href="../electrical/repairs.html"
-             class="mt-7 inline-flex items-center gap-2 font-bold text-slate-900 dark:text-white">
+             class="mt-7 inline-flex items-center gap-2 font-bold text-slate-900 dark:text-white hover:text-amber-500 transition">
             Explore Electrical Repairs
             <span class="material-symbols-outlined text-amber-500">
               arrow_forward
@@ -1034,69 +900,60 @@
           </a>
         </div>
 
-        <div class="grid gap-4 sm:grid-cols-2">
-
-          <div class="reveal lift rounded-2xl border border-slate-200 p-6 dark:border-white/10">
-            <span class="material-symbols-outlined text-amber-500">
-              error
-            </span>
-            <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-              Unexpected Trips
-            </h3>
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Investigation of recurring circuit trips or unexpected interruptions.
-            </p>
+        <!-- Right Side Line & Area Chart Flow -->
+        <div class="reveal relative w-full max-w-md shrink-0">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-black uppercase tracking-widest text-amber-500">Diagnostic Spectrum</span>
+            <span class="text-xs font-semibold text-slate-400">System Analysis</span>
           </div>
 
-          <div class="reveal lift rounded-2xl border border-slate-200 p-6 dark:border-white/10">
-            <span class="material-symbols-outlined text-amber-500">
-              flash_on
-            </span>
-            <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-              Power Issues
-            </h3>
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Assessment of reported electrical supply or circuit concerns.
-            </p>
-          </div>
+          <svg class="w-full h-44 overflow-visible" viewBox="0 0 450 160" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="fault-det-area" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.4" />
+                <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+              </linearGradient>
+            </defs>
 
-          <div class="reveal lift rounded-2xl border border-slate-200 p-6 dark:border-white/10">
-            <span class="material-symbols-outlined text-amber-500">
-              electrical_services
-            </span>
-            <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-              Component Concerns
-            </h3>
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Investigation of components showing signs of abnormal operation.
-            </p>
-          </div>
+            <!-- Shaded Area -->
+            <path d="M 45 120 C 130 120, 190 60, 280 45 C 340 38, 370 20, 410 12 L 410 155 L 45 155 Z" fill="url(#fault-det-area)" />
+            <!-- Connected Curved Line -->
+            <path d="M 45 120 C 130 120, 190 60, 280 45 C 340 38, 370 20, 410 12" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+          </svg>
 
-          <div class="reveal lift rounded-2xl border border-slate-200 p-6 dark:border-white/10">
-            <span class="material-symbols-outlined text-amber-500">
-              troubleshoot
-            </span>
-            <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-              Troubleshooting
-            </h3>
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Structured investigation to help determine the appropriate next step.
-            </p>
+          <div class="pointer-events-none absolute inset-0 pt-8">
+            <div class="absolute left-[12%] top-[68%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Unexpected Trips</span>
+            </div>
+            <div class="absolute left-[38%] top-[50%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Power Issues</span>
+            </div>
+            <div class="absolute left-[66%] top-[30%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Component Concerns</span>
+            </div>
+            <div class="absolute left-[90%] top-[10%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-violet-500 ring-4 ring-violet-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-amber-500">Troubleshooting</span>
+            </div>
           </div>
-
         </div>
+
       </div>
+
     </div>
   </section>
 
 
   <!-- =========================================================
-       SYSTEM MAINTENANCE
+       SYSTEM MAINTENANCE (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-slate-50 py-20 dark:bg-slate-900 md:py-24">
+  <section class="bg-slate-50 py-20 dark:bg-slate-900 md:py-24 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
-      <div class="text-center reveal">
+      <div class="text-center reveal max-w-3xl mx-auto">
         <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
           SYSTEM MAINTENANCE
         </p>
@@ -1112,75 +969,79 @@
         </p>
       </div>
 
-      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <!-- Line & Area Chart Flow for System Maintenance -->
+      <div class="reveal relative mt-16">
+        <svg class="w-full h-[260px] overflow-visible" viewBox="0 0 1000 260" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="sys-maint-area" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#10b981" stop-opacity="0.38" />
+              <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+            </linearGradient>
+          </defs>
 
-        <div class="reveal lift rounded-2xl bg-white p-6 shadow-sm dark:bg-slate-950">
-          <span class="material-symbols-outlined text-amber-500">cable</span>
-          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-            Wiring Systems
-          </h3>
-          <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Maintenance attention for wiring and associated connections.
-          </p>
+          <!-- Shaded Area -->
+          <path d="M 125 160 C 300 160, 375 95, 500 95 C 625 95, 700 45, 875 30 L 875 240 L 125 240 Z" fill="url(#sys-maint-area)" />
+          <!-- Connected Curved Line -->
+          <path d="M 125 160 C 300 160, 375 95, 500 95 C 625 95, 700 45, 875 30" fill="none" stroke="#10b981" stroke-width="4.5" stroke-linecap="round" />
+        </svg>
+
+        <div class="pointer-events-none absolute inset-0 pt-4">
+          <!-- Wiring Systems -->
+          <div class="pointer-events-auto absolute left-[12.5%] top-[65%] -translate-x-1/2 flex flex-col items-center text-center w-60">
+            <span class="h-3.5 w-3.5 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Wiring Systems</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Maintenance attention for wiring and associated connections.</p>
+          </div>
+
+          <!-- Distribution Boards -->
+          <div class="pointer-events-auto absolute left-[37.5%] top-[42%] -translate-x-1/2 flex flex-col items-center text-center w-60">
+            <span class="h-3.5 w-3.5 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Distribution Boards</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Maintenance and condition checks for distribution equipment.</p>
+          </div>
+
+          <!-- Lighting Systems -->
+          <div class="pointer-events-auto absolute left-[62.5%] top-[25%] -translate-x-1/2 flex flex-col items-center text-center w-60">
+            <span class="h-3.5 w-3.5 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Lighting Systems</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Maintenance attention for lighting circuits and connections.</p>
+          </div>
+
+          <!-- Power Connections -->
+          <div class="pointer-events-auto absolute left-[87.5%] top-[12%] -translate-x-1/2 flex flex-col items-center text-center w-60">
+            <span class="h-3.5 w-3.5 rounded-full bg-violet-500 ring-4 ring-violet-500/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Power Connections</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Review of relevant power connections and electrical equipment.</p>
+          </div>
         </div>
-
-        <div class="reveal lift rounded-2xl bg-white p-6 shadow-sm dark:bg-slate-950">
-          <span class="material-symbols-outlined text-amber-500">account_tree</span>
-          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-            Distribution Boards
-          </h3>
-          <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Maintenance and condition checks for distribution equipment.
-          </p>
-        </div>
-
-        <div class="reveal lift rounded-2xl bg-white p-6 shadow-sm dark:bg-slate-950">
-          <span class="material-symbols-outlined text-amber-500">lightbulb</span>
-          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-            Lighting Systems
-          </h3>
-          <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Maintenance attention for lighting circuits and connections.
-          </p>
-        </div>
-
-        <div class="reveal lift rounded-2xl bg-white p-6 shadow-sm dark:bg-slate-950">
-          <span class="material-symbols-outlined text-amber-500">power</span>
-          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-            Power Connections
-          </h3>
-          <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Review of relevant power connections and electrical equipment.
-          </p>
-        </div>
-
       </div>
+
     </div>
   </section>
 
 
   <!-- =========================================================
-       SAFETY CHECKS
+       SAFETY CHECKS (Donut (Ring) Chart Centerpiece & Line Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-white py-20 dark:bg-slate-950 md:py-24">
+  <section class="bg-white py-20 dark:bg-slate-950 md:py-24 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
-      <div class="grid gap-10 lg:grid-cols-2">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-14">
 
-        <div class="reveal rounded-3xl bg-slate-950 p-8 md:p-10">
-          <span class="material-symbols-outlined text-4xl text-amber-400">
+        <div class="reveal max-w-xl">
+          <span class="material-symbols-outlined text-4xl text-amber-500">
             health_and_safety
           </span>
 
-          <p class="mt-6 text-sm font-bold uppercase tracking-[.2em] text-amber-400">
+          <p class="mt-6 text-sm font-bold uppercase tracking-[.2em] text-amber-500">
             SAFETY CHECKS
           </p>
 
-          <h2 class="mt-4 text-3xl font-black text-white md:text-4xl">
+          <h2 class="mt-4 text-3xl font-black text-slate-900 dark:text-white md:text-4xl">
             Safety remains part of the maintenance conversation.
           </h2>
 
-          <p class="mt-5 leading-8 text-slate-400">
+          <p class="mt-5 leading-8 text-slate-600 dark:text-slate-400">
             Electrical maintenance involves systems that can present serious
             safety risks. Maintenance activities should therefore be planned
             and performed using appropriate safety procedures and by suitably
@@ -1188,67 +1049,55 @@
           </p>
         </div>
 
-        <div class="grid gap-4 sm:grid-cols-2">
+        <!-- Center Donut (Ring) Chart with Hollow Center Metrics -->
+        <div class="reveal relative flex items-center justify-center shrink-0 mx-auto lg:mx-0">
+          <svg class="w-80 h-80 sm:w-96 sm:h-96 -rotate-90 drop-shadow-sm" viewBox="0 0 320 320">
+            <circle cx="160" cy="160" r="125" fill="none" stroke="currentColor" stroke-width="38" class="text-slate-200/70 dark:text-slate-800/70" />
+            
+            <!-- Segment 1: Visual Checks (25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#f59e0b" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="0" stroke-linecap="butt" />
+            <!-- Segment 2: Risk Identification (25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#10b981" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="-196.35" stroke-linecap="butt" />
+            <!-- Segment 3: Corrective Work (25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#3b82f6" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="-392.7" stroke-linecap="butt" />
+            <!-- Segment 4: Review (25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#8b5cf6" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="-589.05" stroke-linecap="butt" />
+          </svg>
 
-          <div class="reveal lift rounded-2xl border border-slate-200 p-6 dark:border-white/10">
-            <span class="material-symbols-outlined text-amber-500">
-              visibility
+          <!-- Hollow Center Metrics -->
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-10 pointer-events-none">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-500">
+              Safety Assurance
             </span>
-            <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-              Visual Checks
-            </h3>
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Look for visible signs of damage, deterioration or abnormal conditions.
-            </p>
-          </div>
-
-          <div class="reveal lift rounded-2xl border border-slate-200 p-6 dark:border-white/10">
-            <span class="material-symbols-outlined text-amber-500">
-              warning
+            <span class="mt-1 text-4xl sm:text-5xl font-black text-slate-950 dark:text-white">
+              100%
             </span>
-            <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-              Risk Identification
-            </h3>
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Identify conditions that may require corrective action or further assessment.
-            </p>
-          </div>
-
-          <div class="reveal lift rounded-2xl border border-slate-200 p-6 dark:border-white/10">
-            <span class="material-symbols-outlined text-amber-500">
-              construction
+            <span class="mt-1 text-xs font-semibold text-slate-600 dark:text-slate-300">
+              4 Safety Phases Covered
             </span>
-            <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-              Corrective Work
-            </h3>
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Address maintenance requirements according to the agreed project scope.
-            </p>
+            <div class="mt-3 flex items-center gap-2">
+              <span class="h-2.5 w-2.5 rounded-full bg-amber-500" title="Visual Checks"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-emerald-500" title="Risk Identification"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-blue-500" title="Corrective Work"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-violet-500" title="Review"></span>
+            </div>
           </div>
-
-          <div class="reveal lift rounded-2xl border border-slate-200 p-6 dark:border-white/10">
-            <span class="material-symbols-outlined text-amber-500">
-              assignment_turned_in
-            </span>
-            <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-              Review
-            </h3>
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Review completed work and identify any additional maintenance requirements.
-            </p>
-          </div>
-
         </div>
 
       </div>
+
     </div>
   </section>
 
 
   <!-- =========================================================
-       MAINTENANCE PROCESS
+       MAINTENANCE PROCESS (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-slate-900 py-20 md:py-24">
+  <section class="bg-slate-900 py-20 md:py-24 overflow-hidden text-white">
     <div class="mx-auto max-w-7xl px-5">
 
       <div class="max-w-3xl reveal">
@@ -1266,127 +1115,86 @@
         </p>
       </div>
 
+      <!-- Line & Area Chart Flow for 8-Step Maintenance Process -->
+      <div class="reveal relative mt-16">
+        <svg class="w-full h-[280px] overflow-visible" viewBox="0 0 1000 280" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="maint-process-area" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.38" />
+              <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+            </linearGradient>
+          </defs>
 
-      <div class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Shaded Area -->
+          <path d="M 60 190 C 220 190, 310 105, 500 105 C 690 105, 780 40, 940 25 L 940 260 L 60 260 Z" fill="url(#maint-process-area)" />
+          <!-- Connected Curved Line -->
+          <path d="M 60 190 C 220 190, 310 105, 500 105 C 690 105, 780 40, 940 25" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" />
+        </svg>
 
-        <div class="reveal lift rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p class="text-sm font-black text-amber-400">01</p>
-          <span class="material-symbols-outlined mt-5 text-3xl text-white">
-            forum
-          </span>
-          <h3 class="mt-4 text-xl font-bold text-white">
-            Consultation
-          </h3>
-          <p class="mt-2 text-sm leading-6 text-slate-400">
-            Understand the site, electrical system and reported maintenance needs.
-          </p>
+        <div class="pointer-events-none absolute inset-0 pt-4">
+          <!-- Step 01 -->
+          <div class="pointer-events-auto absolute left-[6%] top-[64%] -translate-x-1/2 flex flex-col items-center text-center w-28 sm:w-36">
+            <span class="h-2.5 w-2.5 rounded-full bg-amber-400 ring-4 ring-amber-400/20"></span>
+            <p class="mt-1 text-[11px] font-black text-amber-400">01 · Consult</p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="pointer-events-auto absolute left-[18.5%] top-[53%] -translate-x-1/2 flex flex-col items-center text-center w-28 sm:w-36">
+            <span class="h-2.5 w-2.5 rounded-full bg-emerald-400 ring-4 ring-emerald-400/20"></span>
+            <p class="mt-1 text-[11px] font-black text-emerald-400">02 · Inspect</p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="pointer-events-auto absolute left-[31%] top-[42%] -translate-x-1/2 flex flex-col items-center text-center w-28 sm:w-36">
+            <span class="h-2.5 w-2.5 rounded-full bg-sky-400 ring-4 ring-sky-400/20"></span>
+            <p class="mt-1 text-[11px] font-black text-sky-400">03 · Diagnose</p>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="pointer-events-auto absolute left-[43.5%] top-[32%] -translate-x-1/2 flex flex-col items-center text-center w-28 sm:w-36">
+            <span class="h-2.5 w-2.5 rounded-full bg-blue-400 ring-4 ring-blue-400/20"></span>
+            <p class="mt-1 text-[11px] font-black text-blue-400">04 · Maintain</p>
+          </div>
+
+          <!-- Step 05 -->
+          <div class="pointer-events-auto absolute left-[56%] top-[23%] -translate-x-1/2 flex flex-col items-center text-center w-28 sm:w-36">
+            <span class="h-2.5 w-2.5 rounded-full bg-indigo-400 ring-4 ring-indigo-400/20"></span>
+            <p class="mt-1 text-[11px] font-black text-indigo-400">05 · Testing</p>
+          </div>
+
+          <!-- Step 06 -->
+          <div class="pointer-events-auto absolute left-[68.5%] top-[15%] -translate-x-1/2 flex flex-col items-center text-center w-28 sm:w-36">
+            <span class="h-2.5 w-2.5 rounded-full bg-violet-400 ring-4 ring-violet-400/20"></span>
+            <p class="mt-1 text-[11px] font-black text-violet-400">06 · Findings</p>
+          </div>
+
+          <!-- Step 07 -->
+          <div class="pointer-events-auto absolute left-[81%] top-[9%]-translate-x-1/2 flex flex-col items-center text-center w-28 sm:w-36">
+            <span class="h-2.5 w-2.5 rounded-full bg-pink-400 ring-4 ring-pink-400/20"></span>
+            <p class="mt-1 text-[11px] font-black text-pink-400">07 · Planning</p>
+          </div>
+
+          <!-- Step 08 -->
+          <div class="pointer-events-auto absolute left-[94%] top-[4%] -translate-x-1/2 flex flex-col items-center text-center w-28 sm:w-36">
+            <span class="h-2.5 w-2.5 rounded-full bg-rose-400 ring-4 ring-rose-400/20"></span>
+            <p class="mt-1 text-[11px] font-black text-rose-400">08 · Support</p>
+          </div>
         </div>
-
-        <div class="reveal lift rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p class="text-sm font-black text-amber-400">02</p>
-          <span class="material-symbols-outlined mt-5 text-3xl text-white">
-            search
-          </span>
-          <h3 class="mt-4 text-xl font-bold text-white">
-            Inspection
-          </h3>
-          <p class="mt-2 text-sm leading-6 text-slate-400">
-            Assess relevant electrical equipment, systems and accessible components.
-          </p>
-        </div>
-
-        <div class="reveal lift rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p class="text-sm font-black text-amber-400">03</p>
-          <span class="material-symbols-outlined mt-5 text-3xl text-white">
-            manage_search
-          </span>
-          <h3 class="mt-4 text-xl font-bold text-white">
-            Diagnosis
-          </h3>
-          <p class="mt-2 text-sm leading-6 text-slate-400">
-            Identify maintenance requirements, faults or conditions needing attention.
-          </p>
-        </div>
-
-        <div class="reveal lift rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p class="text-sm font-black text-amber-400">04</p>
-          <span class="material-symbols-outlined mt-5 text-3xl text-white">
-            build
-          </span>
-          <h3 class="mt-4 text-xl font-bold text-white">
-            Maintenance
-          </h3>
-          <p class="mt-2 text-sm leading-6 text-slate-400">
-            Complete agreed maintenance activities according to the project scope.
-          </p>
-        </div>
-
-        <div class="reveal lift rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p class="text-sm font-black text-amber-400">05</p>
-          <span class="material-symbols-outlined mt-5 text-3xl text-white">
-            fact_check
-          </span>
-          <h3 class="mt-4 text-xl font-bold text-white">
-            Testing & Checks
-          </h3>
-          <p class="mt-2 text-sm leading-6 text-slate-400">
-            Carry out appropriate checks following the maintenance work.
-          </p>
-        </div>
-
-        <div class="reveal lift rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p class="text-sm font-black text-amber-400">06</p>
-          <span class="material-symbols-outlined mt-5 text-3xl text-white">
-            description
-          </span>
-          <h3 class="mt-4 text-xl font-bold text-white">
-            Findings
-          </h3>
-          <p class="mt-2 text-sm leading-6 text-slate-400">
-            Communicate relevant findings and maintenance requirements.
-          </p>
-        </div>
-
-        <div class="reveal lift rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p class="text-sm font-black text-amber-400">07</p>
-          <span class="material-symbols-outlined mt-5 text-3xl text-white">
-            calendar_month
-          </span>
-          <h3 class="mt-4 text-xl font-bold text-white">
-            Maintenance Planning
-          </h3>
-          <p class="mt-2 text-sm leading-6 text-slate-400">
-            Where required, identify future maintenance activities based on the system.
-          </p>
-        </div>
-
-        <div class="reveal lift rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p class="text-sm font-black text-amber-400">08</p>
-          <span class="material-symbols-outlined mt-5 text-3xl text-white">
-            support_agent
-          </span>
-          <h3 class="mt-4 text-xl font-bold text-white">
-            Ongoing Support
-          </h3>
-          <p class="mt-2 text-sm leading-6 text-slate-400">
-            Discuss additional maintenance, repair or project requirements where applicable.
-          </p>
-        </div>
-
       </div>
+
     </div>
   </section>
 
 
   <!-- =========================================================
-       MAINTENANCE CHECKLIST
+       MAINTENANCE CHECKLIST (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-white py-20 dark:bg-slate-950 md:py-24">
+  <section class="bg-white py-20 dark:bg-slate-950 md:py-24 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
-      <div class="grid gap-12 lg:grid-cols-2">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
 
-        <div class="reveal">
+        <div class="reveal max-w-xl">
           <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
             MAINTENANCE CHECKLIST
           </p>
@@ -1401,76 +1209,62 @@
           </p>
         </div>
 
-        <div class="reveal rounded-3xl border border-slate-200 p-7 dark:border-white/10">
-
-          <div class="space-y-5">
-
-            <div class="flex gap-4">
-              <span class="material-symbols-outlined text-amber-500">check_circle</span>
-              <div>
-                <h3 class="font-bold text-slate-900 dark:text-white">
-                  Electrical equipment
-                </h3>
-                <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                  Condition and operation of relevant equipment.
-                </p>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <span class="material-symbols-outlined text-amber-500">check_circle</span>
-              <div>
-                <h3 class="font-bold text-slate-900 dark:text-white">
-                  Wiring and connections
-                </h3>
-                <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                  Review of accessible wiring and electrical connections.
-                </p>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <span class="material-symbols-outlined text-amber-500">check_circle</span>
-              <div>
-                <h3 class="font-bold text-slate-900 dark:text-white">
-                  Distribution systems
-                </h3>
-                <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                  Attention to relevant distribution equipment and circuits.
-                </p>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <span class="material-symbols-outlined text-amber-500">check_circle</span>
-              <div>
-                <h3 class="font-bold text-slate-900 dark:text-white">
-                  Reported faults
-                </h3>
-                <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                  Investigation of known or reported electrical concerns.
-                </p>
-              </div>
-            </div>
-
+        <!-- Right Side Line & Area Chart Flow -->
+        <div class="reveal relative w-full max-w-md shrink-0">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-black uppercase tracking-widest text-amber-500">Checklist Coverage</span>
+            <span class="text-xs font-semibold text-slate-400">System Audit</span>
           </div>
 
+          <svg class="w-full h-44 overflow-visible" viewBox="0 0 450 160" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="check-area" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#10b981" stop-opacity="0.4" />
+                <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+              </linearGradient>
+            </defs>
+
+            <!-- Shaded Area -->
+            <path d="M 45 120 C 130 120, 190 60, 280 45 C 340 38, 370 20, 410 12 L 410 155 L 45 155 Z" fill="url(#check-area)" />
+            <!-- Connected Curved Line -->
+            <path d="M 45 120 C 130 120, 190 60, 280 45 C 340 38, 370 20, 410 12" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round" />
+          </svg>
+
+          <div class="pointer-events-none absolute inset-0 pt-8">
+            <div class="absolute left-[12%] top-[68%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Equipment</span>
+            </div>
+            <div class="absolute left-[38%] top-[50%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Wiring</span>
+            </div>
+            <div class="absolute left-[66%] top-[30%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Distribution</span>
+            </div>
+            <div class="absolute left-[90%] top-[10%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-violet-500 ring-4 ring-violet-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-amber-500">Faults</span>
+            </div>
+          </div>
         </div>
 
       </div>
+
     </div>
   </section>
 
 
   <!-- =========================================================
-       GALLERY / PLACEHOLDERS
+       MAINTENANCE PROJECTS (Donut (Ring) Chart Centerpiece — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-slate-50 py-20 dark:bg-slate-900 md:py-24">
+  <section class="bg-slate-50 py-20 dark:bg-slate-900 md:py-24 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
-      <div class="flex flex-col gap-5 md:flex-row md:items-end md:justify-between reveal">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-14">
 
-        <div>
+        <div class="reveal max-w-xl">
           <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
             MAINTENANCE PROJECTS
           </p>
@@ -1478,48 +1272,45 @@
           <h2 class="mt-4 text-3xl font-black text-slate-900 dark:text-white md:text-5xl">
             Electrical maintenance in practice.
           </h2>
+
+          <p class="mt-5 leading-7 text-slate-600 dark:text-slate-400">
+            Project documentation, electrical inspections and distribution maintenance
+            are handled with professional care according to the requirements of the site.
+          </p>
         </div>
 
-        <p class="max-w-xl leading-7 text-slate-600 dark:text-slate-400">
-          Project photographs can be added here as approved TNSE Electrical
-          Projects maintenance images become available.
-        </p>
+        <!-- Center Donut (Ring) Chart with Hollow Center Metrics -->
+        <div class="reveal relative flex items-center justify-center shrink-0 mx-auto lg:mx-0">
+          <svg class="w-80 h-80 sm:w-96 sm:h-96 -rotate-90 drop-shadow-sm" viewBox="0 0 320 320">
+            <circle cx="160" cy="160" r="125" fill="none" stroke="currentColor" stroke-width="38" class="text-slate-200/70 dark:text-slate-800/70" />
+            
+            <!-- Segment 1: Electrical Maintenance (33.3%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#f59e0b" stroke-width="38"
+                    stroke-dasharray="261.8 785.4" stroke-dashoffset="0" stroke-linecap="butt" />
+            <!-- Segment 2: Electrical Inspection (33.3%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#10b981" stroke-width="38"
+                    stroke-dasharray="261.8 785.4" stroke-dashoffset="-261.8" stroke-linecap="butt" />
+            <!-- Segment 3: Distribution Maintenance (33.3%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#3b82f6" stroke-width="38"
+                    stroke-dasharray="261.8 785.4" stroke-dashoffset="-523.6" stroke-linecap="butt" />
+          </svg>
 
-      </div>
-
-
-      <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-
-        <div class="reveal lift flex min-h-[240px] items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white dark:border-white/10 dark:bg-slate-950">
-          <div class="text-center">
-            <span class="material-symbols-outlined text-5xl text-amber-500">
-              electrical_services
+          <!-- Hollow Center Metrics -->
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-10 pointer-events-none">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-500">
+              Project Focus
             </span>
-            <p class="mt-4 font-bold text-slate-900 dark:text-white">
-              Electrical Maintenance
-            </p>
-          </div>
-        </div>
-
-        <div class="reveal lift flex min-h-[240px] items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white dark:border-white/10 dark:bg-slate-950">
-          <div class="text-center">
-            <span class="material-symbols-outlined text-5xl text-amber-500">
-              fact_check
+            <span class="mt-1 text-4xl sm:text-5xl font-black text-slate-950 dark:text-white">
+              100%
             </span>
-            <p class="mt-4 font-bold text-slate-900 dark:text-white">
-              Electrical Inspection
-            </p>
-          </div>
-        </div>
-
-        <div class="reveal lift flex min-h-[240px] items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white dark:border-white/10 dark:bg-slate-950">
-          <div class="text-center">
-            <span class="material-symbols-outlined text-5xl text-amber-500">
-              account_tree
+            <span class="mt-1 text-xs font-semibold text-slate-600 dark:text-slate-300">
+              3 Core Services
             </span>
-            <p class="mt-4 font-bold text-slate-900 dark:text-white">
-              Distribution Maintenance
-            </p>
+            <div class="mt-3 flex items-center gap-2">
+              <span class="h-2.5 w-2.5 rounded-full bg-amber-500" title="Electrical Maintenance"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-emerald-500" title="Electrical Inspection"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-blue-500" title="Distribution Maintenance"></span>
+            </div>
           </div>
         </div>
 
@@ -1528,13 +1319,14 @@
     </div>
   </section>
 
+
   <!-- =========================================================
-       RELATED SERVICES
+       RELATED SERVICES (Line & Area Chart Flow — No Grids/Cards)
   ========================================================== -->
-  <section class="bg-slate-50 py-16 dark:bg-slate-900">
+  <section class="bg-slate-50 py-16 dark:bg-slate-900 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
-      <div class="reveal">
+      <div class="max-w-3xl reveal">
         <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
           RELATED SERVICES
         </p>
@@ -1544,86 +1336,71 @@
         </h2>
       </div>
 
-      <div class="mt-8 grid gap-5 md:grid-cols-3">
+      <!-- Line & Area Chart Flow for Related Services -->
+      <div class="reveal relative mt-12">
+        <svg class="w-full h-[260px] overflow-visible" viewBox="0 0 1000 260" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="related-area" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.38" />
+              <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0" />
+            </linearGradient>
+          </defs>
 
-        <a href="installations.html"
-           class="reveal lift rounded-2xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-950">
-          <span class="material-symbols-outlined text-amber-500">
-            electrical_services
-          </span>
+          <!-- Shaded Area -->
+          <path d="M 165 160 C 330 160, 400 95, 500 95 C 600 95, 700 45, 835 30 L 835 240 L 165 240 Z" fill="url(#related-area)" />
+          <!-- Connected Curved Line -->
+          <path d="M 165 160 C 330 160, 400 95, 500 95 C 600 95, 700 45, 835 30" fill="none" stroke="#3b82f6" stroke-width="4.5" stroke-linecap="round" />
+        </svg>
 
-          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-            Electrical Installations
-          </h3>
+        <div class="pointer-events-none absolute inset-0 pt-4">
+          <!-- Installations -->
+          <div class="pointer-events-auto absolute left-[16.5%] top-[65%] -translate-x-1/2 flex flex-col items-center text-center w-72">
+            <span class="h-3.5 w-3.5 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Electrical Installations</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Explore electrical installation services and project planning.</p>
+            <a href="installations.html" class="mt-2 inline-flex items-center gap-1 text-xs font-bold text-amber-500 hover:underline pointer-events-auto">
+              Explore <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
 
-          <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Explore electrical installation services and project planning.
-          </p>
+          <!-- Repairs -->
+          <div class="pointer-events-auto absolute left-[50%] top-[38%] -translate-x-1/2 flex flex-col items-center text-center w-72">
+            <span class="h-3.5 w-3.5 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Electrical Repairs</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Explore fault investigation and electrical repair services.</p>
+            <a href="repairs.html" class="mt-2 inline-flex items-center gap-1 text-xs font-bold text-emerald-500 hover:underline pointer-events-auto">
+              Explore <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
 
-          <span class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white">
-            Explore
-            <span class="material-symbols-outlined text-amber-500">arrow_forward</span>
-          </span>
-        </a>
-
-
-        <a href="repairs.html"
-           class="reveal lift rounded-2xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-950">
-          <span class="material-symbols-outlined text-amber-500">
-            build
-          </span>
-
-          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-            Electrical Repairs
-          </h3>
-
-          <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Explore fault investigation and electrical repair services.
-          </p>
-
-          <span class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white">
-            Explore
-            <span class="material-symbols-outlined text-amber-500">arrow_forward</span>
-          </span>
-        </a>
-
-
-        <a href="../solar/index.html"
-           class="reveal lift rounded-2xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-950">
-          <span class="material-symbols-outlined text-amber-500">
-            solar_power
-          </span>
-
-          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-            Solar Solutions
-          </h3>
-
-          <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Explore solar installations, maintenance, repairs and energy solutions.
-          </p>
-
-          <span class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white">
-            Explore
-            <span class="material-symbols-outlined text-amber-500">arrow_forward</span>
-          </span>
-        </a>
-
+          <!-- Solar Solutions -->
+          <div class="pointer-events-auto absolute left-[83.5%] top-[12%] -translate-x-1/2 flex flex-col items-center text-center w-72">
+            <span class="h-3.5 w-3.5 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Solar Solutions</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Explore solar installations, maintenance, repairs and energy solutions.</p>
+            <a href="../solar/index.html" class="mt-2 inline-flex items-center gap-1 text-xs font-bold text-blue-500 hover:underline pointer-events-auto">
+              Explore <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
 
   <!-- =========================================================
-       FINAL CTA — REQUEST A QUOTE
+       FINAL CTA — REQUEST A QUOTE (Updated path & Line/Area Chart)
+       Updated path: https://www.tnse.co.za/forms/contact-form/index.html
   ========================================================== -->
-  <section class="relative overflow-hidden bg-slate-950 py-20 md:py-24">
+  <section class="relative overflow-hidden bg-slate-950 py-20 md:py-24 overflow-hidden text-white">
     <div class="hero-grid absolute inset-0 opacity-30"></div>
 
     <div class="relative mx-auto max-w-7xl px-5">
 
-      <div class="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12 lg:flex lg:items-center lg:justify-between lg:gap-10">
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
 
-        <div class="max-w-3xl reveal">
+        <div class="max-w-2xl reveal">
           <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-400">
             REQUEST A QUOTE
           </p>
@@ -1636,31 +1413,56 @@
             Tell us about your electrical maintenance, inspection or fault
             detection requirement and let us discuss the appropriate next step.
           </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="https://www.tnse.co.za/forms/contact-form/index.html"
+               class="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-400 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-amber-300 shadow-lg">
+              <span>Request a Quote</span>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+
+            <a href="https://wa.me/27818276288"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-6 py-3.5 font-bold text-white transition hover:bg-white/10">
+              <span class="material-symbols-outlined">chat</span>
+              <span>WhatsApp TNSE</span>
+            </a>
+          </div>
         </div>
 
-        <div class="mt-8 flex shrink-0 flex-col gap-3 sm:flex-row lg:mt-0">
+        <!-- Right Side Line & Area Chart for Quote Engagement -->
+        <div class="reveal relative w-full max-w-sm shrink-0">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-black uppercase tracking-widest text-amber-400">Action Flow</span>
+            <span class="text-xs font-semibold text-slate-400">Fast Response</span>
+          </div>
 
-          <a href="../contact/index.html"
-             class="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-400 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-amber-300">
-            <span>Request a Quote</span>
-            <span class="material-symbols-outlined">arrow_forward</span>
-          </a>
+          <svg class="w-full h-40 overflow-visible" viewBox="0 0 380 140" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="maint-cta-area" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.4" />
+                <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+              </linearGradient>
+            </defs>
+            <path d="M 38 100 C 110 100, 160 50, 250 38 C 300 32, 330 18, 355 12 L 355 130 L 38 130 Z" fill="url(#maint-cta-area)" />
+            <path d="M 38 100 C 110 100, 160 50, 250 38 C 300 32, 330 18, 355 12" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+          </svg>
 
-          <a href="https://wa.me/27818276288"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-6 py-3.5 font-bold text-white transition hover:bg-white/10">
-            <span class="material-symbols-outlined">chat</span>
-            <span>WhatsApp TNSE</span>
-          </a>
-
+          <div class="pointer-events-none absolute inset-0 pt-6">
+            <div class="absolute left-[15%] top-[65%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-amber-400 ring-4 ring-amber-400/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-300">Submit Request</span>
+            </div>
+            <div class="absolute left-[75%] top-[20%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-emerald-400 ring-4 ring-emerald-400/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-300">Expert Review</span>
+            </div>
+          </div>
         </div>
-
       </div>
-
     </div>
   </section>
-
 </main>
     
 <!-- =========================================================
