@@ -1145,87 +1145,137 @@
   </div>
 </section>
     
+<!-- =========================================================
+     COMPANY HIGHLIGHTS SECTION (Pie Chart Layout)
+========================================================= -->
 <section class="bg-slate-950 py-20 text-white overflow-hidden">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+    
+    <!-- Flex Container (No Grids) -->
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-14">
       
-      <!-- Left Column: Text Content (Fades in from Left) -->
-      <div class="fade-init from-left">
+      <!-- Left Column: Text Content & Color-Coded Legend -->
+      <div class="fade-init from-left max-w-xl">
         <p class="font-bold uppercase tracking-[0.2em] text-amber-400">
           Company Highlights
         </p>
         <h2 class="mt-3 text-3xl font-black sm:text-4xl">
           Building reliable energy solutions for today and tomorrow.
         </h2>
-        <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
+        <p class="mt-5 text-lg leading-8 text-slate-300">
           TNSE Electrical Projects combines electrical services with solar
           and energy solutions to help customers address their power,
           installation, maintenance and project requirements.
         </p>
+
+        <!-- Color-Coded Highlight Key (No Cards, No Grid) -->
+        <div class="mt-8 flex flex-col space-y-4">
+          
+          <!-- Slice 1: Year Established (Amber) -->
+          <div class="flex items-center gap-3 border-l-4 border-amber-400 pl-4" style="transition-delay: 100ms;">
+            <span class="material-symbols-outlined text-2xl text-amber-400">calendar_month</span>
+            <div>
+              <span class="font-black text-white">2017</span>
+              <span class="mx-2 text-slate-600">—</span>
+              <span class="text-sm text-slate-300">Year established</span>
+            </div>
+          </div>
+
+          <!-- Slice 2: BEE Contributor (Emerald) -->
+          <div class="flex items-center gap-3 border-l-4 border-emerald-400 pl-4" style="transition-delay: 200ms;">
+            <span class="material-symbols-outlined text-2xl text-emerald-400">workspace_premium</span>
+            <div>
+              <span class="font-black text-white">Level 1</span>
+              <span class="mx-2 text-slate-600">—</span>
+              <span class="text-sm text-slate-300">BEE Contributor</span>
+            </div>
+          </div>
+
+          <!-- Slice 3: Electrical (Sky Blue) -->
+          <div class="flex items-center gap-3 border-l-4 border-sky-400 pl-4" style="transition-delay: 300ms;">
+            <span class="material-symbols-outlined text-2xl text-sky-400">bolt</span>
+            <div>
+              <span class="font-black text-white">Electrical</span>
+              <span class="mx-2 text-slate-600">—</span>
+              <span class="text-sm text-slate-300">Installation &amp; maintenance</span>
+            </div>
+          </div>
+
+          <!-- Slice 4: Solar & Energy (Violet) -->
+          <div class="flex items-center gap-3 border-l-4 border-violet-400 pl-4" style="transition-delay: 400ms;">
+            <span class="material-symbols-outlined text-2xl text-violet-400">solar_power</span>
+            <div>
+              <span class="font-black text-white">Solar &amp; Energy</span>
+              <span class="mx-2 text-slate-600">—</span>
+              <span class="text-sm text-slate-300">Renewable energy solutions</span>
+            </div>
+          </div>
+
+        </div>
+
         <a href="about/index.html"
-          class="mt-8 inline-flex items-center gap-2 rounded-xl bg-amber-400 px-6 py-3 font-bold text-slate-950 transition hover:bg-amber-300">
+          class="mt-10 inline-flex items-center gap-2 rounded-xl bg-amber-400 px-6 py-3 font-bold text-slate-950 transition hover:bg-amber-300">
           Discover Our Company
-          <span class="material-symbols-outlined">
-            arrow_forward
-          </span>
+          <span class="material-symbols-outlined">arrow_forward</span>
         </a>
       </div>
 
-      <!-- Right Column: Highlight Cards (Different directional fades) -->
-      <div class="grid gap-4 sm:grid-cols-2">
-        
-        <!-- Card 1: From Bottom -->
-        <div class="fade-init from-bottom rounded-2xl border border-slate-800 bg-slate-900 p-6" style="transition-delay: 100ms;">
-          <span class="material-symbols-outlined text-3xl text-amber-400">
-            calendar_month
-          </span>
-          <p class="mt-4 text-3xl font-black">
-            2017
-          </p>
-          <p class="mt-1 text-slate-400">
-            Year established
-          </p>
-        </div>
+      <!-- Right Column: Full Pie Chart (Triangular Slices Dividing a Full Circle) -->
+      <div class="fade-init from-right relative flex items-center justify-center shrink-0 mx-auto lg:mx-0">
+        <svg class="w-80 h-80 sm:w-[420px] sm:h-[420px] drop-shadow-2xl" viewBox="0 0 400 400">
+          
+          <!-- Slice 1: Top-Right Quadrant (Amber - 2017) -->
+          <g class="transition-transform duration-300 hover:scale-[1.02] origin-[200px_200px]">
+            <path d="M 200 200 L 200 20 A 180 180 0 0 1 380 200 Z"
+                  fill="#f59e0b" stroke="#020617" stroke-width="5" stroke-linejoin="round" />
+            <text x="275" y="122" text-anchor="middle" fill="#020617" font-size="11" font-weight="800" letter-spacing="1.5">
+              ESTABLISHED
+            </text>
+            <text x="275" y="148" text-anchor="middle" fill="#020617" font-size="24" font-weight="900">
+              2017
+            </text>
+          </g>
 
-        <!-- Card 2: From Right -->
-        <div class="fade-init from-right rounded-2xl border border-slate-800 bg-slate-900 p-6" style="transition-delay: 200ms;">
-          <span class="material-symbols-outlined text-3xl text-amber-400">
-            workspace_premium
-          </span>
-          <p class="mt-4 text-3xl font-black">
-            Level 1
-          </p>
-          <p class="mt-1 text-slate-400">
-            BEE Contributor
-          </p>
-        </div>
+          <!-- Slice 2: Bottom-Right Quadrant (Emerald - Level 1 BEE) -->
+          <g class="transition-transform duration-300 hover:scale-[1.02] origin-[200px_200px]">
+            <path d="M 200 200 L 380 200 A 180 180 0 0 1 200 380 Z"
+                  fill="#10b981" stroke="#020617" stroke-width="5" stroke-linejoin="round" />
+            <text x="275" y="265" text-anchor="middle" fill="#020617" font-size="22" font-weight="900">
+              Level 1
+            </text>
+            <text x="275" y="286" text-anchor="middle" fill="#020617" font-size="11" font-weight="800" letter-spacing="1">
+              BEE CONTRIBUTOR
+            </text>
+          </g>
 
-        <!-- Card 3: Middle In -->
-        <div class="fade-init middle-in rounded-2xl border border-slate-800 bg-slate-900 p-6" style="transition-delay: 300ms;">
-          <span class="material-symbols-outlined text-3xl text-amber-400">
-            bolt
-          </span>
-          <p class="mt-4 text-xl font-black">
-            Electrical
-          </p>
-          <p class="mt-1 text-slate-400">
-            Installation & maintenance
-          </p>
-        </div>
+          <!-- Slice 3: Bottom-Left Quadrant (Sky Blue - Electrical) -->
+          <g class="transition-transform duration-300 hover:scale-[1.02] origin-[200px_200px]">
+            <path d="M 200 200 L 200 380 A 180 180 0 0 1 20 200 Z"
+                  fill="#0ea5e9" stroke="#020617" stroke-width="5" stroke-linejoin="round" />
+            <text x="125" y="265" text-anchor="middle" fill="#020617" font-size="19" font-weight="900">
+              Electrical
+            </text>
+            <text x="125" y="285" text-anchor="middle" fill="#020617" font-size="10.5" font-weight="800">
+              Install &amp; Maint.
+            </text>
+          </g>
 
-        <!-- Card 4: From Bottom -->
-        <div class="fade-init from-bottom rounded-2xl border border-slate-800 bg-slate-900 p-6" style="transition-delay: 400ms;">
-          <span class="material-symbols-outlined text-3xl text-amber-400">
-            solar_power
-          </span>
-          <p class="mt-4 text-xl font-black">
-            Solar & Energy
-          </p>
-          <p class="mt-1 text-slate-400">
-            Renewable energy solutions
-          </p>
-        </div>
+          <!-- Slice 4: Top-Left Quadrant (Violet - Solar & Energy) -->
+          <g class="transition-transform duration-300 hover:scale-[1.02] origin-[200px_200px]">
+            <path d="M 200 200 L 20 200 A 180 180 0 0 1 200 20 Z"
+                  fill="#8b5cf6" stroke="#020617" stroke-width="5" stroke-linejoin="round" />
+            <text x="125" y="130" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="900">
+              Solar &amp;
+            </text>
+            <text x="125" y="150" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="900">
+              Energy
+            </text>
+            <text x="125" y="168" text-anchor="middle" fill="#f1f5f9" font-size="10.5" font-weight="700">
+              Renewables
+            </text>
+          </g>
 
+        </svg>
       </div>
 
     </div>
