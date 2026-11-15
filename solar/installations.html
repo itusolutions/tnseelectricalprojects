@@ -527,7 +527,7 @@
   </section>
 
   <!-- =========================================================
-       INTRODUCTION (Donut (Ring) Chart — No Grids/Cards)
+       INTRODUCTION (Donut (Ring) Chart Replacement — No Grids/Cards)
   ========================================================== -->
   <section class="bg-white py-20 dark:bg-slate-950 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
@@ -557,20 +557,20 @@
           </p>
         </div>
 
-        <!-- Donut (Ring) Chart Replacing Introduction Cards -->
+        <!-- Donut (Ring) Chart Replacement -->
         <div class="reveal relative flex items-center justify-center shrink-0 mx-auto">
           <svg class="w-80 h-80 sm:w-96 sm:h-96 -rotate-90 drop-shadow-sm" viewBox="0 0 320 320">
             <circle cx="160" cy="160" r="125" fill="none" stroke="currentColor" stroke-width="38" class="text-slate-200/70 dark:text-slate-800/70" />
-            <!-- Segment 1: Solar (25%) -->
+            <!-- Solar Segment (25%) -->
             <circle cx="160" cy="160" r="125" fill="none" stroke="#f59e0b" stroke-width="38"
                     stroke-dasharray="196.35 785.4" stroke-dashoffset="0" stroke-linecap="butt" />
-            <!-- Segment 2: Electrical (25%) -->
+            <!-- Electrical Segment (25%) -->
             <circle cx="160" cy="160" r="125" fill="none" stroke="#10b981" stroke-width="38"
                     stroke-dasharray="196.35 785.4" stroke-dashoffset="-196.35" stroke-linecap="butt" />
-            <!-- Segment 3: Storage (25%) -->
+            <!-- Storage Segment (25%) -->
             <circle cx="160" cy="160" r="125" fill="none" stroke="#3b82f6" stroke-width="38"
                     stroke-dasharray="196.35 785.4" stroke-dashoffset="-392.7" stroke-linecap="butt" />
-            <!-- Segment 4: Support (25%) -->
+            <!-- Support Segment (25%) -->
             <circle cx="160" cy="160" r="125" fill="none" stroke="#8b5cf6" stroke-width="38"
                     stroke-dasharray="196.35 785.4" stroke-dashoffset="-589.05" stroke-linecap="butt" />
           </svg>
@@ -601,7 +601,7 @@
 
 
   <!-- =========================================================
-       SOLAR PANEL INSTALLATIONS (Line Chart — No Grids/Cards)
+       SOLAR PANEL INSTALLATIONS (Line Chart Replacement — No Grids/Cards)
   ========================================================== -->
   <section class="bg-slate-50 py-20 dark:bg-slate-900/60 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
@@ -622,7 +622,7 @@
         </p>
       </div>
 
-      <!-- Line Chart Flow replacing panel cards -->
+      <!-- Line Chart Flow Replacement -->
       <div class="reveal relative mt-16">
         <svg class="w-full h-56 overflow-visible" viewBox="0 0 1000 200" preserveAspectRatio="none">
           <path d="M 60 140 C 250 140, 320 70, 500 65 C 680 60, 780 30, 940 15" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" />
@@ -657,7 +657,7 @@
 
 
   <!-- =========================================================
-       INVERTER INSTALLATIONS (Area Chart — No Grids/Cards)
+       INVERTER INSTALLATIONS (Area Chart Replacement — No Grids/Cards)
   ========================================================== -->
   <section class="py-20 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
@@ -680,7 +680,7 @@
           </p>
         </div>
 
-        <!-- Area Chart Flow replacing inverter cards -->
+        <!-- Area Chart Flow Replacement -->
         <div class="reveal relative w-full">
           <div class="flex items-center justify-between mb-2">
             <span class="text-xs font-black uppercase tracking-widest text-amber-500">Inverter Efficiency Area</span>
@@ -724,7 +724,7 @@
 
 
   <!-- =========================================================
-       BATTERY STORAGE (Area Chart — No Grids/Cards)
+       BATTERY STORAGE (Line Chart Replacement — No Grids/Cards)
   ========================================================== -->
   <section class="bg-slate-50 py-20 dark:bg-slate-900/60 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
@@ -745,36 +745,27 @@
         </p>
       </div>
 
-      <!-- Area Chart Flow replacing battery cards -->
-      <div class="reveal relative mt-16 max-w-4xl mx-auto">
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-xs font-black uppercase tracking-widest text-amber-500">Storage & Backup Trend Area</span>
-          <span class="text-xs font-semibold text-slate-400">Capacity Integration</span>
-        </div>
-
-        <svg class="w-full h-52 overflow-visible" viewBox="0 0 600 180" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="battery-area" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#10b981" stop-opacity="0.4" />
-              <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
-            </linearGradient>
-          </defs>
-          <path d="M 60 130 C 180 130, 280 60, 380 45 C 460 35, 520 20, 550 10 L 550 170 L 60 170 Z" fill="url(#battery-area)" />
-          <path d="M 60 130 C 180 130, 280 60, 380 45 C 460 35, 520 20, 550 10" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round" />
+      <!-- Line Chart Flow Replacement -->
+      <div class="reveal relative mt-16">
+        <svg class="w-full h-48 overflow-visible" viewBox="0 0 1000 180" preserveAspectRatio="none">
+          <path d="M 80 120 C 300 120, 500 50, 920 30" fill="none" stroke="#10b981" stroke-width="4.5" stroke-linecap="round" />
         </svg>
 
-        <div class="pointer-events-none absolute inset-0 pt-8">
-          <div class="absolute left-[15%] top-[68%] -translate-x-1/2 flex flex-col items-center text-center">
-            <span class="h-3 w-3 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
-            <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Battery Installation</span>
+        <div class="pointer-events-none absolute inset-0 pt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="pointer-events-auto absolute left-[15%] top-[50%] -translate-x-1/2 flex flex-col items-center text-center w-64">
+            <span class="h-3.5 w-3.5 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
+            <h3 class="mt-2 text-base font-bold text-slate-900 dark:text-white">Battery Installation</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400">Configuring solar & backup storage</p>
           </div>
-          <div class="absolute left-[52%] top-[40%] -translate-x-1/2 flex flex-col items-center text-center">
-            <span class="h-3 w-3 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
-            <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Backup Power</span>
+          <div class="pointer-events-auto absolute left-[50%] top-[35%] -translate-x-1/2 flex flex-col items-center text-center w-64">
+            <span class="h-3.5 w-3.5 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
+            <h3 class="mt-2 text-base font-bold text-slate-900 dark:text-white">Backup Power</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400">Supporting selected loads safely</p>
           </div>
-          <div class="absolute left-[88%] top-[15%] -translate-x-1/2 flex flex-col items-center text-center">
-            <span class="h-3 w-3 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
-            <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">System Integration</span>
+          <div class="pointer-events-auto absolute left-[85%] top-[15%] -translate-x-1/2 flex flex-col items-center text-center w-64">
+            <span class="h-3.5 w-3.5 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
+            <h3 class="mt-2 text-base font-bold text-slate-900 dark:text-white">System Integration</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400">Inverter & electrical synchronization</p>
           </div>
         </div>
       </div>
@@ -784,7 +775,7 @@
 
 
   <!-- =========================================================
-       SOLAR SYSTEM DESIGN (Line Chart — No Grids/Cards)
+       SOLAR SYSTEM DESIGN (Area Chart Replacement — No Grids/Cards)
   ========================================================== -->
   <section class="py-20 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
@@ -808,33 +799,40 @@
           </p>
         </div>
 
-        <!-- Line Chart Flow replacing design cards -->
+        <!-- Area Chart Flow Replacement -->
         <div class="reveal relative w-full">
           <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-black uppercase tracking-widest text-amber-500">Design Pathway Line Chart</span>
-            <span class="text-xs font-semibold text-slate-400">Step-by-Step Flow</span>
+            <span class="text-xs font-black uppercase tracking-widest text-amber-500">System Design Planning Area</span>
+            <span class="text-xs font-semibold text-slate-400">Architectural Flow</span>
           </div>
 
-          <svg class="w-full h-52 overflow-visible" viewBox="0 0 600 180" preserveAspectRatio="none">
-            <path d="M 50 140 C 180 140, 260 80, 380 60 C 460 45, 520 25, 560 15" fill="none" stroke="#3b82f6" stroke-width="4.5" stroke-linecap="round" />
+          <svg class="w-full h-52 overflow-visible" viewBox="0 0 500 180" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="design-area" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.4" />
+                <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0" />
+              </linearGradient>
+            </defs>
+            <path d="M 50 130 C 150 130, 220 50, 310 40 C 380 30, 420 18, 460 10 L 460 170 L 50 170 Z" fill="url(#design-area)" />
+            <path d="M 50 130 C 150 130, 220 50, 310 40 C 380 30, 420 18, 460 10" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" />
           </svg>
 
-          <div class="pointer-events-none absolute inset-0 pt-6">
-            <div class="absolute left-[12%] top-[60%] -translate-x-1/2 flex flex-col items-center text-center w-36">
+          <div class="pointer-events-none absolute inset-0 pt-8">
+            <div class="absolute left-[12%] top-[68%] -translate-x-1/2 flex flex-col items-center">
               <span class="h-3 w-3 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
-              <span class="mt-1 text-xs font-bold text-slate-900 dark:text-white">Site Assessment</span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Site Assessment</span>
             </div>
-            <div class="absolute left-[38%] top-[45%] -translate-x-1/2 flex flex-col items-center text-center w-36">
+            <div class="absolute left-[42%] top-[45%] -translate-x-1/2 flex flex-col items-center">
               <span class="h-3 w-3 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
-              <span class="mt-1 text-xs font-bold text-slate-900 dark:text-white">Electrical Assessment</span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">Electrical Assessment</span>
             </div>
-            <div class="absolute left-[68%] top-[25%] -translate-x-1/2 flex flex-col items-center text-center w-36">
-              <span class="h-3 w-3 rounded-full bg-sky-500 ring-4 ring-sky-500/20"></span>
-              <span class="mt-1 text-xs font-bold text-slate-900 dark:text-white">System Planning</span>
+            <div class="absolute left-[75%] top-[25%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-700 dark:text-slate-300">System Planning</span>
             </div>
-            <div class="absolute left-[92%] top-[10%] -translate-x-1/2 flex flex-col items-center text-center w-36">
+            <div class="absolute left-[92%] top-[10%] -translate-x-1/2 flex flex-col items-center">
               <span class="h-3 w-3 rounded-full bg-violet-500 ring-4 ring-violet-500/20"></span>
-              <span class="mt-1 text-xs font-bold text-slate-900 dark:text-white">Installation Planning</span>
+              <span class="mt-1 text-xs font-bold text-amber-500">Installation Planning</span>
             </div>
           </div>
         </div>
@@ -845,7 +843,7 @@
 
 
   <!-- =========================================================
-       RESIDENTIAL / COMMERCIAL (Donut (Ring) Chart — No Grids/Cards)
+       RESIDENTIAL & COMMERCIAL (Donut Chart Replacement — No Grids/Cards)
   ========================================================== -->
   <section class="bg-slate-950 py-20 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
@@ -872,14 +870,14 @@
           </p>
         </div>
 
-        <!-- Donut (Ring) Chart for Residential vs Commercial Distribution -->
+        <!-- Donut Chart Replacement -->
         <div class="reveal relative flex items-center justify-center shrink-0 mx-auto">
           <svg class="w-80 h-80 sm:w-96 sm:h-96 -rotate-90 drop-shadow-sm" viewBox="0 0 320 320">
             <circle cx="160" cy="160" r="125" fill="none" stroke="currentColor" stroke-width="38" class="text-slate-800/70" />
-            <!-- Segment 1: Residential (50%) -->
+            <!-- Residential Segment (50%) -->
             <circle cx="160" cy="160" r="125" fill="none" stroke="#f59e0b" stroke-width="38"
                     stroke-dasharray="392.7 785.4" stroke-dashoffset="0" stroke-linecap="butt" />
-            <!-- Segment 2: Commercial (50%) -->
+            <!-- Commercial Segment (50%) -->
             <circle cx="160" cy="160" r="125" fill="none" stroke="#3b82f6" stroke-width="38"
                     stroke-dasharray="392.7 785.4" stroke-dashoffset="-392.7" stroke-linecap="butt" />
           </svg>
@@ -908,7 +906,7 @@
 
 
   <!-- =========================================================
-       BACKUP POWER (Line Chart — No Grids/Cards)
+       BACKUP POWER (Line Chart Replacement — No Grids/Cards)
   ========================================================== -->
   <section class="py-20 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
@@ -928,10 +926,10 @@
         </p>
       </div>
 
-      <!-- Line Chart Flow replacing Backup Power cards -->
-      <div class="reveal relative mt-16 max-w-4xl mx-auto">
-        <svg class="w-full h-48 overflow-visible" viewBox="0 0 800 180" preserveAspectRatio="none">
-          <path d="M 80 120 C 250 120, 400 50, 720 30" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" />
+      <!-- Line Chart Flow Replacement -->
+      <div class="reveal relative mt-16">
+        <svg class="w-full h-48 overflow-visible" viewBox="0 0 1000 180" preserveAspectRatio="none">
+          <path d="M 80 120 C 300 120, 500 50, 920 30" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" />
         </svg>
 
         <div class="pointer-events-none absolute inset-0 pt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -958,7 +956,7 @@
 
 
   <!-- =========================================================
-       INSTALLATION PROCESS (Line Chart — No Grids/Cards)
+       INSTALLATION PROCESS (Line Chart Trend Replacement — No Grids/Cards)
   ========================================================== -->
   <section id="installation-process" class="bg-slate-50 py-20 dark:bg-slate-900/60 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
@@ -978,7 +976,7 @@
         </p>
       </div>
 
-      <!-- Line Chart Flow representing 5-Stage Process -->
+      <!-- Line Chart Flow Replacement -->
       <div class="reveal relative mt-16">
         <svg class="w-full h-56 overflow-visible" viewBox="0 0 1000 200" preserveAspectRatio="none">
           <path d="M 60 140 C 220 140, 320 90, 500 80 C 680 70, 780 35, 940 20" fill="none" stroke="#3b82f6" stroke-width="4.5" stroke-linecap="round" />
@@ -1018,7 +1016,7 @@
 
 
   <!-- =========================================================
-       INSTALLATION CHECKLIST (Area Chart — No Grids/Cards)
+       INSTALLATION CHECKLIST (Area Chart Replacement — No Grids/Cards)
   ========================================================== -->
   <section class="py-20 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
@@ -1040,7 +1038,7 @@
           </p>
         </div>
 
-        <!-- Area Chart Flow replacing checklist cards -->
+        <!-- Area Chart Flow Replacement -->
         <div class="reveal relative w-full">
           <div class="flex items-center justify-between mb-2">
             <span class="text-xs font-black uppercase tracking-widest text-amber-500">Planning & Assessment Area</span>
@@ -1074,287 +1072,6 @@
             <div class="absolute left-[92%] top-[10%] -translate-x-1/2 flex flex-col items-center">
               <span class="h-3 w-3 rounded-full bg-violet-500 ring-4 ring-violet-500/20"></span>
               <span class="mt-1 text-xs font-bold text-amber-500">Future Scalability</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       SOLAR PROJECT GALLERY (Donut (Ring) Chart Centerpiece — No Grids/Cards)
-  ========================================================== -->
-  <section class="bg-slate-950 py-20 overflow-hidden">
-    <div class="mx-auto max-w-7xl px-5">
-
-      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-14">
-
-        <div class="reveal max-w-xl">
-          <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-400">
-            Solar Project Gallery
-          </p>
-
-          <h2 class="mt-3 text-3xl font-black text-white md:text-5xl">
-            Installation work and project highlights.
-          </h2>
-
-          <p class="mt-5 max-w-2xl leading-8 text-slate-400">
-            Showcase completed solar installations, inverter installations,
-            battery systems and other energy projects here.
-          </p>
-
-          <a href="../../projects/solar/index.html"
-             class="mt-7 inline-flex items-center gap-2 font-bold text-amber-400 hover:underline">
-            <span>View Solar Projects</span>
-            <span class="material-symbols-outlined">arrow_forward</span>
-          </a>
-        </div>
-
-        <!-- Center Donut (Ring) Chart with Hollow Center Metrics -->
-        <div class="reveal relative flex items-center justify-center shrink-0 mx-auto lg:mx-0">
-          <svg class="w-80 h-80 sm:w-96 sm:h-96 -rotate-90 drop-shadow-sm" viewBox="0 0 320 320">
-            <circle cx="160" cy="160" r="125" fill="none" stroke="currentColor" stroke-width="38" class="text-slate-800/70" />
-            
-            <!-- Segment 1: Solar Panel Installation (33.3%) -->
-            <circle cx="160" cy="160" r="125" fill="none" stroke="#f59e0b" stroke-width="38"
-                    stroke-dasharray="261.8 785.4" stroke-dashoffset="0" stroke-linecap="butt" />
-            <!-- Segment 2: Inverter System (33.3%) -->
-            <circle cx="160" cy="160" r="125" fill="none" stroke="#10b981" stroke-width="38"
-                    stroke-dasharray="261.8 785.4" stroke-dashoffset="-261.8" stroke-linecap="butt" />
-            <!-- Segment 3: Battery Storage System (33.3%) -->
-            <circle cx="160" cy="160" r="125" fill="none" stroke="#3b82f6" stroke-width="38"
-                    stroke-dasharray="261.8 785.4" stroke-dashoffset="-523.6" stroke-linecap="butt" />
-          </svg>
-
-          <!-- Hollow Center Metrics -->
-          <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-10 pointer-events-none">
-            <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-400">
-              Solar Highlights
-            </span>
-            <span class="mt-1 text-4xl sm:text-5xl font-black text-white">
-              100%
-            </span>
-            <span class="mt-1 text-xs font-semibold text-slate-300">
-              3 Core Systems
-            </span>
-            <div class="mt-3 flex items-center gap-2">
-              <span class="h-2.5 w-2.5 rounded-full bg-amber-500" title="Solar Panel Installation"></span>
-              <span class="h-2.5 w-2.5 rounded-full bg-emerald-500" title="Inverter System"></span>
-              <span class="h-2.5 w-2.5 rounded-full bg-blue-500" title="Battery Storage System"></span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =========================================================
-       WHY CHOOSE TNSE (Area Chart Flow — No Grids/Cards)
-  ========================================================== -->
-  <section class="py-20 overflow-hidden bg-white dark:bg-slate-950">
-    <div class="mx-auto max-w-7xl px-5">
-
-      <div class="text-center reveal max-w-3xl mx-auto">
-        <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-500">
-          Why TNSE
-        </p>
-
-        <h2 class="mt-3 text-3xl font-black text-slate-900 dark:text-white md:text-5xl">
-          A complete approach to solar installation.
-        </h2>
-      </div>
-
-      <!-- Area Chart Flow Replacing 4 Value Cards -->
-      <div class="reveal relative mt-16">
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-xs font-black uppercase tracking-widest text-amber-500">Execution Standards</span>
-          <span class="text-xs font-semibold text-slate-400">End-to-End Quality</span>
-        </div>
-
-        <svg class="w-full h-56 overflow-visible" viewBox="0 0 1000 200" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="why-tnse-area" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.38" />
-              <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
-            </linearGradient>
-          </defs>
-
-          <!-- Shaded Area -->
-          <path d="M 80 140 C 260 140, 350 75, 500 65 C 650 55, 760 25, 920 15 L 920 190 L 80 190 Z" fill="url(#why-tnse-area)" />
-          <!-- Connected Curved Line -->
-          <path d="M 80 140 C 260 140, 350 75, 500 65 C 650 55, 760 25, 920 15" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" />
-        </svg>
-
-        <div class="pointer-events-none absolute inset-0 pt-6">
-          <!-- Point 1: Technical Approach -->
-          <div class="pointer-events-auto absolute left-[10%] top-[62%] -translate-x-1/2 flex flex-col items-center text-center w-52">
-            <span class="h-3.5 w-3.5 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
-            <h3 class="mt-2 text-sm font-bold text-slate-900 dark:text-white">Technical Approach</h3>
-            <p class="mt-0.5 text-xs text-slate-600 dark:text-slate-400">Wider electrical integration</p>
-          </div>
-
-          <!-- Point 2: Project Planning -->
-          <div class="pointer-events-auto absolute left-[36%] top-[44%] -translate-x-1/2 flex flex-col items-center text-center w-52">
-            <span class="h-3.5 w-3.5 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
-            <h3 class="mt-2 text-sm font-bold text-slate-900 dark:text-white">Project Planning</h3>
-            <p class="mt-0.5 text-xs text-slate-600 dark:text-slate-400">Tailored to application needs</p>
-          </div>
-
-          <!-- Point 3: Quality Focus -->
-          <div class="pointer-events-auto absolute left-[64%] top-[28%] -translate-x-1/2 flex flex-col items-center text-center w-52">
-            <span class="h-3.5 w-3.5 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
-            <h3 class="mt-2 text-sm font-bold text-slate-900 dark:text-white">Quality Focus</h3>
-            <p class="mt-0.5 text-xs text-slate-600 dark:text-slate-400">Strict checks & system testing</p>
-          </div>
-
-          <!-- Point 4: Ongoing Support -->
-          <div class="pointer-events-auto absolute left-[90%] top-[10%] -translate-x-1/2 flex flex-col items-center text-center w-52">
-            <span class="h-3.5 w-3.5 rounded-full bg-violet-500 ring-4 ring-violet-500/20"></span>
-            <h3 class="mt-2 text-sm font-bold text-slate-900 dark:text-white">Ongoing Support</h3>
-            <p class="mt-0.5 text-xs text-slate-600 dark:text-slate-400">Post-installation care</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =========================================================
-       RELATED SERVICES (Line Chart Flow — No Grids/Cards)
-  ========================================================== -->
-  <section class="bg-slate-50 py-20 dark:bg-slate-900/60 overflow-hidden">
-    <div class="mx-auto max-w-7xl px-5">
-
-      <div class="reveal mb-10 max-w-3xl">
-        <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-500">
-          Explore More
-        </p>
-
-        <h2 class="mt-3 text-3xl font-black text-slate-900 dark:text-white md:text-4xl">
-          Continue exploring TNSE solutions
-        </h2>
-      </div>
-
-      <!-- Line Chart Flow Replacing 3 Service Cards -->
-      <div class="reveal relative mt-14">
-        <svg class="w-full h-56 overflow-visible" viewBox="0 0 1000 200" preserveAspectRatio="none">
-          <path d="M 150 140 C 330 140, 400 80, 500 80 C 600 80, 700 35, 850 20" fill="none" stroke="#10b981" stroke-width="4.5" stroke-linecap="round" />
-        </svg>
-
-        <div class="pointer-events-none absolute inset-0 pt-4">
-          <!-- Solar Maintenance -->
-          <div class="pointer-events-auto absolute left-[15%] top-[62%] -translate-x-1/2 flex flex-col items-center text-center w-72">
-            <span class="h-3.5 w-3.5 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
-            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Solar Maintenance</h3>
-            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Explore solar system inspection and maintenance services.</p>
-            <a href="../maintenance.html" class="mt-2 inline-flex items-center gap-1 text-xs font-bold text-amber-500 hover:underline pointer-events-auto">
-              Explore <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </a>
-          </div>
-
-          <!-- Solar Repairs -->
-          <div class="pointer-events-auto absolute left-[50%] top-[36%] -translate-x-1/2 flex flex-col items-center text-center w-72">
-            <span class="h-3.5 w-3.5 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
-            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Solar Repairs</h3>
-            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Explore troubleshooting and solar system repair services.</p>
-            <a href="../repairs.html" class="mt-2 inline-flex items-center gap-1 text-xs font-bold text-emerald-500 hover:underline pointer-events-auto">
-              Explore <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </a>
-          </div>
-
-          <!-- Energy Solutions -->
-          <div class="pointer-events-auto absolute left-[85%] top-[10%] -translate-x-1/2 flex flex-col items-center text-center w-72">
-            <span class="h-3.5 w-3.5 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
-            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Energy Solutions</h3>
-            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Discover backup power, energy storage and renewable energy solutions.</p>
-            <a href="../../energy-solutions/index.html" class="mt-2 inline-flex items-center gap-1 text-xs font-bold text-blue-500 hover:underline pointer-events-auto">
-              Explore <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =========================================================
-       REQUEST A QUOTE CTA (Updated Path & Area Chart Flow — No Grids/Cards)
-       Updated path: https://www.tnse.co.za/forms/contact-form/index.html
-  ========================================================== -->
-  <section class="relative overflow-hidden bg-slate-950 py-24 text-white">
-    <div class="hero-grid absolute inset-0 opacity-30"></div>
-
-    <div class="relative mx-auto max-w-7xl px-5">
-      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
-
-        <div class="max-w-2xl">
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-amber-400 text-5xl">
-              solar_power
-            </span>
-            <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-400">
-              Start Your Solar Project
-            </p>
-          </div>
-
-          <h2 class="mt-5 text-4xl font-black tracking-tight text-white md:text-6xl">
-            Ready to explore solar for your property?
-          </h2>
-
-          <p class="mt-6 text-lg leading-8 text-slate-400">
-            Tell us about your electrical and energy requirements and discuss a
-            solar installation solution for your project.
-          </p>
-
-          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-            <a href="https://www.tnse.co.za/forms/contact-form/index.html"
-               class="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-400 px-7 py-4 font-black text-slate-950 transition hover:bg-amber-300 shadow-lg">
-              <span>Request a Quote</span>
-              <span class="material-symbols-outlined">arrow_forward</span>
-            </a>
-
-            <a href="https://wa.me/27818276288"
-               target="_blank"
-               rel="noopener"
-               class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-7 py-4 font-bold text-white transition hover:bg-white/10">
-              <span class="material-symbols-outlined">chat</span>
-              <span>WhatsApp TNSE</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right Side Area Chart Flow for Project Kickoff -->
-        <div class="reveal relative w-full max-w-sm shrink-0">
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-black uppercase tracking-widest text-amber-400">Project Kickoff</span>
-            <span class="text-xs font-semibold text-slate-400">Direct Consultation</span>
-          </div>
-
-          <svg class="w-full h-40 overflow-visible" viewBox="0 0 380 140" preserveAspectRatio="none">
-            <defs>
-              <linearGradient id="solar-quote-area" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.4" />
-                <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
-              </linearGradient>
-            </defs>
-            <path d="M 38 100 C 110 100, 160 50, 250 38 C 300 32, 330 18, 355 12 L 355 130 L 38 130 Z" fill="url(#solar-quote-area)" />
-            <path d="M 38 100 C 110 100, 160 50, 250 38 C 300 32, 330 18, 355 12" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
-          </svg>
-
-          <div class="pointer-events-none absolute inset-0 pt-6">
-            <div class="absolute left-[15%] top-[65%] -translate-x-1/2 flex flex-col items-center">
-              <span class="h-3 w-3 rounded-full bg-amber-400 ring-4 ring-amber-400/20"></span>
-              <span class="mt-1 text-xs font-bold text-slate-300">Submit Brief</span>
-            </div>
-            <div class="absolute left-[75%] top-[20%] -translate-x-1/2 flex flex-col items-center">
-              <span class="h-3 w-3 rounded-full bg-emerald-400 ring-4 ring-emerald-400/20"></span>
-              <span class="mt-1 text-xs font-bold text-slate-300">Solar Deployment</span>
             </div>
           </div>
         </div>
