@@ -588,13 +588,13 @@
     
 <main>
 
-
 <!-- =========================================================
-       HERO SECTION WITH DYNAMIC BACKGROUND CAROUSEL
-  ========================================================== -->
+     HERO SECTION WITH DYNAMIC BACKGROUND CAROUSEL
+     (Grids/Cards replaced with Donut Chart and Line/Area Charts)
+========================================================= -->
   <section class="relative overflow-hidden bg-slate-950 py-24 md:py-32">
 
-    <!-- Dynamic Background Carousel Container (Targeted by script ID #heroCarousel) -->
+    <!-- Dynamic Background Carousel Container -->
     <div id="heroCarousel" class="absolute inset-0 z-0 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/60 z-10"></div>
     </div>
@@ -606,124 +606,86 @@
 
     <div class="relative z-20 mx-auto max-w-7xl px-5">
 
-      <div class="max-w-4xl">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-14">
 
-        <div class="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-2">
-
-          <span class="material-symbols-outlined text-lg text-amber-400">
-            electrical_services
-          </span>
-
-          <span class="text-sm font-bold uppercase tracking-[.2em] text-amber-400">
-            ELECTRICAL SERVICES
-          </span>
-
-        </div>
-
-        <h1 class="mt-6 text-4xl font-black leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
-          Reliable electrical solutions for
-          <span class="text-amber-400">every requirement.</span>
-        </h1>
-
-        <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
-          TNSE Electrical Projects provides electrical installation, maintenance,
-          repair, fault-finding and wiring solutions for residential, commercial
-          and other project environments.
-        </p>
-
-        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-
-          <a href="../contact/index.html"
-             class="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-400 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-amber-300">
-
-            Request a Quote
-
-            <span class="material-symbols-outlined">
-              arrow_forward
+        <!-- Left Copy -->
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-2">
+            <span class="material-symbols-outlined text-lg text-amber-400">
+              electrical_services
             </span>
-
-          </a>
-
-          <a href="#electrical-services"
-             class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-6 py-3.5 font-bold text-white transition hover:bg-white/10">
-
-            Explore Services
-
-            <span class="material-symbols-outlined">
-              expand_more
+            <span class="text-sm font-bold uppercase tracking-[.2em] text-amber-400">
+              ELECTRICAL SERVICES
             </span>
+          </div>
 
-          </a>
+          <h1 class="mt-6 text-4xl font-black leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
+            Reliable electrical solutions for
+            <span class="text-amber-400">every requirement.</span>
+          </h1>
 
-        </div>
-
-      </div>
-
-      <!-- Hero service highlights -->
-      <div class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-
-        <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-5 backdrop-blur shadow-lg">
-
-          <span class="material-symbols-outlined text-amber-400">
-            electrical_services
-          </span>
-
-          <h3 class="mt-4 text-xl font-black text-white">
-            Installations
-          </h3>
-
-          <p class="mt-1 text-sm text-slate-400">
-            Electrical installation solutions
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
+            TNSE Electrical Projects provides electrical installation, maintenance,
+            repair, fault-finding and wiring solutions for residential, commercial
+            and other project environments.
           </p>
 
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="https://www.tnse.co.za/forms/contact-form/index.html"
+               class="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-400 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-amber-300">
+              Request a Quote
+              <span class="material-symbols-outlined">
+                arrow_forward
+              </span>
+            </a>
+
+            <a href="#electrical-services"
+               class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-6 py-3.5 font-bold text-white transition hover:bg-white/10">
+              Explore Services
+              <span class="material-symbols-outlined">
+                expand_more
+              </span>
+            </a>
+          </div>
         </div>
 
-        <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-5 backdrop-blur shadow-lg">
+        <!-- Right: Donut (Ring) Chart Replacing Hero Cards Grid -->
+        <div class="reveal relative flex items-center justify-center shrink-0 mx-auto lg:mx-0">
+          <svg class="w-80 h-80 sm:w-96 sm:h-96 -rotate-90 drop-shadow-sm" viewBox="0 0 320 320">
+            <circle cx="160" cy="160" r="125" fill="none" stroke="currentColor" stroke-width="38" class="text-slate-800/70" />
+            
+            <!-- Segment 1: Installations (Amber - 25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#f59e0b" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="0" stroke-linecap="butt" />
+            <!-- Segment 2: Maintenance (Emerald - 25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#10b981" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="-196.35" stroke-linecap="butt" />
+            <!-- Segment 3: Repairs (Blue - 25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#3b82f6" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="-392.7" stroke-linecap="butt" />
+            <!-- Segment 4: Fault Finding (Violet - 25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#8b5cf6" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="-589.05" stroke-linecap="butt" />
+          </svg>
 
-          <span class="material-symbols-outlined text-amber-400">
-            engineering
-          </span>
-
-          <h3 class="mt-4 text-xl font-black text-white">
-            Maintenance
-          </h3>
-
-          <p class="mt-1 text-sm text-slate-400">
-            Planned electrical maintenance
-          </p>
-
-        </div>
-
-        <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-5 backdrop-blur shadow-lg">
-
-          <span class="material-symbols-outlined text-amber-400">
-            build
-          </span>
-
-          <h3 class="mt-4 text-xl font-black text-white">
-            Repairs
-          </h3>
-
-          <p class="mt-1 text-sm text-slate-400">
-            Electrical troubleshooting
-          </p>
-
-        </div>
-
-        <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-5 backdrop-blur shadow-lg">
-
-          <span class="material-symbols-outlined text-amber-400">
-            search
-          </span>
-
-          <h3 class="mt-4 text-xl font-black text-white">
-            Fault Finding
-          </h3>
-
-          <p class="mt-1 text-sm text-slate-400">
-            Identify electrical problems
-          </p>
-
+          <!-- Hollow Center Metrics -->
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-10 pointer-events-none">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-400">
+              Service Focus
+            </span>
+            <span class="mt-1 text-4xl sm:text-5xl font-black text-white">
+              100%
+            </span>
+            <span class="mt-1 text-xs font-semibold text-slate-300">
+              4 Primary Pillars
+            </span>
+            <div class="mt-3 flex items-center gap-2">
+              <span class="h-2.5 w-2.5 rounded-full bg-amber-500" title="Installations"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-emerald-500" title="Maintenance"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-blue-500" title="Repairs"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-violet-500" title="Fault Finding"></span>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -731,1645 +693,514 @@
     </div>
   </section>
 
-  <section class="bg-white py-20 dark:bg-slate-950">
-
-
-
+  <!-- =========================================================
+       SECTION 2: ELECTRICAL SOLUTIONS (Line & Area Chart Flow)
+  ========================================================= -->
+  <section class="bg-white py-20 dark:bg-slate-950 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
 
-
-      <div class="grid gap-12 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
-
-
-
-        <div class="reveal">
-
-
-
+        <div class="reveal max-w-xl">
           <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-500">
-
             ELECTRICAL SOLUTIONS
-
           </p>
 
-
-
           <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-900 dark:text-white md:text-5xl">
-
             Electrical services designed around your project.
-
           </h2>
-
-
 
           <p class="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-400">
-
             Electrical systems are an important part of residential, commercial
-
             and operational environments. TNSE Electrical Projects provides a
-
             range of electrical services covering new installations, maintenance,
-
             repairs, wiring and fault finding.
-
           </p>
-
-
 
           <p class="mt-5 leading-8 text-slate-600 dark:text-slate-400">
-
             Our approach starts with understanding the requirement and assessing
-
             the work needed before determining the appropriate scope of service.
-
           </p>
-
-
-
         </div>
 
-
-
-        <div class="reveal rounded-3xl border border-slate-200 bg-slate-50 p-8 dark:border-white/10 dark:bg-slate-900">
-
-
-
-          <div class="flex items-center gap-4">
-
-
-
-            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-400/10">
-
-
-
-              <span class="material-symbols-outlined text-amber-500">
-
-                bolt
-
-              </span>
-
-
-
-            </div>
-
-
-
-            <div>
-
-
-
-              <p class="text-sm font-bold uppercase tracking-wider text-amber-500">
-
-                Our Electrical Focus
-
-              </p>
-
-
-
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white">
-
-                Practical Project Support
-
-              </h3>
-
-
-
-            </div>
-
-
-
+        <!-- Right Side: Line & Area Chart Flow (Replacing Card Box) -->
+        <div class="reveal relative w-full max-w-md shrink-0">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-black uppercase tracking-widest text-amber-500">Project Support Flow</span>
+            <span class="text-xs font-semibold text-slate-400">Polokwane</span>
           </div>
 
+          <svg class="w-full h-44 overflow-visible" viewBox="0 0 450 160" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="sol-area" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.38" />
+                <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+              </linearGradient>
+            </defs>
 
+            <!-- Shaded Area -->
+            <path d="M 45 110 C 130 110, 190 55, 280 45 C 340 38, 370 22, 410 15 L 410 155 L 45 155 Z" fill="url(#sol-area)" />
+            <!-- Connected Curved Line -->
+            <path d="M 45 110 C 130 110, 190 55, 280 45 C 340 38, 370 22, 410 15" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+          </svg>
 
-          <div class="mt-8 space-y-4">
-
-
-
-            <div class="flex items-center gap-3">
-
-              <span class="material-symbols-outlined text-amber-500">
-
-                check_circle
-
-              </span>
-
-              <span class="text-slate-700 dark:text-slate-300">
-
-                Electrical installations
-
-              </span>
-
+          <div class="pointer-events-none absolute inset-0 pt-10">
+            <div class="absolute left-[12%] top-[65%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
+              <span class="mt-1.5 text-xs font-bold text-slate-700 dark:text-slate-300">Installations</span>
             </div>
-
-
-
-            <div class="flex items-center gap-3">
-
-              <span class="material-symbols-outlined text-amber-500">
-
-                check_circle
-
-              </span>
-
-              <span class="text-slate-700 dark:text-slate-300">
-
-                Electrical maintenance
-
-              </span>
-
+            <div class="absolute left-[52%] top-[36%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
+              <span class="mt-1.5 text-xs font-bold text-slate-700 dark:text-slate-300">Maintenance</span>
             </div>
-
-
-
-            <div class="flex items-center gap-3">
-
-              <span class="material-symbols-outlined text-amber-500">
-
-                check_circle
-
-              </span>
-
-              <span class="text-slate-700 dark:text-slate-300">
-
-                Repairs and troubleshooting
-
-              </span>
-
+            <div class="absolute left-[88%] top-[12%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
+              <span class="mt-1.5 text-xs font-bold text-slate-700 dark:text-slate-300">Wiring &amp; Distribution</span>
             </div>
-
-
-
-            <div class="flex items-center gap-3">
-
-              <span class="material-symbols-outlined text-amber-500">
-
-                check_circle
-
-              </span>
-
-              <span class="text-slate-700 dark:text-slate-300">
-
-                Wiring and distribution
-
-              </span>
-
-            </div>
-
-
-
           </div>
-
-
-
         </div>
-
-
 
       </div>
 
-
-
     </div>
-
   </section>
 
-
-
-
-
   <!-- =========================================================
-
-       CORE ELECTRICAL SERVICES
-
-  ========================================================== -->
-
-  <section id="electrical-services"
-
-           class="bg-slate-50 py-20 dark:bg-slate-900/60">
-
-
-
+       CORE ELECTRICAL SERVICES (Line & Area Chart Flow)
+  ========================================================= -->
+  <section id="electrical-services" class="bg-slate-50 py-20 dark:bg-slate-900/60 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
-
-
 
       <div class="max-w-3xl reveal">
-
-
-
         <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-500">
-
           CORE SERVICES
-
         </p>
 
-
-
         <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-900 dark:text-white md:text-5xl">
-
           Complete electrical service categories.
-
         </h2>
-
-
 
         <p class="mt-5 leading-8 text-slate-600 dark:text-slate-400">
-
           Explore the main electrical services available from TNSE Electrical
-
           Projects.
-
         </p>
-
-
-
       </div>
 
+      <!-- Line & Area Chart Replacing Grid Cards -->
+      <div class="reveal relative mt-16">
+        <svg class="w-full h-[300px] overflow-visible" viewBox="0 0 1000 300" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="core-area-1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+            </linearGradient>
+            <linearGradient id="core-area-2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#10b981" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+            </linearGradient>
+            <linearGradient id="core-area-3" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0" />
+            </linearGradient>
+          </defs>
 
+          <!-- Shaded Areas -->
+          <path d="M 165 190 C 275 190, 320 120, 440 120 L 440 290 L 165 290 Z" fill="url(#core-area-1)" />
+          <path d="M 440 120 C 560 120, 610 60, 725 60 L 725 290 L 440 290 Z" fill="url(#core-area-2)" />
+          <path d="M 725 60 C 800 60, 850 35, 910 25 L 910 290 L 725 290 Z" fill="url(#core-area-3)" />
 
+          <!-- Connected Curved Line Segments -->
+          <path d="M 165 190 C 275 190, 320 120, 440 120" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" />
+          <path d="M 440 120 C 560 120, 610 60, 725 60" fill="none" stroke="#10b981" stroke-width="4.5" stroke-linecap="round" />
+          <path d="M 725 60 C 800 60, 850 35, 910 25" fill="none" stroke="#3b82f6" stroke-width="4.5" stroke-linecap="round" />
+        </svg>
 
-
-      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-
-
-
-
-
-        <!-- Installations -->
-
-        <a href="installations.html"
-
-           class="reveal lift group rounded-3xl border border-slate-200 bg-white p-8 dark:border-white/10 dark:bg-slate-950">
-
-
-
-          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-400/10">
-
-
-
-            <span class="material-symbols-outlined text-amber-500">
-
-              electrical_services
-
-            </span>
-
-
-
+        <!-- Plotted Data Points & Service Copy (No Cards) -->
+        <div class="pointer-events-none absolute inset-0">
+          
+          <!-- Installations -->
+          <div class="pointer-events-auto absolute left-[16.5%] top-[60%] -translate-x-1/2 flex flex-col items-center text-center w-72">
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-amber-400 text-slate-950 ring-8 ring-amber-400/20 shadow-md">
+              <span class="material-symbols-outlined">electrical_services</span>
+            </div>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Electrical Installations</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-400 leading-6">
+              Electrical installations for suitable residential, commercial and project environments.
+            </p>
+            <a href="installations.html" class="mt-3 inline-flex items-center gap-1 text-xs font-bold text-amber-500 hover:underline pointer-events-auto">
+              Explore Installations <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
           </div>
 
-
-
-          <h3 class="mt-6 text-2xl font-bold text-slate-900 dark:text-white">
-
-            Electrical Installations
-
-          </h3>
-
-
-
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-
-            Electrical installations for suitable residential, commercial and
-
-            project environments, including wiring, distribution and related
-
-            electrical infrastructure.
-
-          </p>
-
-
-
-          <span class="mt-6 inline-flex items-center gap-2 font-bold text-amber-500">
-
-
-
-            Explore Installations
-
-
-
-            <span class="material-symbols-outlined transition group-hover:translate-x-1">
-
-              arrow_forward
-
-            </span>
-
-
-
-          </span>
-
-
-
-        </a>
-
-
-
-
-
-        <!-- Maintenance -->
-
-        <a href="maintenance.html"
-
-           class="reveal lift group rounded-3xl border border-slate-200 bg-white p-8 dark:border-white/10 dark:bg-slate-950">
-
-
-
-          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-400/10">
-
-
-
-            <span class="material-symbols-outlined text-amber-500">
-
-              engineering
-
-            </span>
-
-
-
+          <!-- Maintenance -->
+          <div class="pointer-events-auto absolute left-[44%] top-[36%] -translate-x-1/2 flex flex-col items-center text-center w-72">
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-400 text-slate-950 ring-8 ring-emerald-400/20 shadow-md">
+              <span class="material-symbols-outlined">engineering</span>
+            </div>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Electrical Maintenance</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-400 leading-6">
+              Maintenance services focused on inspections, system checks and preventative work.
+            </p>
+            <a href="maintenance.html" class="mt-3 inline-flex items-center gap-1 text-xs font-bold text-emerald-500 hover:underline pointer-events-auto">
+              Explore Maintenance <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
           </div>
 
-
-
-          <h3 class="mt-6 text-2xl font-bold text-slate-900 dark:text-white">
-
-            Electrical Maintenance
-
-          </h3>
-
-
-
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-
-            Maintenance services focused on inspections, system checks,
-
-            preventative work and identifying electrical maintenance
-
-            requirements.
-
-          </p>
-
-
-
-          <span class="mt-6 inline-flex items-center gap-2 font-bold text-amber-500">
-
-
-
-            Explore Maintenance
-
-
-
-            <span class="material-symbols-outlined transition group-hover:translate-x-1">
-
-              arrow_forward
-
-            </span>
-
-
-
-          </span>
-
-
-
-        </a>
-
-
-
-
-
-        <!-- Repairs -->
-
-        <a href="repairs.html"
-
-           class="reveal lift group rounded-3xl border border-slate-200 bg-white p-8 dark:border-white/10 dark:bg-slate-950">
-
-
-
-          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-400/10">
-
-
-
-            <span class="material-symbols-outlined text-amber-500">
-
-              build
-
-            </span>
-
-
-
+          <!-- Repairs & Fault Finding -->
+          <div class="pointer-events-auto absolute left-[72.5%] top-[14%] -translate-x-1/2 flex flex-col items-center text-center w-72">
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-400 text-slate-950 ring-8 ring-blue-400/20 shadow-md">
+              <span class="material-symbols-outlined">build</span>
+            </div>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Repairs &amp; Fault Finding</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-400 leading-6">
+              Troubleshooting and corrective electrical work for identified faults and components.
+            </p>
+            <a href="repairs.html" class="mt-3 inline-flex items-center gap-1 text-xs font-bold text-blue-500 hover:underline pointer-events-auto">
+              Explore Repairs <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
           </div>
-
-
-
-          <h3 class="mt-6 text-2xl font-bold text-slate-900 dark:text-white">
-
-            Electrical Repairs
-
-          </h3>
-
-
-
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-
-            Troubleshooting and corrective electrical work for identified
-
-            faults, damaged components and electrical system problems.
-
-          </p>
-
-
-
-          <span class="mt-6 inline-flex items-center gap-2 font-bold text-amber-500">
-
-
-
-            Explore Repairs
-
-
-
-            <span class="material-symbols-outlined transition group-hover:translate-x-1">
-
-              arrow_forward
-
-            </span>
-
-
-
-          </span>
-
-
-
-        </a>
-
-
-
-
-
-        <!-- Fault Finding -->
-
-        <div class="reveal lift rounded-3xl border border-slate-200 bg-white p-8 dark:border-white/10 dark:bg-slate-950">
-
-
-
-          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-400/10">
-
-
-
-            <span class="material-symbols-outlined text-amber-500">
-
-              search
-
-            </span>
-
-
-
-          </div>
-
-
-
-          <h3 class="mt-6 text-2xl font-bold text-slate-900 dark:text-white">
-
-            Fault Finding
-
-          </h3>
-
-
-
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-
-            Investigation of electrical problems to help identify potential
-
-            causes and determine the appropriate corrective work.
-
-          </p>
-
-
 
         </div>
-
-
-
-
-
-        <!-- Wiring -->
-
-        <div class="reveal lift rounded-3xl border border-slate-200 bg-white p-8 dark:border-white/10 dark:bg-slate-950">
-
-
-
-          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-400/10">
-
-
-
-            <span class="material-symbols-outlined text-amber-500">
-
-              cable
-
-            </span>
-
-
-
-          </div>
-
-
-
-          <h3 class="mt-6 text-2xl font-bold text-slate-900 dark:text-white">
-
-            Electrical Wiring
-
-          </h3>
-
-
-
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-
-            Electrical wiring work covering circuits, connections, distribution
-
-            and related installation requirements.
-
-          </p>
-
-
-
-        </div>
-
-
-
-
-
-        <!-- Distribution -->
-
-        <div class="reveal lift rounded-3xl border border-slate-200 bg-white p-8 dark:border-white/10 dark:bg-slate-950">
-
-
-
-          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-400/10">
-
-
-
-            <span class="material-symbols-outlined text-amber-500">
-
-              account_tree
-
-            </span>
-
-
-
-          </div>
-
-
-
-          <h3 class="mt-6 text-2xl font-bold text-slate-900 dark:text-white">
-
-            Electrical Distribution
-
-          </h3>
-
-
-
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-
-            Distribution boards, circuits, connections and related electrical
-
-            distribution requirements.
-
-          </p>
-
-
-
-        </div>
-
-
-
       </div>
-
-
 
     </div>
-
   </section>
 
-
-
-
-
   <!-- =========================================================
-
-       ELECTRICAL INSTALLATIONS
-
-  ========================================================== -->
-
-  <section class="bg-white py-20 dark:bg-slate-950">
-
-
-
+       ELECTRICAL INSTALLATIONS (Donut Chart & Line/Area Flow)
+  ========================================================= -->
+  <section class="bg-white py-20 dark:bg-slate-950 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
 
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-14">
 
-
-      <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
-
-
-
-        <div class="reveal">
-
-
-
+        <div class="reveal max-w-xl">
           <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-500">
-
             INSTALLATIONS
-
           </p>
-
-
 
           <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-900 dark:text-white md:text-5xl">
-
             Electrical installations from planning to completion.
-
           </h2>
-
-
 
           <p class="mt-5 leading-8 text-slate-600 dark:text-slate-400">
-
             Electrical installation requirements vary according to the property,
-
             equipment, electrical load and project scope. TNSE can assess the
-
             requirement and provide an appropriate installation approach.
-
           </p>
-
-
-
-          <div class="mt-8 grid gap-4 sm:grid-cols-2">
-
-
-
-            <div class="rounded-2xl border border-slate-200 p-5 dark:border-white/10">
-
-
-
-              <span class="material-symbols-outlined text-amber-500">
-
-                home
-
-              </span>
-
-
-
-              <h3 class="mt-3 font-bold text-slate-900 dark:text-white">
-
-                Residential
-
-              </h3>
-
-
-
-              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-
-                Electrical requirements for homes and residential properties.
-
-              </p>
-
-
-
-            </div>
-
-
-
-            <div class="rounded-2xl border border-slate-200 p-5 dark:border-white/10">
-
-
-
-              <span class="material-symbols-outlined text-amber-500">
-
-                business
-
-              </span>
-
-
-
-              <h3 class="mt-3 font-bold text-slate-900 dark:text-white">
-
-                Commercial
-
-              </h3>
-
-
-
-              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-
-                Electrical requirements for commercial environments.
-
-              </p>
-
-
-
-            </div>
-
-
-
-            <div class="rounded-2xl border border-slate-200 p-5 dark:border-white/10">
-
-
-
-              <span class="material-symbols-outlined text-amber-500">
-
-                cable
-
-              </span>
-
-
-
-              <h3 class="mt-3 font-bold text-slate-900 dark:text-white">
-
-                Wiring
-
-              </h3>
-
-
-
-              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-
-                Circuits, connections and structured electrical wiring.
-
-              </p>
-
-
-
-            </div>
-
-
-
-            <div class="rounded-2xl border border-slate-200 p-5 dark:border-white/10">
-
-
-
-              <span class="material-symbols-outlined text-amber-500">
-
-                electrical_panel
-
-              </span>
-
-
-
-              <h3 class="mt-3 font-bold text-slate-900 dark:text-white">
-
-                Distribution
-
-              </h3>
-
-
-
-              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-
-                Distribution boards and related electrical systems.
-
-              </p>
-
-
-
-            </div>
-
-
-
-          </div>
-
-
-
         </div>
 
+        <!-- Center Donut Chart for Installation Scope -->
+        <div class="reveal relative flex items-center justify-center shrink-0 mx-auto lg:mx-0">
+          <svg class="w-80 h-80 sm:w-96 sm:h-96 -rotate-90 drop-shadow-sm" viewBox="0 0 320 320">
+            <circle cx="160" cy="160" r="125" fill="none" stroke="currentColor" stroke-width="38" class="text-slate-200/70 dark:text-slate-800/70" />
+            
+            <!-- Segment 1: Residential (25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#f59e0b" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="0" stroke-linecap="butt" />
+            <!-- Segment 2: Commercial (25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#10b981" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="-196.35" stroke-linecap="butt" />
+            <!-- Segment 3: Wiring (25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#3b82f6" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="-392.7" stroke-linecap="butt" />
+            <!-- Segment 4: Distribution (25%) -->
+            <circle cx="160" cy="160" r="125" fill="none" stroke="#8b5cf6" stroke-width="38"
+                    stroke-dasharray="196.35 785.4" stroke-dashoffset="-589.05" stroke-linecap="butt" />
+          </svg>
 
-
-
-
-        <div class="reveal rounded-3xl bg-slate-950 p-8 md:p-10">
-
-
-
-          <p class="text-sm font-bold uppercase tracking-[.2em] text-amber-400">
-
-            INSTALLATION FOCUS
-
-          </p>
-
-
-
-          <h3 class="mt-4 text-2xl font-bold text-white">
-
-            What an electrical installation may include
-
-          </h3>
-
-
-
-          <div class="mt-8 space-y-5">
-
-
-
-            <div class="flex gap-4">
-
-
-
-              <span class="material-symbols-outlined text-amber-400">
-
-                check_circle
-
-              </span>
-
-
-
-              <div>
-
-                <h4 class="font-bold text-white">
-
-                  Electrical wiring
-
-                </h4>
-
-
-
-                <p class="mt-1 text-sm leading-6 text-slate-400">
-
-                  Installation of appropriate electrical circuits and connections.
-
-                </p>
-
-              </div>
-
-
-
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-10 pointer-events-none">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-500">
+              Scope Coverage
+            </span>
+            <span class="mt-1 text-4xl sm:text-5xl font-black text-slate-950 dark:text-white">
+              100%
+            </span>
+            <span class="mt-1 text-xs font-semibold text-slate-600 dark:text-slate-300">
+              Residential &amp; Commercial
+            </span>
+            <div class="mt-3 flex items-center gap-2">
+              <span class="h-2.5 w-2.5 rounded-full bg-amber-500"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-violet-500"></span>
             </div>
-
-
-
-            <div class="flex gap-4">
-
-
-
-              <span class="material-symbols-outlined text-amber-400">
-
-                check_circle
-
-              </span>
-
-
-
-              <div>
-
-                <h4 class="font-bold text-white">
-
-                  Distribution boards
-
-                </h4>
-
-
-
-                <p class="mt-1 text-sm leading-6 text-slate-400">
-
-                  Distribution requirements based on the project scope.
-
-                </p>
-
-              </div>
-
-
-
-            </div>
-
-
-
-            <div class="flex gap-4">
-
-
-
-              <span class="material-symbols-outlined text-amber-400">
-
-                check_circle
-
-              </span>
-
-
-
-              <div>
-
-                <h4 class="font-bold text-white">
-
-                  Electrical connections
-
-                </h4>
-
-
-
-                <p class="mt-1 text-sm leading-6 text-slate-400">
-
-                  Connections and associated electrical installation work.
-
-                </p>
-
-              </div>
-
-
-
-            </div>
-
-
-
-            <div class="flex gap-4">
-
-
-
-              <span class="material-symbols-outlined text-amber-400">
-
-                check_circle
-
-              </span>
-
-
-
-              <div>
-
-                <h4 class="font-bold text-white">
-
-                  Project assessment
-
-                </h4>
-
-
-
-                <p class="mt-1 text-sm leading-6 text-slate-400">
-
-                  Consideration of site conditions and project requirements.
-
-                </p>
-
-              </div>
-
-
-
-            </div>
-
-
-
           </div>
-
-
-
         </div>
-
-
 
       </div>
 
-
-
     </div>
-
   </section>
 
-
-
-
-
   <!-- =========================================================
-
-       MAINTENANCE & REPAIRS
-
-  ========================================================== -->
-
-  <section class="bg-slate-50 py-20 dark:bg-slate-900/60">
-
-
-
+       MAINTENANCE & REPAIRS (Line & Area Chart Progression)
+  ========================================================= -->
+  <section class="bg-slate-50 py-20 dark:bg-slate-900/60 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5">
-
-
 
       <div class="text-center reveal">
-
-
-
         <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-500">
-
-          MAINTENANCE & REPAIRS
-
+          MAINTENANCE &amp; REPAIRS
         </p>
-
-
 
         <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-900 dark:text-white md:text-5xl">
-
           Keep electrical systems under control.
-
         </h2>
 
-
-
         <p class="mx-auto mt-5 max-w-3xl leading-8 text-slate-600 dark:text-slate-400">
-
           Electrical maintenance and repair services can help identify issues,
-
           investigate faults and address maintenance requirements.
-
         </p>
-
-
-
       </div>
 
+      <!-- Line & Area Chart Replacing Grid Cards -->
+      <div class="reveal relative mt-16">
+        <svg class="w-full h-[260px] overflow-visible" viewBox="0 0 1000 260" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="maint-area" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.36" />
+              <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+            </linearGradient>
+          </defs>
 
+          <!-- Shaded Area -->
+          <path d="M 125 160 C 300 160, 375 95, 500 95 C 625 95, 700 45, 875 30 L 875 240 L 125 240 Z" fill="url(#maint-area)" />
+          <!-- Connected Curved Line -->
+          <path d="M 125 160 C 300 160, 375 95, 500 95 C 625 95, 700 45, 875 30" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" />
+        </svg>
 
+        <div class="pointer-events-none absolute inset-0 pt-4">
+          <!-- Inspections -->
+          <div class="pointer-events-auto absolute left-[12.5%] top-[65%] -translate-x-1/2 flex flex-col items-center text-center w-60">
+            <span class="h-3.5 w-3.5 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Inspections</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Review components and installation conditions.</p>
+          </div>
 
+          <!-- Fault Diagnosis -->
+          <div class="pointer-events-auto absolute left-[37.5%] top-[42%] -translate-x-1/2 flex flex-col items-center text-center w-60">
+            <span class="h-3.5 w-3.5 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Fault Diagnosis</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Investigate faults and identify potential causes.</p>
+          </div>
 
-      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Repairs -->
+          <div class="pointer-events-auto absolute left-[62.5%] top-[25%] -translate-x-1/2 flex flex-col items-center text-center w-60">
+            <span class="h-3.5 w-3.5 rounded-full bg-blue-500 ring-4 ring-blue-500/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Repairs</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Carry out appropriate corrective work.</p>
+          </div>
 
-
-
-        <div class="reveal lift rounded-3xl border border-slate-200 bg-white p-7 dark:border-white/10 dark:bg-slate-950">
-
-
-
-          <span class="material-symbols-outlined text-amber-500">
-
-            fact_check
-
-          </span>
-
-
-
-          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">
-
-            Inspections
-
-          </h3>
-
-
-
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-
-            Review relevant electrical components and installation conditions.
-
-          </p>
-
-
-
+          <!-- Preventative Care -->
+          <div class="pointer-events-auto absolute left-[87.5%] top-[12%] -translate-x-1/2 flex flex-col items-center text-center w-60">
+            <span class="h-3.5 w-3.5 rounded-full bg-violet-500 ring-4 ring-violet-500/20"></span>
+            <h3 class="mt-3 text-lg font-bold text-slate-900 dark:text-white">Preventative Care</h3>
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-5">Planned maintenance before issues develop.</p>
+          </div>
         </div>
-
-
-
-
-
-        <div class="reveal lift rounded-3xl border border-slate-200 bg-white p-7 dark:border-white/10 dark:bg-slate-950">
-
-
-
-          <span class="material-symbols-outlined text-amber-500">
-
-            search
-
-          </span>
-
-
-
-          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">
-
-            Fault Diagnosis
-
-          </h3>
-
-
-
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-
-            Investigate electrical faults and identify potential causes.
-
-          </p>
-
-
-
-        </div>
-
-
-
-
-
-        <div class="reveal lift rounded-3xl border border-slate-200 bg-white p-7 dark:border-white/10 dark:bg-slate-950">
-
-
-
-          <span class="material-symbols-outlined text-amber-500">
-
-            build
-
-          </span>
-
-
-
-          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">
-
-            Repairs
-
-          </h3>
-
-
-
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-
-            Carry out appropriate corrective work based on the identified issue.
-
-          </p>
-
-
-
-        </div>
-
-
-
-
-
-        <div class="reveal lift rounded-3xl border border-slate-200 bg-white p-7 dark:border-white/10 dark:bg-slate-950">
-
-
-
-          <span class="material-symbols-outlined text-amber-500">
-
-            engineering
-
-          </span>
-
-
-
-          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">
-
-            Preventative Care
-
-          </h3>
-
-
-
-          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-
-            Planned maintenance can help identify issues before they develop further.
-
-          </p>
-
-
-
-        </div>
-
-
-
       </div>
-
-
 
     </div>
-
   </section>
 
-
-
-
-
   <!-- =========================================================
-
-       FAULT FINDING
-
-  ========================================================== -->
-
-  <section class="bg-slate-950 py-20">
-
-
-
+       FAULT FINDING (Line & Area Chart Flow)
+  ========================================================= -->
+  <section class="bg-slate-950 py-20 overflow-hidden text-white">
     <div class="mx-auto max-w-7xl px-5">
 
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-14">
 
-
-      <div class="grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
-
-
-
-        <div class="reveal">
-
-
-
+        <div class="reveal max-w-xl">
           <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-400">
-
             FAULT FINDING
-
           </p>
-
-
 
           <h2 class="mt-4 text-3xl font-black tracking-tight text-white md:text-5xl">
-
             Find the problem before deciding on the solution.
-
           </h2>
 
-
-
           <p class="mt-5 leading-8 text-slate-400">
-
             Electrical faults can have different causes. A structured fault-finding
-
             process helps identify the affected area and determine what corrective
-
             work may be required.
-
           </p>
 
-
-
           <a href="repairs.html"
-
-             class="mt-8 inline-flex items-center gap-2 font-bold text-amber-400">
-
-
-
+             class="mt-8 inline-flex items-center gap-2 font-bold text-amber-400 hover:text-amber-300 transition">
             Explore Electrical Repairs
-
-
-
             <span class="material-symbols-outlined">
-
               arrow_forward
-
             </span>
-
-
-
           </a>
-
-
-
         </div>
 
-
-
-
-
-        <div class="grid gap-4 sm:grid-cols-2">
-
-
-
-          <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-6">
-
-
-
-            <span class="material-symbols-outlined text-amber-400">
-
-              report_problem
-
-            </span>
-
-
-
-            <h3 class="mt-4 font-bold text-white">
-
-              Identify Symptoms
-
-            </h3>
-
-
-
-            <p class="mt-2 text-sm leading-7 text-slate-400">
-
-              Understand the reported electrical problem and affected equipment.
-
-            </p>
-
-
-
+        <!-- Right Side Line & Area Chart for Fault Finding Steps -->
+        <div class="reveal relative w-full max-w-md shrink-0">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-black uppercase tracking-widest text-amber-400">Diagnostic Steps</span>
+            <span class="text-xs font-semibold text-slate-400">System Analysis</span>
           </div>
 
+          <svg class="w-full h-44 overflow-visible" viewBox="0 0 450 160" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="fault-area" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.4" />
+                <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0" />
+              </linearGradient>
+            </defs>
 
+            <!-- Shaded Area -->
+            <path d="M 45 120 C 130 120, 190 60, 280 45 C 340 38, 370 20, 410 12 L 410 155 L 45 155 Z" fill="url(#fault-area)" />
+            <!-- Connected Curved Line -->
+            <path d="M 45 120 C 130 120, 190 60, 280 45 C 340 38, 370 20, 410 12" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" />
+          </svg>
 
-
-
-          <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-6">
-
-
-
-            <span class="material-symbols-outlined text-amber-400">
-
-              search
-
-            </span>
-
-
-
-            <h3 class="mt-4 font-bold text-white">
-
-              Investigate
-
-            </h3>
-
-
-
-            <p class="mt-2 text-sm leading-7 text-slate-400">
-
-              Investigate the installation and relevant components.
-
-            </p>
-
-
-
+          <div class="pointer-events-none absolute inset-0 pt-8">
+            <div class="absolute left-[12%] top-[68%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-amber-400 ring-4 ring-amber-400/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-300">Symptoms</span>
+            </div>
+            <div class="absolute left-[38%] top-[50%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-emerald-400 ring-4 ring-emerald-400/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-300">Investigate</span>
+            </div>
+            <div class="absolute left-[66%] top-[30%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-sky-400 ring-4 ring-sky-400/20"></span>
+              <span class="mt-1 text-xs font-bold text-slate-300">Diagnose</span>
+            </div>
+            <div class="absolute left-[90%] top-[10%] -translate-x-1/2 flex flex-col items-center">
+              <span class="h-3 w-3 rounded-full bg-blue-400 ring-4 ring-blue-400/20"></span>
+              <span class="mt-1 text-xs font-bold text-amber-400">Correct</span>
+            </div>
           </div>
-
-
-
-
-
-          <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-6">
-
-
-
-            <span class="material-symbols-outlined text-amber-400">
-
-              analytics
-
-            </span>
-
-
-
-            <h3 class="mt-4 font-bold text-white">
-
-              Diagnose
-
-            </h3>
-
-
-
-            <p class="mt-2 text-sm leading-7 text-slate-400">
-
-              Determine the likely source of the electrical issue.
-
-            </p>
-
-
-
-          </div>
-
-
-
-
-
-          <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-6">
-
-
-
-            <span class="material-symbols-outlined text-amber-400">
-
-              build
-
-            </span>
-
-
-
-            <h3 class="mt-4 font-bold text-white">
-
-              Correct
-
-            </h3>
-
-
-
-            <p class="mt-2 text-sm leading-7 text-slate-400">
-
-              Determine the appropriate repair or corrective work.
-
-            </p>
-
-
-
-          </div>
-
-
-
         </div>
-
-
 
       </div>
 
-
-
     </div>
-
   </section>
+
 
 <!-- =========================================================
-       SERVICE ENVIRONMENTS
-  ========================================================== -->
+     SERVICE ENVIRONMENTS (Donut Ring, Line & Area Chart Transformation)
+     Updated contact path: https://www.tnse.co.za/forms/contact-form/index.html
+========================================================= -->
+<section class="bg-white py-20 dark:bg-slate-950 overflow-hidden">
+  <div class="mx-auto max-w-7xl px-5">
 
-  <section class="bg-white py-20 dark:bg-slate-950">
+    <!-- Section Header Intro -->
+    <div class="text-center reveal max-w-3xl mx-auto">
+      <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-500">
+        SERVICE ENVIRONMENTS
+      </p>
+      <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-900 dark:text-white md:text-5xl">
+        Electrical solutions for different environments.
+      </h2>
+      <p class="mx-auto mt-5 max-w-3xl leading-8 text-slate-600 dark:text-slate-400">
+        Electrical requirements differ from one environment to another.
+        TNSE services can be considered according to the specific project scope.
+      </p>
+    </div>
 
-    <div class="mx-auto max-w-7xl px-5">
+    <!-- Main Flex Layout Replacing All Grids and Cards -->
+    <div class="mt-16 flex flex-col lg:flex-row items-center justify-center gap-14">
 
-      <div class="text-center reveal">
+      <!-- Left Column: Residential & Commercial Flow (Line & Area Chart Data Representation) -->
+      <div class="reveal w-full max-w-xl">
+        
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-black uppercase tracking-widest text-amber-500">Environment Scope Matrix</span>
+          <span class="text-xs font-semibold text-slate-400">Polokwane &amp; Limpopo</span>
+        </div>
 
-        <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-500">
-          SERVICE ENVIRONMENTS
-        </p>
+        <!-- SVG Line & Area Chart with Shaded Base -->
+        <svg class="w-full h-52 overflow-visible" viewBox="0 0 500 180" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="env-area" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.4" />
+              <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+            </linearGradient>
+          </defs>
 
-        <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-900 dark:text-white md:text-5xl">
-          Electrical solutions for different environments.
-        </h2>
+          <!-- Shaded Area Beneath Line -->
+          <path d="M 45 130 C 150 130, 220 70, 320 50 C 380 40, 420 25, 465 15 L 465 170 L 45 170 Z" fill="url(#env-area)" />
+          <!-- Connected Curved Line Segments -->
+          <path d="M 45 130 C 150 130, 220 70, 320 50 C 380 40, 420 25, 465 15" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" />
+        </svg>
 
-        <p class="mx-auto mt-5 max-w-3xl leading-8 text-slate-600 dark:text-slate-400">
-          Electrical requirements differ from one environment to another.
-          TNSE services can be considered according to the specific project scope.
-        </p>
+        <!-- Plotted Milestones Along Trend -->
+        <div class="pointer-events-none absolute inset-0 pt-12"></div>
+        <div class="relative -mt-10 grid grid-cols-3 gap-4 text-center">
+          <div>
+            <span class="inline-block h-3 w-3 rounded-full bg-amber-500 ring-4 ring-amber-500/20 mb-1"></span>
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">Residential</p>
+            <p class="text-xs text-slate-500 mt-0.5">Wiring &amp; Repairs</p>
+          </div>
+          <div>
+            <span class="inline-block h-3 w-3 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20 mb-1"></span>
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">Commercial</p>
+            <p class="text-xs text-slate-500 mt-0.5">Offices &amp; Facilities</p>
+          </div>
+          <div>
+            <span class="inline-block h-3 w-3 rounded-full bg-blue-500 ring-4 ring-blue-500/20 mb-1"></span>
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">Industrial</p>
+            <p class="text-xs text-slate-500 mt-0.5">Heavy Infrastructure</p>
+          </div>
+        </div>
 
       </div>
 
+      <!-- Center: Donut (Ring) Chart with Hollow Center Metrics (Replacing Card Boxes) -->
+      <div class="reveal relative flex items-center justify-center shrink-0">
+        <!-- SVG Donut Ring (Circumference = 2 * π * 125 ≈ 785.4) -->
+        <svg class="w-80 h-80 sm:w-96 sm:h-96 -rotate-90 drop-shadow-sm" viewBox="0 0 320 320">
+          <circle cx="160" cy="160" r="125" fill="none" stroke="currentColor" stroke-width="38" class="text-slate-200/70 dark:text-slate-800/70" />
+          
+          <!-- Segment 1: Residential (33.3%) -->
+          <circle cx="160" cy="160" r="125" fill="none" stroke="#f59e0b" stroke-width="38"
+                  stroke-dasharray="261.8 785.4" stroke-dashoffset="0" stroke-linecap="butt" />
+          <!-- Segment 2: Commercial (33.3%) -->
+          <circle cx="160" cy="160" r="125" fill="none" stroke="#10b981" stroke-width="38"
+                  stroke-dasharray="261.8 785.4" stroke-dashoffset="-261.8" stroke-linecap="butt" />
+          <!-- Segment 3: Industrial & Projects (33.3%) -->
+          <circle cx="160" cy="160" r="125" fill="none" stroke="#3b82f6" stroke-width="38"
+                  stroke-dasharray="261.8 785.4" stroke-dashoffset="-523.6" stroke-linecap="butt" />
+        </svg>
 
-      <div class="mt-12 grid gap-6 md:grid-cols-3">
-
-        <!-- Residential -->
-        <div class="reveal lift overflow-hidden rounded-3xl border border-slate-200 dark:border-white/10">
-
-          <div class="relative h-52 overflow-hidden bg-slate-950">
-            <img src="https://www.tnse.co.za/images/projects/electrical/tnse (4).jpg" alt="Residential Electrical Solutions" class="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+        <!-- Hollow Center Metrics -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-10 pointer-events-none">
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-500">
+            Environments
+          </span>
+          <span class="mt-1 text-4xl sm:text-5xl font-black text-slate-950 dark:text-white">
+            100%
+          </span>
+          <span class="mt-1 text-xs font-semibold text-slate-600 dark:text-slate-300">
+            3 Core Sectors Covered
+          </span>
+          <div class="mt-3 flex items-center gap-2">
+            <span class="h-2.5 w-2.5 rounded-full bg-amber-500" title="Residential"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-emerald-500" title="Commercial"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-blue-500" title="Industrial"></span>
           </div>
-
-          <div class="p-8">
-
-            <p class="text-sm font-bold uppercase tracking-widest text-amber-500">
-              RESIDENTIAL
-            </p>
-
-            <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white">
-              Residential Solutions
-            </h3>
-
-            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-              Electrical installation, wiring, maintenance, repairs and related
-              requirements for residential properties.
-            </p>
-
-            <div class="mt-6 space-y-3">
-
-              <div class="flex gap-3">
-                <span class="material-symbols-outlined text-amber-500">
-                  check
-                </span>
-                <span class="text-sm text-slate-600 dark:text-slate-400">
-                  Electrical installations
-                </span>
-              </div>
-
-              <div class="flex gap-3">
-                <span class="material-symbols-outlined text-amber-500">
-                  check
-                </span>
-                <span class="text-sm text-slate-600 dark:text-slate-400">
-                  Wiring requirements
-                </span>
-              </div>
-
-              <div class="flex gap-3">
-                <span class="material-symbols-outlined text-amber-500">
-                  check
-                </span>
-                <span class="text-sm text-slate-600 dark:text-slate-400">
-                  Repairs and maintenance
-                </span>
-              </div>
-
-            </div>
-
-          </div>
-
         </div>
-
-
-        <!-- Commercial -->
-        <div class="reveal lift overflow-hidden rounded-3xl border border-slate-200 dark:border-white/10">
-
-          <div class="relative h-52 overflow-hidden bg-slate-950">
-            <img src="https://www.tnse.co.za/images/projects/electrical/tnse (1).jpg" alt="Commercial Electrical Solutions" class="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-          </div>
-
-          <div class="p-8">
-
-            <p class="text-sm font-bold uppercase tracking-widest text-amber-500">
-              COMMERCIAL
-            </p>
-
-            <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white">
-              Commercial Solutions
-            </h3>
-
-            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-              Electrical services for offices, commercial properties, facilities
-              and other operational environments.
-            </p>
-
-            <div class="mt-6 space-y-3">
-
-              <div class="flex gap-3">
-                <span class="material-symbols-outlined text-amber-500">
-                  check
-                </span>
-                <span class="text-sm text-slate-600 dark:text-slate-400">
-                  Electrical installations
-                </span>
-              </div>
-
-              <div class="flex gap-3">
-                <span class="material-symbols-outlined text-amber-500">
-                  check
-                </span>
-                <span class="text-sm text-slate-600 dark:text-slate-400">
-                  Maintenance support
-                </span>
-              </div>
-
-              <div class="flex gap-3">
-                <span class="material-symbols-outlined text-amber-500">
-                  check
-                </span>
-                <span class="text-sm text-slate-600 dark:text-slate-400">
-                  Fault finding
-                </span>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- Industrial / Project -->
-        <div class="reveal lift overflow-hidden rounded-3xl border border-slate-200 dark:border-white/10">
-
-          <div class="relative h-52 overflow-hidden bg-slate-950">
-            <img src="https://www.tnse.co.za/images/projects/electrical/tnse (5).jpg" alt="Industrial and Project Electrical Solutions" class="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-          </div>
-
-          <div class="p-8">
-
-            <p class="text-sm font-bold uppercase tracking-widest text-amber-500">
-              INDUSTRIAL & PROJECTS
-            </p>
-
-            <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white">
-              Project Environments
-            </h3>
-
-            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-              Heavy-duty electrical infrastructure, plant maintenance support, and
-              custom project execution for industrial settings.
-            </p>
-
-            <div class="mt-6 space-y-3">
-
-              <div class="flex gap-3">
-                <span class="material-symbols-outlined text-amber-500">
-                  check
-                </span>
-                <span class="text-sm text-slate-600 dark:text-slate-400">
-                  Infrastructure setup
-                </span>
-              </div>
-
-              <div class="flex gap-3">
-                <span class="material-symbols-outlined text-amber-500">
-                  check
-                </span>
-                <span class="text-sm text-slate-600 dark:text-slate-400">
-                  System diagnostics
-                </span>
-              </div>
-
-              <div class="flex gap-3">
-                <span class="material-symbols-outlined text-amber-500">
-                  check
-                </span>
-                <span class="text-sm text-slate-600 dark:text-slate-400">
-                  Compliance & safety
-                </span>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
       </div>
 
     </div>
 
-  </section>
+    <!-- Bottom Action Link to Updated Contact Form Path -->
+    <div class="mt-14 text-center reveal">
+      <a href="https://www.tnse.co.za/forms/contact-form/index.html"
+         class="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-amber-400 shadow-lg">
+        Request a Consultation
+        <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+    </div>
+
+  </div>
+</section>
 </main>
             
 
