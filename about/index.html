@@ -1034,381 +1034,292 @@
   </section>
 
 <!-- =========================================================
-
-     OUR STORY (PARALLAX BACKGROUND CONFINED TO THIS SECTION ONLY)
-
+     OUR STORY (LINE & AREA CHART EVOLUTION — NO GRIDS/CARDS)
 ========================================================== -->
-
 <section class="relative overflow-hidden py-20 lg:py-28">
-
   
-
-  <!-- Scoped Background Container (Absolute positioning keeps it inside this section only) -->
-
+  <!-- Scoped Background Container -->
   <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-
     <div id="parallaxBg" class="absolute inset-0 w-full h-full"></div>
-
-    <!-- Dark overlay for high contrast and readability -->
-
     <div class="absolute inset-0 bg-slate-950/85 dark:bg-slate-950/90 z-10"></div>
-
   </div>
-
-
 
   <!-- Section Content Layer -->
-
   <div class="relative z-20 mx-auto max-w-7xl px-5">
 
-
-
+    <!-- Header -->
     <div class="mx-auto max-w-3xl text-center reveal">
-
-
-
       <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-400">
-
         Our Story
-
       </p>
-
-
-
       <h2 class="mt-4 text-3xl font-black tracking-tight text-white md:text-4xl">
-
         From electrical services to integrated energy solutions
-
       </h2>
-
-
-
       <p class="mt-5 leading-8 text-slate-300">
-
         TNSE has developed its service offering around the changing needs
-
         of clients who require dependable electrical infrastructure
-
         and backup power solutions.
-
       </p>
-
-
-
     </div>
 
+    <!-- Desktop Line & Area Chart Timeline (Colored Curved Segments + Shaded Area Beneath) -->
+    <div class="reveal relative mt-20 hidden lg:block">
+      
+      <!-- SVG Area & Line Chart (No Grid Lines) -->
+      <svg class="w-full h-[360px] overflow-visible" viewBox="0 0 1000 320" preserveAspectRatio="none">
+        <defs>
+          <!-- Shaded Area Gradients Beneath Each Connecting Line -->
+          <linearGradient id="story-area-1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+          </linearGradient>
+          <linearGradient id="story-area-2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#10b981" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+          </linearGradient>
+          <linearGradient id="story-area-3" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0" />
+          </linearGradient>
+        </defs>
 
+        <!-- Shaded Area Beneath Curve -->
+        <path d="M 160 220 C 330 220, 330 135, 500 135 L 500 315 L 160 315 Z" fill="url(#story-area-1)" />
+        <path d="M 500 135 C 670 135, 670 50, 840 50 L 840 315 L 500 315 Z" fill="url(#story-area-2)" />
+        <path d="M 840 50 C 920 50, 950 30, 985 25 L 985 315 L 840 315 Z" fill="url(#story-area-3)" />
 
+        <!-- Colored Connecting Line Segments -->
+        <!-- Milestone 1 -> 2 (Amber) -->
+        <path d="M 160 220 C 330 220, 330 135, 500 135" fill="none" stroke="#f59e0b" stroke-width="5" stroke-linecap="round" />
+        <!-- Milestone 2 -> 3 (Emerald) -->
+        <path d="M 500 135 C 670 135, 670 50, 840 50" fill="none" stroke="#10b981" stroke-width="5" stroke-linecap="round" />
+        <!-- Milestone 3 -> Future Trajectory (Sky Blue) -->
+        <path d="M 840 50 C 920 50, 950 30, 985 25" fill="none" stroke="#3b82f6" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 8" />
+      </svg>
 
-
-    <div class="relative mt-16">
-
-
-
-      <!-- Timeline line -->
-
-      <div class="absolute left-5 top-0 hidden h-full w-px bg-white/10 md:block"></div>
-
-
-
-      <div class="space-y-10">
-
-
-
-        <!-- 2017 -->
-
-        <div class="reveal relative md:pl-16">
-
-
-
-          <div class="absolute left-0 hidden h-10 w-10 place-items-center rounded-full bg-amber-400 text-slate-950 md:grid">
-
+      <!-- Plotted Data Points & Story Copy (No Cards) -->
+      <div class="pointer-events-none absolute inset-0">
+        
+        <!-- Data Point 1: 2017 (Amber) -->
+        <div class="pointer-events-auto absolute left-[16%] top-[68.75%] -translate-x-1/2 -translate-y-6 flex flex-col items-center text-center w-72">
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-amber-400 text-slate-950 ring-8 ring-amber-400/20 shadow-lg">
             <span class="material-symbols-outlined">flag</span>
-
           </div>
-
-
-
-          <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-7 backdrop-blur">
-
-
-
-            <span class="text-sm font-black text-amber-400">
-
-              2017
-
-            </span>
-
-
-
-            <h3 class="mt-2 text-xl font-bold text-white">
-
-              TNSE Electrical Projects established
-
-            </h3>
-
-
-
-            <p class="mt-3 leading-7 text-slate-300">
-
-              TNSE Electrical Projects was established with a focus on
-
-              providing electrical services and practical project solutions.
-
-            </p>
-
-
-
-          </div>
-
-
-
+          <span class="mt-4 text-xs font-black tracking-widest text-amber-400 uppercase">2017</span>
+          <h3 class="mt-1 text-lg font-bold text-white">TNSE Electrical Projects established</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-300">
+            TNSE Electrical Projects was established with a focus on providing electrical services and practical project solutions.
+          </p>
         </div>
 
-
-
-
-
-        <!-- Electrical -->
-
-        <div class="reveal relative md:pl-16">
-
-
-
-          <div class="absolute left-0 hidden h-10 w-10 place-items-center rounded-full bg-slate-950 text-amber-400 border border-amber-400/30 md:grid">
-
+        <!-- Data Point 2: Electrical Services (Emerald) -->
+        <div class="pointer-events-auto absolute left-[50%] top-[42.18%] -translate-x-1/2 -translate-y-6 flex flex-col items-center text-center w-72">
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-400 text-slate-950 ring-8 ring-emerald-400/20 shadow-lg">
             <span class="material-symbols-outlined">bolt</span>
-
           </div>
-
-
-
-          <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-7 backdrop-blur">
-
-
-
-            <span class="text-sm font-black text-amber-400">
-
-              ELECTRICAL SERVICES
-
-            </span>
-
-
-
-            <h3 class="mt-2 text-xl font-bold text-white">
-
-              Expanding electrical capabilities
-
-            </h3>
-
-
-
-            <p class="mt-3 leading-7 text-slate-300">
-
-              The service offering includes electrical installations,
-
-              maintenance, repairs, wiring, distribution and fault finding.
-
-            </p>
-
-
-
-          </div>
-
-
-
+          <span class="mt-4 text-xs font-black tracking-widest text-emerald-400 uppercase">Electrical Services</span>
+          <h3 class="mt-1 text-lg font-bold text-white">Expanding electrical capabilities</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-300">
+            The service offering includes electrical installations, maintenance, repairs, wiring, distribution and fault finding.
+          </p>
         </div>
 
-
-
-
-
-        <!-- Energy & Backup -->
-
-        <div class="reveal relative md:pl-16">
-
-
-
-          <div class="absolute left-0 hidden h-10 w-10 place-items-center rounded-full bg-amber-400 text-slate-950 md:grid">
-
-            <span class="material-symbols-outlined">bolt</span>
-
+        <!-- Data Point 3: Energy & Power Solutions (Sky Blue) -->
+        <div class="pointer-events-auto absolute left-[84%] top-[15.62%] -translate-x-1/2 -translate-y-6 flex flex-col items-center text-center w-72">
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-sky-400 text-slate-950 ring-8 ring-sky-400/20 shadow-lg">
+            <span class="material-symbols-outlined">solar_power</span>
           </div>
-
-
-
-          <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-7 backdrop-blur">
-
-
-
-            <span class="text-sm font-black text-amber-400">
-
-              ENERGY & POWER SOLUTIONS
-
-            </span>
-
-
-
-            <h3 class="mt-2 text-xl font-bold text-white">
-
-              Moving toward reliable energy solutions
-
-            </h3>
-
-
-
-            <p class="mt-3 leading-7 text-slate-300">
-
-              TNSE's offering extends into power continuity systems,
-
-              inverter installations, battery storage and backup solutions.
-
-            </p>
-
-
-
-          </div>
-
-
-
+          <span class="mt-4 text-xs font-black tracking-widest text-sky-400 uppercase">Energy &amp; Power Solutions</span>
+          <h3 class="mt-1 text-lg font-bold text-white">Moving toward reliable energy solutions</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-300">
+            TNSE's offering extends into power continuity systems, inverter installations, battery storage and backup solutions.
+          </p>
         </div>
-
-
 
       </div>
-
-
-
     </div>
 
+    <!-- Mobile / Tablet Connected Line Flow (No Cards, No Grid) -->
+    <div class="mt-14 flex flex-col space-y-10 lg:hidden pl-4">
+      
+      <!-- 2017 -->
+      <div class="reveal relative pl-8 border-l-4 border-amber-400">
+        <span class="absolute -left-[14px] top-0 flex h-6 w-6 items-center justify-center rounded-full bg-amber-400 text-slate-950 ring-4 ring-amber-400/25">
+          <span class="material-symbols-outlined text-sm">flag</span>
+        </span>
+        <span class="text-xs font-black uppercase tracking-wider text-amber-400">2017</span>
+        <h3 class="mt-1 text-xl font-bold text-white">TNSE Electrical Projects established</h3>
+        <p class="mt-2 text-sm leading-7 text-slate-300">
+          TNSE Electrical Projects was established with a focus on providing electrical services and practical project solutions.
+        </p>
+      </div>
 
+      <!-- Electrical -->
+      <div class="reveal relative pl-8 border-l-4 border-emerald-400">
+        <span class="absolute -left-[14px] top-0 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-400 text-slate-950 ring-4 ring-emerald-400/25">
+          <span class="material-symbols-outlined text-sm">bolt</span>
+        </span>
+        <span class="text-xs font-black uppercase tracking-wider text-emerald-400">Electrical Services</span>
+        <h3 class="mt-1 text-xl font-bold text-white">Expanding electrical capabilities</h3>
+        <p class="mt-2 text-sm leading-7 text-slate-300">
+          The service offering includes electrical installations, maintenance, repairs, wiring, distribution and fault finding.
+        </p>
+      </div>
+
+      <!-- Energy & Backup -->
+      <div class="reveal relative pl-8 border-l-4 border-transparent">
+        <span class="absolute -left-[14px] top-0 flex h-6 w-6 items-center justify-center rounded-full bg-sky-400 text-slate-950 ring-4 ring-sky-400/25">
+          <span class="material-symbols-outlined text-sm">solar_power</span>
+        </span>
+        <span class="text-xs font-black uppercase tracking-wider text-sky-400">Energy &amp; Power Solutions</span>
+        <h3 class="mt-1 text-xl font-bold text-white">Moving toward reliable energy solutions</h3>
+        <p class="mt-2 text-sm leading-7 text-slate-300">
+          TNSE's offering extends into power continuity systems, inverter installations, battery storage and backup solutions.
+        </p>
+      </div>
+
+    </div>
 
   </div>
-
 </section>
 
+
 <!-- =========================================================
-        MISSION VISION VALUES
-  ========================================================== -->
-  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
-    <div class="mx-auto max-w-7xl px-5">
+     MISSION VISION VALUES (DONUT / RING CHART — NO GRIDS/CARDS)
+========================================================== -->
+<section class="bg-white py-20 dark:bg-slate-950 lg:py-28 overflow-hidden">
+  <div class="mx-auto max-w-7xl px-5">
 
-      <div class="max-w-3xl reveal">
-        <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
-          Our Foundation
-        </p>
+    <!-- Header -->
+    <div class="reveal mx-auto max-w-3xl text-center">
+      <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
+        Our Foundation
+      </p>
+      <h2 class="mt-4 text-3xl font-black text-slate-950 dark:text-white md:text-4xl">
+        The principles behind our work
+      </h2>
+    </div>
 
-        <h2 class="mt-4 text-3xl font-black text-slate-950 dark:text-white md:text-4xl">
-          The principles behind our work
-        </h2>
-      </div>
+    <!-- Flex Layout: Donut Chart Centerpiece + Color-Coded Principles (No Grids, No Cards) -->
+    <div class="mt-16 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
 
-
-      <div class="mt-12 grid gap-6 lg:grid-cols-3">
-
-        <!-- Mission -->
-        <div class="reveal lift rounded-3xl border border-slate-200 bg-slate-50 p-8 dark:border-white/10 dark:bg-slate-900">
-
-          <div class="grid h-14 w-14 place-items-center rounded-2xl bg-amber-100 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400">
-            <span class="material-symbols-outlined text-3xl">
-              target
-            </span>
+      <!-- Left Column: Mission & Vision -->
+      <div class="flex flex-col space-y-12 w-full max-w-sm lg:text-right">
+        
+        <!-- Our Mission (Amber Segment) -->
+        <div class="reveal relative pl-5 lg:pl-0 lg:pr-5 border-l-4 lg:border-l-0 lg:border-r-4 border-amber-500">
+          <div class="inline-flex items-center gap-2 lg:flex-row-reverse text-amber-600 dark:text-amber-400">
+            <span class="material-symbols-outlined text-2xl">target</span>
+            <span class="text-xs font-extrabold uppercase tracking-widest">Pillar 01 · Purpose</span>
           </div>
-
-          <h3 class="mt-7 text-2xl font-black text-slate-950 dark:text-white">
+          <h3 class="mt-2 text-2xl font-black text-slate-950 dark:text-white">
             Our Mission
           </h3>
-
-          <p class="mt-4 leading-8 text-slate-600 dark:text-slate-400">
+          <p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
             To deliver professional, reliable and safety-conscious electrical
             and energy solutions that respond to the practical needs of our
             clients.
           </p>
-
         </div>
 
-
-        <!-- Vision -->
-        <div class="reveal lift rounded-3xl border border-slate-200 bg-slate-50 p-8 dark:border-white/10 dark:bg-slate-900">
-
-          <div class="grid h-14 w-14 place-items-center rounded-2xl bg-amber-100 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400">
-            <span class="material-symbols-outlined text-3xl">
-              visibility
-            </span>
+        <!-- Our Vision (Emerald Segment) -->
+        <div class="reveal relative pl-5 lg:pl-0 lg:pr-5 border-l-4 lg:border-l-0 lg:border-r-4 border-emerald-500">
+          <div class="inline-flex items-center gap-2 lg:flex-row-reverse text-emerald-600 dark:text-emerald-400">
+            <span class="material-symbols-outlined text-2xl">visibility</span>
+            <span class="text-xs font-extrabold uppercase tracking-widest">Pillar 02 · Direction</span>
           </div>
-
-          <h3 class="mt-7 text-2xl font-black text-slate-950 dark:text-white">
+          <h3 class="mt-2 text-2xl font-black text-slate-950 dark:text-white">
             Our Vision
           </h3>
-
-          <p class="mt-4 leading-8 text-slate-600 dark:text-slate-400">
+          <p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
             To build a trusted South African engineering brand recognised
             for quality service, practical innovation and dependable energy
             solutions.
           </p>
-
-        </div>
-
-
-        <!-- Values -->
-        <div class="reveal lift rounded-3xl border border-slate-200 bg-slate-50 p-8 dark:border-white/10 dark:bg-slate-900">
-
-          <div class="grid h-14 w-14 place-items-center rounded-2xl bg-amber-100 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400">
-            <span class="material-symbols-outlined text-3xl">
-              verified
-            </span>
-          </div>
-
-          <h3 class="mt-7 text-2xl font-black text-slate-950 dark:text-white">
-            Our Values
-          </h3>
-
-          <ul class="mt-5 space-y-3 text-slate-600 dark:text-slate-400">
-
-            <li class="flex gap-3">
-              <span class="material-symbols-outlined text-amber-500">
-                check_circle
-              </span>
-              Integrity
-            </li>
-
-            <li class="flex gap-3">
-              <span class="material-symbols-outlined text-amber-500">
-                check_circle
-              </span>
-              Professional service
-            </li>
-
-            <li class="flex gap-3">
-              <span class="material-symbols-outlined text-amber-500">
-                check_circle
-              </span>
-              Safety
-            </li>
-
-            <li class="flex gap-3">
-              <span class="material-symbols-outlined text-amber-500">
-                check_circle
-              </span>
-              Accountability
-            </li>
-
-            <li class="flex gap-3">
-              <span class="material-symbols-outlined text-amber-500">
-                check_circle
-              </span>
-              Continuous improvement
-            </li>
-
-          </ul>
-
         </div>
 
       </div>
 
-    </div>
-  </section>
+      <!-- Center: Donut (Ring) Chart with Hollow Center Metrics -->
+      <div class="reveal relative flex items-center justify-center shrink-0 my-4 lg:my-0">
+        <!-- SVG Donut Ring (Circumference = 2 * π * 125 ≈ 785.4) -->
+        <svg class="w-80 h-80 sm:w-96 sm:h-96 -rotate-90 drop-shadow-sm" viewBox="0 0 320 320">
+          <!-- Subtle Base Track -->
+          <circle cx="160" cy="160" r="125" fill="none" stroke="currentColor" stroke-width="38" class="text-slate-200/60 dark:text-slate-800/60" />
 
+          <!-- Segment 1: Our Mission (Amber - 33.3%) -->
+          <circle cx="160" cy="160" r="125" fill="none" stroke="#f59e0b" stroke-width="38"
+                  stroke-dasharray="252 785.4" stroke-dashoffset="0" stroke-linecap="butt"
+                  class="transition-all duration-300 hover:opacity-85" />
+
+          <!-- Segment 2: Our Vision (Emerald - 33.3%) -->
+          <circle cx="160" cy="160" r="125" fill="none" stroke="#10b981" stroke-width="38"
+                  stroke-dasharray="252 785.4" stroke-dashoffset="-261.8" stroke-linecap="butt"
+                  class="transition-all duration-300 hover:opacity-85" />
+
+          <!-- Segment 3: Our Values (Blue - 33.3%) -->
+          <circle cx="160" cy="160" r="125" fill="none" stroke="#3b82f6" stroke-width="38"
+                  stroke-dasharray="252 785.4" stroke-dashoffset="-523.6" stroke-linecap="butt"
+                  class="transition-all duration-300 hover:opacity-85" />
+        </svg>
+
+        <!-- Hollow Center Space for Total Metrics -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-12 pointer-events-none">
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-500">
+            TNSE DNA
+          </span>
+          <span class="mt-1 text-4xl sm:text-5xl font-black text-slate-950 dark:text-white">
+            100%
+          </span>
+          <span class="mt-1 text-xs font-semibold text-slate-600 dark:text-slate-300">
+            3 Core Principles · 5 Values
+          </span>
+          <!-- Color Key Dots -->
+          <div class="mt-3 flex items-center gap-2">
+            <span class="h-2.5 w-2.5 rounded-full bg-amber-500" title="Our Mission"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-emerald-500" title="Our Vision"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-blue-500" title="Our Values"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Our Values (Blue Segment) -->
+      <div class="reveal w-full max-w-sm pl-5 border-l-4 border-blue-500 text-left">
+        <div class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400">
+          <span class="material-symbols-outlined text-2xl">verified</span>
+          <span class="text-xs font-extrabold uppercase tracking-widest">Pillar 03 · Standards</span>
+        </div>
+        <h3 class="mt-2 text-2xl font-black text-slate-950 dark:text-white">
+          Our Values
+        </h3>
+        <ul class="mt-4 space-y-3 text-sm font-medium text-slate-600 dark:text-slate-400">
+          <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-amber-500 text-lg">check_circle</span>
+            Integrity
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-emerald-500 text-lg">check_circle</span>
+            Professional service
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-blue-500 text-lg">check_circle</span>
+            Safety
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-violet-500 text-lg">check_circle</span>
+            Accountability
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-rose-500 text-lg">check_circle</span>
+            Continuous improvement
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
   <!-- =========================================================
         ELECTRICAL & SOLAR EXPERTISE
