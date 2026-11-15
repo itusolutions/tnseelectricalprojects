@@ -1203,97 +1203,158 @@
 	</div>
 
 
-<!-- How We Work Section -->
-<section class="mx-auto max-w-7xl px-5 py-20">
-  <div class="fade-init from-top">
+<!-- How We Work Section (Line & Area Chart Flow) -->
+<section class="mx-auto max-w-7xl px-5 py-20 overflow-hidden">
+  <div class="fade-init from-top max-w-2xl">
     <p class="text-sm font-bold uppercase tracking-[.25em] text-amber-500">How we work</p>
     <h2 class="mt-3 text-3xl sm:text-4xl font-black">A clear path from idea to implementation.</h2>
   </div>
 
-  <!-- Line / Area Chart Container (No Grids) -->
-  <div class="mt-12 relative">
-    <!-- Responsive SVG Area & Line Path -->
-    <div class="w-full h-48 sm:h-64">
-      <svg viewBox="0 0 1000 220" preserveAspectRatio="none" class="w-full h-full overflow-visible">
-        <defs>
-          <!-- Area Chart Gradient -->
-          <linearGradient id="areaShade" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.30" />
-            <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
-          </linearGradient>
-        </defs>
+  <!-- Desktop / Tablet Line & Area Chart View -->
+  <div class="relative mt-16 hidden lg:block">
+    <!-- SVG Line & Area Chart (No Grids, Multi-Color Segments & Shaded Areas) -->
+    <svg class="w-full h-[340px] overflow-visible" viewBox="0 0 1000 320" preserveAspectRatio="none">
+      <defs>
+        <!-- Shaded Area Gradients for Each Connecting Segment -->
+        <linearGradient id="area-1-2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.28" />
+          <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+        </linearGradient>
+        <linearGradient id="area-2-3" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#10b981" stop-opacity="0.28" />
+          <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+        </linearGradient>
+        <linearGradient id="area-3-4" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.28" />
+          <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0" />
+        </linearGradient>
+        <linearGradient id="area-4-5" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.28" />
+          <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.0" />
+        </linearGradient>
+      </defs>
 
-        <!-- Area Chart: Shaded space beneath the line -->
-        <path 
-          d="M 60 185 C 170 185, 190 145, 280 145 C 370 145, 410 105, 500 105 C 590 105, 630 60, 720 60 C 810 60, 850 20, 940 20 L 940 220 L 60 220 Z" 
-          fill="url(#areaShade)" 
-        />
+      <!-- Shaded Area Segments Beneath the Line -->
+      <!-- 01 to 02 -->
+      <path d="M 80 250 C 185 250, 185 195, 290 195 L 290 310 L 80 310 Z" fill="url(#area-1-2)" />
+      <!-- 02 to 03 -->
+      <path d="M 290 195 C 395 195, 395 140, 500 140 L 500 310 L 290 310 Z" fill="url(#area-2-3)" />
+      <!-- 03 to 04 -->
+      <path d="M 500 140 C 605 140, 605 85, 710 85 L 710 310 L 500 310 Z" fill="url(#area-3-4)" />
+      <!-- 04 to 05 -->
+      <path d="M 710 85 C 815 85, 815 35, 920 35 L 920 310 L 710 310 Z" fill="url(#area-4-5)" />
 
-        <!-- Line Chart: Curved segment connecting data points -->
-        <path 
-          d="M 60 185 C 170 185, 190 145, 280 145 C 370 145, 410 105, 500 105 C 590 105, 630 60, 720 60 C 810 60, 850 20, 940 20" 
-          fill="none" 
-          stroke="#f59e0b" 
-          stroke-width="3.5" 
-          stroke-linecap="round"
-        />
+      <!-- Colored Curved Connecting Line Segments -->
+      <!-- 01 -> 02 (Amber) -->
+      <path d="M 80 250 C 185 250, 185 195, 290 195" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+      <!-- 02 -> 03 (Emerald) -->
+      <path d="M 290 195 C 395 195, 395 140, 500 140" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round" />
+      <!-- 03 -> 04 (Blue) -->
+      <path d="M 500 140 C 605 140, 605 85, 710 85" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" />
+      <!-- 04 -> 05 (Violet) -->
+      <path d="M 710 85 C 815 85, 815 35, 920 35" fill="none" stroke="#8b5cf6" stroke-width="4" stroke-linecap="round" />
+    </svg>
 
-        <!-- Data Point 01 -->
-        <circle cx="60" cy="185" r="7" fill="#f59e0b" />
-        <circle cx="60" cy="185" r="13" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-opacity="0.4" />
+    <!-- Data Point Nodes & Labels Positioned Along the Trendline -->
+    <div class="pointer-events-none absolute inset-0">
+      
+      <!-- Point 01: Consultation -->
+      <div class="fade-init from-left pointer-events-auto absolute left-[8%] top-[78%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-center w-44">
+        <div class="h-5 w-5 rounded-full bg-amber-500 ring-4 ring-amber-500/30 shadow-md"></div>
+        <div class="mt-4">
+          <b class="text-amber-500 text-sm tracking-wider">01</b>
+          <h3 class="font-bold text-base">Consultation</h3>
+          <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Understand your requirement.</p>
+        </div>
+      </div>
 
-        <!-- Data Point 02 -->
-        <circle cx="280" cy="145" r="7" fill="#f59e0b" />
-        <circle cx="280" cy="145" r="13" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-opacity="0.4" />
+      <!-- Point 02: Assessment -->
+      <div class="fade-init from-left pointer-events-auto absolute left-[29%] top-[61%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-center w-44">
+        <div class="h-5 w-5 rounded-full bg-emerald-500 ring-4 ring-emerald-500/30 shadow-md"></div>
+        <div class="mt-4">
+          <b class="text-emerald-500 text-sm tracking-wider">02</b>
+          <h3 class="font-bold text-base">Assessment</h3>
+          <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Review site and system needs.</p>
+        </div>
+      </div>
 
-        <!-- Data Point 03 -->
-        <circle cx="500" cy="105" r="7" fill="#f59e0b" />
-        <circle cx="500" cy="105" r="13" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-opacity="0.4" />
+      <!-- Point 03: Design -->
+      <div class="fade-init from-left pointer-events-auto absolute left-[50%] top-[44%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-center w-44">
+        <div class="h-5 w-5 rounded-full bg-blue-500 ring-4 ring-blue-500/30 shadow-md"></div>
+        <div class="mt-4">
+          <b class="text-blue-500 text-sm tracking-wider">03</b>
+          <h3 class="font-bold text-base">Design</h3>
+          <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Develop a suitable solution.</p>
+        </div>
+      </div>
 
-        <!-- Data Point 04 -->
-        <circle cx="720" cy="60" r="7" fill="#f59e0b" />
-        <circle cx="720" cy="60" r="13" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-opacity="0.4" />
+      <!-- Point 04: Installation -->
+      <div class="fade-init from-left pointer-events-auto absolute left-[71%] top-[27%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-center w-44">
+        <div class="h-5 w-5 rounded-full bg-violet-500 ring-4 ring-violet-500/30 shadow-md"></div>
+        <div class="mt-4">
+          <b class="text-violet-500 text-sm tracking-wider">04</b>
+          <h3 class="font-bold text-base">Installation</h3>
+          <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Implement and test the work.</p>
+        </div>
+      </div>
 
-        <!-- Data Point 05 -->
-        <circle cx="940" cy="20" r="7" fill="#f59e0b" />
-        <circle cx="940" cy="20" r="13" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-opacity="0.4" />
-      </svg>
+      <!-- Point 05: Support -->
+      <div class="fade-init from-left pointer-events-auto absolute left-[92%] top-[11%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-center w-44">
+        <div class="h-5 w-5 rounded-full bg-rose-500 ring-4 ring-rose-500/30 shadow-md"></div>
+        <div class="mt-4">
+          <b class="text-rose-500 text-sm tracking-wider">05</b>
+          <h3 class="font-bold text-base">Support</h3>
+          <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Maintenance and ongoing support.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile / Small Screen Vertical Connected Line Flow (No Grid) -->
+  <div class="mt-12 flex flex-col space-y-8 lg:hidden relative pl-6">
+    <!-- Step 01 -->
+    <div class="fade-init from-left relative pl-6 border-l-4 border-amber-500">
+      <span class="absolute -left-[11px] top-0 h-4 w-4 rounded-full bg-amber-500 ring-4 ring-amber-500/25"></span>
+      <b class="text-amber-500 text-sm">01</b>
+      <h3 class="font-bold text-lg">Consultation</h3>
+      <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Understand your requirement.</p>
     </div>
 
-    <!-- Step Labels Aligned Along the Trend Line (Flexbox - No Grid) -->
-    <div class="mt-6 flex flex-col md:flex-row justify-between gap-6">
-      <div class="fade-init from-left flex-1">
-        <b class="text-amber-500 text-lg">01</b>
-        <h3 class="mt-1 font-bold">Consultation</h3>
-        <p class="mt-1 text-xs sm:text-sm text-slate-500 dark:text-slate-400">Understand your requirement.</p>
-      </div>
+    <!-- Step 02 -->
+    <div class="fade-init from-left relative pl-6 border-l-4 border-emerald-500">
+      <span class="absolute -left-[11px] top-0 h-4 w-4 rounded-full bg-emerald-500 ring-4 ring-emerald-500/25"></span>
+      <b class="text-emerald-500 text-sm">02</b>
+      <h3 class="font-bold text-lg">Assessment</h3>
+      <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Review site and system needs.</p>
+    </div>
 
-      <div class="fade-init from-left flex-1">
-        <b class="text-amber-500 text-lg">02</b>
-        <h3 class="mt-1 font-bold">Assessment</h3>
-        <p class="mt-1 text-xs sm:text-sm text-slate-500 dark:text-slate-400">Review site and system needs.</p>
-      </div>
+    <!-- Step 03 -->
+    <div class="fade-init from-left relative pl-6 border-l-4 border-blue-500">
+      <span class="absolute -left-[11px] top-0 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-blue-500/25"></span>
+      <b class="text-blue-500 text-sm">03</b>
+      <h3 class="font-bold text-lg">Design</h3>
+      <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Develop a suitable solution.</p>
+    </div>
 
-      <div class="fade-init from-left flex-1">
-        <b class="text-amber-500 text-lg">03</b>
-        <h3 class="mt-1 font-bold">Design</h3>
-        <p class="mt-1 text-xs sm:text-sm text-slate-500 dark:text-slate-400">Develop a suitable solution.</p>
-      </div>
+    <!-- Step 04 -->
+    <div class="fade-init from-left relative pl-6 border-l-4 border-violet-500">
+      <span class="absolute -left-[11px] top-0 h-4 w-4 rounded-full bg-violet-500 ring-4 ring-violet-500/25"></span>
+      <b class="text-violet-500 text-sm">04</b>
+      <h3 class="font-bold text-lg">Installation</h3>
+      <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Implement and test the work.</p>
+    </div>
 
-      <div class="fade-init from-left flex-1">
-        <b class="text-amber-500 text-lg">04</b>
-        <h3 class="mt-1 font-bold">Installation</h3>
-        <p class="mt-1 text-xs sm:text-sm text-slate-500 dark:text-slate-400">Implement and test the work.</p>
-      </div>
-
-      <div class="fade-init from-left flex-1">
-        <b class="text-amber-500 text-lg">05</b>
-        <h3 class="mt-1 font-bold">Support</h3>
-        <p class="mt-1 text-xs sm:text-sm text-slate-500 dark:text-slate-400">Maintenance and ongoing support.</p>
-      </div>
+    <!-- Step 05 -->
+    <div class="fade-init from-left relative pl-6 border-l-4 border-transparent">
+      <span class="absolute -left-[11px] top-0 h-4 w-4 rounded-full bg-rose-500 ring-4 ring-rose-500/25"></span>
+      <b class="text-rose-500 text-sm">05</b>
+      <h3 class="font-bold text-lg">Support</h3>
+      <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Maintenance and ongoing support.</p>
     </div>
   </div>
 </section>
+	
     <!-- =========================================================
          9. CUSTOMER REVIEWS
     ========================================================= -->
