@@ -916,53 +916,86 @@
     </div>
   </div>
 </section>
-  <!-- =========================================================
-        COMPANY HIGHLIGHTS
-  ========================================================== -->
-  <section class="border-y border-slate-200 bg-slate-50 py-14 dark:border-white/10 dark:bg-slate-900/50">
-    <div class="mx-auto max-w-7xl px-5">
+<!-- =========================================================
+     COMPANY HIGHLIGHTS (Line & Area Chart Flow — No Grids/Cards)
+========================================================= -->
+<section class="border-y border-slate-200 bg-slate-50 py-16 dark:border-white/10 dark:bg-slate-900/50 overflow-hidden">
+  <div class="mx-auto max-w-7xl px-5">
 
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+    <!-- Section Header Intro -->
+    <div class="text-center sm:text-left mb-8 reveal">
+      <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-amber-500">Company Metrics &amp; Milestones</p>
+      <h2 class="mt-2 text-2xl font-black text-slate-950 dark:text-white sm:text-3xl">Track Record of Growth &amp; Impact</h2>
+    </div>
 
-        <div class="reveal text-center lg:text-left">
-          <p class="text-4xl font-black text-slate-950 dark:text-white">2017</p>
-          <p class="mt-2 text-sm font-bold uppercase tracking-widest text-slate-500">
+    <!-- Line & Area Chart Replacing Grids & Cards -->
+    <div class="reveal relative mt-6">
+      <svg class="w-full h-[240px] overflow-visible" viewBox="0 0 1000 240" preserveAspectRatio="none">
+        <defs>
+          <!-- Shaded Area Gradient -->
+          <linearGradient id="highlights-area" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.38" />
+            <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+          </linearGradient>
+        </defs>
+
+        <!-- Shaded Area Beneath Curve -->
+        <path d="M 125 150 C 300 150, 375 90, 500 90 C 625 90, 700 45, 875 30 L 875 220 L 125 220 Z" fill="url(#highlights-area)" />
+        
+        <!-- Connected Curved Line Segments -->
+        <path d="M 125 150 C 300 150, 375 90, 500 90 C 625 90, 700 45, 875 30" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" />
+      </svg>
+
+      <!-- Plotted Data Points Along the Trendline (No Card Containers, No Grids) -->
+      <div class="pointer-events-none absolute inset-0 pt-4">
+        
+        <!-- Point 1: Year Established -->
+        <div class="pointer-events-auto absolute left-[12.5%] top-[60%] -translate-x-1/2 flex flex-col items-center text-center">
+          <span class="h-4 w-4 rounded-full bg-amber-500 ring-4 ring-amber-500/25"></span>
+          <p class="mt-3 text-3xl sm:text-4xl font-black text-slate-950 dark:text-white">2017</p>
+          <p class="mt-1 text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
             Year Established
           </p>
         </div>
 
-        <div class="reveal text-center lg:text-left">
-          <p class="text-4xl font-black text-slate-950 dark:text-white">
+        <!-- Point 2: BEE Contributor -->
+        <div class="pointer-events-auto absolute left-[37.5%] top-[38%] -translate-x-1/2 flex flex-col items-center text-center">
+          <span class="h-4 w-4 rounded-full bg-emerald-500 ring-4 ring-emerald-500/25"></span>
+          <p class="mt-3 text-3xl sm:text-4xl font-black text-slate-950 dark:text-white">
             Level 1
           </p>
-          <p class="mt-2 text-sm font-bold uppercase tracking-widest text-slate-500">
+          <p class="mt-1 text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
             BEE Contributor
           </p>
         </div>
 
-        <div class="reveal text-center lg:text-left">
-          <p class="text-4xl font-black text-slate-950 dark:text-white">
+        <!-- Point 3: Energy Solutions -->
+        <div class="pointer-events-auto absolute left-[62.5%] top-[25%] -translate-x-1/2 flex flex-col items-center text-center">
+          <span class="h-4 w-4 rounded-full bg-sky-500 ring-4 ring-sky-500/25"></span>
+          <p class="mt-3 text-3xl sm:text-4xl font-black text-slate-950 dark:text-white">
             360°
           </p>
-          <p class="mt-2 text-sm font-bold uppercase tracking-widest text-slate-500">
+          <p class="mt-1 text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
             Energy Solutions
           </p>
         </div>
 
-        <div class="reveal text-center lg:text-left">
-          <p class="text-4xl font-black text-slate-950 dark:text-white">
+        <!-- Point 4: Location -->
+        <div class="pointer-events-auto absolute left-[87.5%] top-[12%] -translate-x-1/2 flex flex-col items-center text-center">
+          <span class="h-4 w-4 rounded-full bg-violet-500 ring-4 ring-violet-500/25"></span>
+          <p class="mt-3 text-3xl sm:text-4xl font-black text-amber-500">
             Limpopo
           </p>
-          <p class="mt-2 text-sm font-bold uppercase tracking-widest text-slate-500">
+          <p class="mt-1 text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
             Based in Polokwane
           </p>
         </div>
 
       </div>
-
     </div>
-  </section>
 
+  </div>
+</section>
 
 <!-- =========================================================
         PROJECT GALLERY CAROUSEL SECTION
