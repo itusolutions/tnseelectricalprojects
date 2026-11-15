@@ -613,25 +613,26 @@
 </section>
 
 
-	<!-- =========================================================
-     ABOUT HERO SECTION (Population Pyramid Layout)
-========================================================= -->
+<!-- =========================================================
+     ABOUT HERO WITH DYNAMIC CAROUSEL, POPULATION PYRAMID & LINE/AREA CHART
+========================================================== -->
 <section class="relative overflow-hidden bg-slate-950 py-24 lg:py-32">
   
   <!-- Dynamic Background Carousel Container (Targeted by script ID #heroCarousel) -->
   <div id="heroCarousel" class="absolute inset-0 z-0 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/60 z-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/70 z-10"></div>
   </div>
 
+  <!-- Ambient Glows (Background .hero-grid removed) -->
   <div class="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-amber-400/10 blur-3xl z-10"></div>
   <div class="absolute -bottom-40 -left-32 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl z-10"></div>
 
   <div class="relative z-20 mx-auto max-w-7xl px-5">
     
-    <!-- Flex Container Replacing All Grids & Cards -->
-    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-16">
+    <!-- Flex Container (No Grids, No Cards) -->
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-14">
 
-      <!-- Left Content Column -->
+      <!-- Left Content: Hero Copy + Line & Area Chart Trend -->
       <div class="max-w-2xl">
         <div class="flex items-center gap-3">
           <span class="h-px w-12 bg-amber-400"></span>
@@ -640,7 +641,7 @@
           </p>
         </div>
 
-        <h1 class="mt-6 text-4xl font-black leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
+        <h1 class="mt-6 text-4xl font-black leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
           Powering progress with practical engineering solutions
         </h1>
 
@@ -663,33 +664,94 @@
             <span class="material-symbols-outlined">arrow_outward</span>
           </a>
         </div>
+
+        <!-- Line & Area Chart: Colored Segments with Shaded Area Beneath -->
+        <div class="mt-14 pt-8 border-t border-white/10">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-amber-400">Growth &amp; Delivery Trajectory</span>
+            <span class="text-xs font-semibold text-slate-400">2017 – Present</span>
+          </div>
+
+          <div class="relative w-full overflow-visible">
+            <svg class="w-full h-32 overflow-visible" viewBox="0 0 600 120" preserveAspectRatio="none">
+              <defs>
+                <!-- Shaded Area Gradients -->
+                <linearGradient id="about-hero-area-1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.38" />
+                  <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+                </linearGradient>
+                <linearGradient id="about-hero-area-2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#10b981" stop-opacity="0.38" />
+                  <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+                </linearGradient>
+                <linearGradient id="about-hero-area-3" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.38" />
+                  <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.0" />
+                </linearGradient>
+              </defs>
+
+              <!-- Shaded Areas Beneath Each Line Segment -->
+              <path d="M 45 90 C 110 90, 150 60, 220 55 L 220 118 L 45 118 Z" fill="url(#about-hero-area-1)" />
+              <path d="M 220 55 C 290 50, 330 35, 400 32 L 400 118 L 220 118 Z" fill="url(#about-hero-area-2)" />
+              <path d="M 400 32 C 465 30, 500 15, 555 12 L 555 118 L 400 118 Z" fill="url(#about-hero-area-3)" />
+
+              <!-- Multi-Color Connecting Line Segments -->
+              <!-- 2017 -> Electrical (Amber) -->
+              <path d="M 45 90 C 110 90, 150 60, 220 55" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+              <!-- Electrical -> Solar (Emerald) -->
+              <path d="M 220 55 C 290 50, 330 35, 400 32" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round" />
+              <!-- Solar -> Energy Systems (Sky Blue) -->
+              <path d="M 400 32 C 465 30, 500 15, 555 12" fill="none" stroke="#0ea5e9" stroke-width="4" stroke-linecap="round" />
+            </svg>
+
+            <!-- Data Points Along the Trendline -->
+            <div class="pointer-events-none absolute inset-0">
+              <div class="absolute left-[7.5%] top-[72%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                <span class="h-3.5 w-3.5 rounded-full bg-amber-400 ring-4 ring-amber-400/25"></span>
+                <span class="mt-2 text-xs font-black text-white">2017</span>
+              </div>
+              <div class="absolute left-[36.6%] top-[44%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                <span class="h-3.5 w-3.5 rounded-full bg-emerald-400 ring-4 ring-emerald-400/25"></span>
+                <span class="mt-2 text-xs font-black text-white">Electrical</span>
+              </div>
+              <div class="absolute left-[66.6%] top-[25%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                <span class="h-3.5 w-3.5 rounded-full bg-sky-400 ring-4 ring-sky-400/25"></span>
+                <span class="mt-2 text-xs font-black text-white">Solar</span>
+              </div>
+              <div class="absolute left-[92.5%] top-[9%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                <span class="h-3.5 w-3.5 rounded-full bg-violet-400 ring-4 ring-violet-400/25"></span>
+                <span class="mt-2 text-xs font-black text-amber-400">Energy</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Right Column: Population Pyramid Shape (Two back-to-back horizontal bars forming a symmetrical triangular/bell shape) -->
+      <!-- Right Visual: Population Pyramid (Two Back-to-Back Horizontal Bar Charts Forming a Symmetrical Triangle/Bell Shape) -->
       <div class="w-full max-w-md shrink-0">
         
-        <!-- Pyramid Axis Header Labels -->
-        <div class="flex justify-between text-xs font-extrabold uppercase tracking-widest text-slate-400 mb-3 px-6">
+        <!-- Axis Headers -->
+        <div class="flex justify-between text-xs font-extrabold uppercase tracking-widest mb-4 px-4">
           <span class="text-amber-400">Residential</span>
-          <span class="text-center">Capability Scope</span>
+          <span class="text-slate-400">Project Scope</span>
           <span class="text-sky-400">Commercial</span>
         </div>
 
-        <!-- Back-to-Back Horizontal Bars (Symmetrical Triangular / Bell Form) -->
+        <!-- Symmetrical Back-to-Back Bars (No Cards, No Grid) -->
         <div class="flex flex-col space-y-3">
           
-          <!-- Tier 1: Foundation / Base (100% Width) -->
+          <!-- Tier 1: Base (100% Width) -->
           <div class="flex items-center gap-2">
             <div class="flex-1 flex justify-end">
-              <div class="h-11 bg-amber-500 rounded-l-xl flex items-center px-4 transition hover:bg-amber-400" style="width: 100%;">
+              <div class="h-10 rounded-l-lg bg-amber-400 flex items-center px-3.5" style="width: 100%;">
                 <span class="text-xs font-black text-slate-950">Installations</span>
               </div>
             </div>
-            <div class="w-16 text-center text-xs font-black text-slate-300 py-1.5 bg-slate-900 border border-white/10 rounded-lg">
+            <span class="w-16 text-center text-[11px] font-black uppercase tracking-wider text-slate-300">
               Base
-            </div>
+            </span>
             <div class="flex-1 flex justify-start">
-              <div class="h-11 bg-sky-500 rounded-r-xl flex items-center px-4 transition hover:bg-sky-400" style="width: 100%;">
+              <div class="h-10 rounded-r-lg bg-sky-400 flex items-center px-3.5" style="width: 100%;">
                 <span class="text-xs font-black text-slate-950">Maintenance</span>
               </div>
             </div>
@@ -698,16 +760,16 @@
           <!-- Tier 2: Mid-Lower (80% Width) -->
           <div class="flex items-center gap-2">
             <div class="flex-1 flex justify-end">
-              <div class="h-11 bg-amber-500/85 rounded-l-xl flex items-center px-4 transition" style="width: 80%;">
-                <span class="text-xs font-bold text-slate-950">Fault Finding</span>
+              <div class="h-10 rounded-l-lg bg-emerald-400 flex items-center px-3.5" style="width: 80%;">
+                <span class="text-xs font-black text-slate-950">Solar Power</span>
               </div>
             </div>
-            <div class="w-16 text-center text-xs font-black text-slate-300 py-1.5 bg-slate-900 border border-white/10 rounded-lg">
+            <span class="w-16 text-center text-[11px] font-black uppercase tracking-wider text-slate-300">
               Core
-            </div>
+            </span>
             <div class="flex-1 flex justify-start">
-              <div class="h-11 bg-sky-500/85 rounded-r-xl flex items-center px-4 transition" style="width: 80%;">
-                <span class="text-xs font-bold text-slate-950">Repairs</span>
+              <div class="h-10 rounded-r-lg bg-teal-400 flex items-center px-3.5" style="width: 80%;">
+                <span class="text-xs font-black text-slate-950">Backup</span>
               </div>
             </div>
           </div>
@@ -715,51 +777,43 @@
           <!-- Tier 3: Mid-Upper (60% Width) -->
           <div class="flex items-center gap-2">
             <div class="flex-1 flex justify-end">
-              <div class="h-11 bg-amber-500/70 rounded-l-xl flex items-center px-4 transition" style="width: 60%;">
-                <span class="text-xs font-bold text-slate-950">Solar Energy</span>
+              <div class="h-10 rounded-l-lg bg-violet-400 flex items-center px-3.5" style="width: 60%;">
+                <span class="text-xs font-black text-slate-950">Repairs</span>
               </div>
             </div>
-            <div class="w-16 text-center text-xs font-black text-slate-300 py-1.5 bg-slate-900 border border-white/10 rounded-lg">
-              Advanced
-            </div>
+            <span class="w-16 text-center text-[11px] font-black uppercase tracking-wider text-slate-300">
+              Scale
+            </span>
             <div class="flex-1 flex justify-start">
-              <div class="h-11 bg-sky-500/70 rounded-r-xl flex items-center px-4 transition" style="width: 60%;">
-                <span class="text-xs font-bold text-slate-950">Projects</span>
+              <div class="h-10 rounded-r-lg bg-indigo-400 flex items-center px-3.5" style="width: 60%;">
+                <span class="text-xs font-black text-slate-950">Faults</span>
               </div>
             </div>
           </div>
 
-          <!-- Tier 4: Peak / Apex (40% Width) -->
+          <!-- Tier 4: Peak Apex (40% Width) -->
           <div class="flex items-center gap-2">
             <div class="flex-1 flex justify-end">
-              <div class="h-11 bg-amber-500/50 rounded-l-xl flex items-center px-4 transition" style="width: 40%;">
-                <span class="text-xs font-bold text-slate-950">Limpopo</span>
+              <div class="h-10 rounded-l-lg bg-rose-400 flex items-center px-3.5" style="width: 40%;">
+                <span class="text-xs font-black text-slate-950">2017</span>
               </div>
             </div>
-            <div class="w-16 text-center text-xs font-black text-slate-300 py-1.5 bg-slate-900 border border-white/10 rounded-lg">
+            <span class="w-16 text-center text-[11px] font-black uppercase tracking-wider text-slate-300">
               Apex
-            </div>
+            </span>
             <div class="flex-1 flex justify-start">
-              <div class="h-11 bg-sky-500/50 rounded-r-xl flex items-center px-4 transition" style="width: 40%;">
-                <span class="text-xs font-bold text-slate-950">Polokwane</span>
+              <div class="h-10 rounded-r-lg bg-orange-400 flex items-center px-3.5" style="width: 40%;">
+                <span class="text-xs font-black text-slate-950">BEE L1</span>
               </div>
             </div>
           </div>
 
         </div>
-
-        <!-- Footnote Note -->
-        <p class="mt-4 text-center text-xs text-slate-400 italic">
-          Symmetrical balance of residential and commercial engineering capability since 2017.
-        </p>
-
       </div>
 
     </div>
-
   </div>
 </section>
-
 <!-- =========================================================
      COMPANY INTRODUCTION WITH LINE & AREA CHART FLOW
 ========================================================= -->
