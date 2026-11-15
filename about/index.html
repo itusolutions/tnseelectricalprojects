@@ -613,113 +613,159 @@
 </section>
 
 <!-- =========================================================
-        COMPANY INTRODUCTION WITH DYNAMIC PROJECT IMAGE
-  ========================================================== -->
-  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
-    <div class="mx-auto max-w-7xl px-5">
+     COMPANY INTRODUCTION WITH LINE & AREA CHART FLOW
+========================================================= -->
+<section class="bg-white py-20 dark:bg-slate-950 lg:py-28 overflow-hidden">
+  <div class="mx-auto max-w-7xl px-5">
 
-      <div class="grid items-center gap-14 lg:grid-cols-2">
+    <!-- Flex Layout Replacing All Grids & Cards -->
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-14">
 
-        <!-- Visual / Parallax Image Container -->
-        <div class="reveal relative">
-          <div class="overflow-hidden rounded-[2rem] bg-slate-900 p-2 shadow-2xl">
+      <!-- Left Visual: Project Photo with Integrated Line & Area Chart Overlay (No Cards/Grids) -->
+      <div class="reveal relative w-full lg:w-1/2 shrink-0">
+        <div class="relative aspect-[4/3] overflow-hidden rounded-[2rem]">
+          
+          <!-- Company Project Image -->
+          <img src="https://www.tnse.co.za/images/projects/electrical/tnse (1).jpg" 
+               alt="TNSE Electrical Field Installation" 
+               class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105" />
 
-            <div class="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-slate-800 via-slate-900 to-black">
+          <!-- Subtle Gradient Tint for Chart Readability -->
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
 
-              <!-- Company Project Image Path Updated -->
-              <img src="https://www.tnse.co.za/images/projects/electrical/tnse (1).jpg" alt="TNSE Electrical Field Installation" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105" />
+          <!-- Top-Right Regional Indicator (Floating Text, No Card Box) -->
+          <div class="absolute top-6 right-6 text-right">
+            <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-amber-400">Field Operations</p>
+            <p class="text-sm font-bold text-white">Limpopo Region · Since 2017</p>
+          </div>
 
-              <div class="absolute inset-0 opacity-30"
-                   style="background-image: linear-gradient(rgba(15,23,42,.25),rgba(15,23,42,.9));">
+          <!-- Bottom Area & Line Chart Overlaid on Photo (No Background Grid Lines) -->
+          <div class="absolute inset-x-0 bottom-0 pt-10">
+            <svg class="w-full h-36 overflow-visible" viewBox="0 0 500 130" preserveAspectRatio="none">
+              <defs>
+                <!-- Shaded Area Gradients for Each Connecting Segment -->
+                <linearGradient id="intro-area-1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.45" />
+                  <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0" />
+                </linearGradient>
+                <linearGradient id="intro-area-2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#10b981" stop-opacity="0.45" />
+                  <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+                </linearGradient>
+                <linearGradient id="intro-area-3" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.45" />
+                  <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0" />
+                </linearGradient>
+              </defs>
+
+              <!-- Shaded Area Segments Beneath the Line -->
+              <path d="M 45 95 C 105 95, 135 65, 195 65 L 195 130 L 45 130 Z" fill="url(#intro-area-1)" />
+              <path d="M 195 65 C 255 65, 285 40, 345 40 L 345 130 L 195 130 Z" fill="url(#intro-area-2)" />
+              <path d="M 345 40 C 400 40, 420 18, 465 18 L 465 130 L 345 130 Z" fill="url(#intro-area-3)" />
+
+              <!-- Colored Curved Connecting Line Segments -->
+              <!-- 2017 -> Needs Assessment (Amber) -->
+              <path d="M 45 95 C 105 95, 135 65, 195 65" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+              <!-- Assessment -> Execution (Emerald) -->
+              <path d="M 195 65 C 255 65, 285 40, 345 40" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round" />
+              <!-- Execution -> Long-Term Value (Blue) -->
+              <path d="M 345 40 C 400 40, 420 18, 465 18" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" />
+            </svg>
+
+            <!-- Data Point Milestones Along the Line -->
+            <div class="pointer-events-none absolute inset-0">
+              <!-- Point 1: 2017 -->
+              <div class="absolute left-[9%] top-[68%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                <span class="h-3.5 w-3.5 rounded-full bg-amber-400 ring-4 ring-amber-400/30"></span>
+                <span class="mt-1.5 text-xs font-black text-white">2017</span>
               </div>
-
-              <div class="absolute inset-0 flex items-center justify-end p-6">
-                <div class="rounded-xl bg-slate-950/80 backdrop-blur-md border border-white/10 px-4 py-2 text-right">
-                  <p class="text-xs font-bold uppercase tracking-widest text-amber-400">Field Operations</p>
-                  <p class="text-sm font-semibold text-white">Limpopo Region</p>
-                </div>
+              <!-- Point 2: Assess -->
+              <div class="absolute left-[39%] top-[48%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                <span class="h-3.5 w-3.5 rounded-full bg-emerald-400 ring-4 ring-emerald-400/30"></span>
+                <span class="mt-1.5 text-xs font-black text-white">Assess</span>
               </div>
-
+              <!-- Point 3: Deliver -->
+              <div class="absolute left-[69%] top-[30%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                <span class="h-3.5 w-3.5 rounded-full bg-blue-400 ring-4 ring-blue-400/30"></span>
+                <span class="mt-1.5 text-xs font-black text-white">Deliver</span>
+              </div>
+              <!-- Point 4: Reliability -->
+              <div class="absolute left-[93%] top-[14%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                <span class="h-3.5 w-3.5 rounded-full bg-violet-400 ring-4 ring-violet-400/30"></span>
+                <span class="mt-1.5 text-xs font-black text-amber-400">100%</span>
+              </div>
             </div>
           </div>
 
-          <!-- Floating statistic -->
-          <div class="absolute -bottom-6 -right-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-xl dark:border-white/10 dark:bg-slate-900 sm:right-6">
-            <p class="text-3xl font-black text-amber-500">2017</p>
-            <p class="mt-1 text-xs font-bold uppercase tracking-widest text-slate-500">
-              Established
-            </p>
-          </div>
         </div>
+      </div>
 
+      <!-- Right Content: Company Story & Colored Trend Milestones (No Grids/Cards) -->
+      <div class="reveal w-full lg:w-1/2">
+        <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
+          About TNSE
+        </p>
 
-        <!-- Content -->
-        <div class="reveal">
+        <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-950 dark:text-white md:text-4xl">
+          Building dependable power solutions for today and tomorrow.
+        </h2>
 
-          <p class="text-sm font-bold uppercase tracking-[.22em] text-amber-500">
-            About TNSE
-          </p>
+        <p class="mt-6 leading-8 text-slate-600 dark:text-slate-400">
+          TNSE Electrical Projects was established in 2017 with a focus on
+          providing practical electrical solutions and supporting clients
+          with their power requirements.
+        </p>
 
-          <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-950 dark:text-white md:text-4xl">
-            Building dependable power solutions for today and tomorrow.
-          </h2>
+        <p class="mt-5 leading-8 text-slate-600 dark:text-slate-400">
+          Our services cover electrical installations, maintenance,
+          repairs, fault finding, backup power, and related energy solutions.
+        </p>
 
-          <p class="mt-6 leading-8 text-slate-600 dark:text-slate-400">
-            TNSE Electrical Projects was established in 2017 with a focus on
-            providing practical electrical solutions and supporting clients
-            with their power requirements.
-          </p>
+        <p class="mt-5 leading-8 text-slate-600 dark:text-slate-400">
+          We understand that every project has different requirements.
+          Our approach is therefore centred on understanding the client's
+          needs, assessing the project requirements and providing a practical
+          solution that supports reliability, safety and long-term value.
+        </p>
 
-          <p class="mt-5 leading-8 text-slate-600 dark:text-slate-400">
-            Our services cover electrical installations, maintenance,
-            repairs, fault finding, backup power, and related energy solutions.
-          </p>
-
-          <p class="mt-5 leading-8 text-slate-600 dark:text-slate-400">
-            We understand that every project has different requirements.
-            Our approach is therefore centred on understanding the client's
-            needs, assessing the project requirements and providing a practical
-            solution that supports reliability, safety and long-term value.
-          </p>
-
-          <div class="mt-8 grid gap-4 sm:grid-cols-2">
-
-            <div class="flex gap-3">
-              <span class="material-symbols-outlined text-amber-500">
-                check_circle
-              </span>
-              <div>
-                <h3 class="font-bold text-slate-900 dark:text-white">
-                  Practical solutions
-                </h3>
-                <p class="mt-1 text-sm text-slate-500">
-                  Solutions designed around real project requirements.
-                </p>
-              </div>
+        <!-- Connected Multi-Color Trend Line Points (Replaces the 2-Column Grid) -->
+        <div class="mt-10 flex flex-col space-y-6 border-l-4 border-amber-500 pl-5">
+          
+          <!-- Point 1: Practical Solutions (Amber) -->
+          <div class="relative flex items-start gap-3">
+            <span class="absolute -left-[29px] top-1 h-4 w-4 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></span>
+            <span class="material-symbols-outlined text-amber-500">check_circle</span>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white">
+                Practical solutions
+              </h3>
+              <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+                Solutions designed around real project requirements.
+              </p>
             </div>
+          </div>
 
-            <div class="flex gap-3">
-              <span class="material-symbols-outlined text-amber-500">
-                check_circle
-              </span>
-              <div>
-                <h3 class="font-bold text-slate-900 dark:text-white">
-                  Client focused
-                </h3>
-                <p class="mt-1 text-sm text-slate-500">
-                  Clear communication from enquiry to completion.
-                </p>
-              </div>
+          <!-- Point 2: Client Focused (Emerald) -->
+          <div class="relative flex items-start gap-3">
+            <span class="absolute -left-[29px] top-1 h-4 w-4 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
+            <span class="material-symbols-outlined text-emerald-500">check_circle</span>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white">
+                Client focused
+              </h3>
+              <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+                Clear communication from enquiry to completion.
+              </p>
             </div>
-
           </div>
 
         </div>
 
       </div>
-    </div>
-  </section>
 
+    </div>
+  </div>
+</section>
   <!-- =========================================================
         COMPANY HIGHLIGHTS
   ========================================================== -->
